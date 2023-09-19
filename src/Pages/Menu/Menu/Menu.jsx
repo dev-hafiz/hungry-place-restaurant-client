@@ -4,6 +4,7 @@ import Cover from "../../Shared/Cover/Cover";
 const Menu = () => {
   return (
     <section className="h-screen">
+    {/* React Halmet  */}
       <Helmet>
         <title>Hungry Place | Our Menu</title>
       </Helmet>
