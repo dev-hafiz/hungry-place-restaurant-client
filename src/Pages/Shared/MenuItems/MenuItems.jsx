@@ -13,7 +13,14 @@ const MenuItems = () => {
 
   const [items, setItems] = useState([]);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    fetch("menu.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const filteredData = data.filter((i) => i.category === "salad");
+        setItems(filteredData);
+      });
+  }, []);
 
   return (
     <section
