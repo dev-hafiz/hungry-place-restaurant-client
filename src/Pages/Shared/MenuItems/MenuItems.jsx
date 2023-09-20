@@ -5,12 +5,6 @@ import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import MenuItem from "./MenuItem";
 
 const MenuItems = () => {
-  //AOS animation used here
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
-
   const [items, setItems] = useState([]);
 
   useEffect(() => {
