@@ -5,7 +5,7 @@ import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import MenuItem from "./MenuItem";
 
 const MenuItems = () => {
-  //AOS animation used here
+  //AOS animation used
   useEffect(() => {
     AOS.init();
     AOS.refresh();
