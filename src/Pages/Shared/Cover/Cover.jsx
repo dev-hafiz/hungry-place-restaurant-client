@@ -1,15 +1,16 @@
-import ParallaxComponent from "react-parallax-component";
+import { Parallax } from "react-parallax";
+
 // eslint-disable-next-line react/prop-types
 const Cover = ({ title, img }) => {
   return (
-    <ParallaxComponent speed="0.003" width="300" top="40%" left="100">
+    <Parallax
+      blur={{ min: -15, max: 15 }}
+      bgImage={img}
+      bgImageAlt="the dog"
+      strength={-200}
+    >
       <div>
-        <div
-          className="hero h-[600px]"
-          style={{
-            backgroundImage: `url("${img}")`,
-          }}
-        >
+        <div className="hero h-[600px]">
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
             <div className="max-w-md">
@@ -24,7 +25,7 @@ const Cover = ({ title, img }) => {
           </div>
         </div>
       </div>
-    </ParallaxComponent>
+    </Parallax>
   );
 };
 
