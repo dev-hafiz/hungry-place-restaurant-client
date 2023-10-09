@@ -13,7 +13,7 @@ const Cover = ({ title, img }) => {
         <div className="hero h-[600px]">
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
-            <div className=" bg-black py-16 bg-opacity-40 px-28 w-2/4	">
+            <div className=" bg-black rounded-lg py-16 bg-opacity-40 px-28 w-2/4	">
               <h1 className="mb-5 text-5xl  text-white font-bold">{title}</h1>
               <p className="mb-5 text-white">
                 Provident cupiditate voluptatem et in. Quaerat fugiat ut
