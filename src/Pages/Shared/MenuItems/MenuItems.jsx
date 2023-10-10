@@ -11,6 +11,7 @@ const MenuItems = () => {
     AOS.refresh();
   }, []);
 
+  // Loade items data
   const [items, setItems] = useState([]);
 
   useEffect(() => {
