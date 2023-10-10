@@ -1,8 +1,9 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import MenuItem from "./MenuItem";
+import useMenu from "../../../Hooks/useMenu";
 
 const MenuItems = () => {
   //AOS animation used
@@ -12,16 +13,19 @@ const MenuItems = () => {
   }, []);
 
   // Loade items data
-  const [items, setItems] = useState([]);
+  const [items] = useMenu();
+  const filteredData = items.filter((i) => i.category === "salad");
 
-  useEffect(() => {
-    fetch("menu.json")
-      .then((res) => res.json())
-      .then((data) => {
-        const filteredData = data.filter((i) => i.category === "salad");
-        setItems(filteredData);
-      });
-  }, []);
+  // const [items, setItems] = useState([]);
+
+  // useEffect(() => {
+  //   fetch("menu.json")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       const filteredData = data.filter((i) => i.category === "salad");
+  //       setItems(filteredData);
+  //     });
+  // }, []);
 
   return (
     <section
@@ -32,7 +36,7 @@ const MenuItems = () => {
     >
       <SectionTitle subHeading="Check it out" heading="FROM OUR MENU" />
       <div className="grid md:grid-cols-2 mt-4 pb-16 gap-4">
-        {items.map((item) => (
+        {filteredData.map((item) => (
           <MenuItem key={item._id} item={item} />
         ))}
       </div>
