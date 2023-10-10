@@ -12,20 +12,9 @@ const MenuItems = () => {
     AOS.refresh();
   }, []);
 
-  // Loade items data
+  // Loade items data with custom hook
   const [items] = useMenu();
   const filteredData = items.filter((i) => i.category === "salad");
-
-  // const [items, setItems] = useState([]);
-
-  // useEffect(() => {
-  //   fetch("menu.json")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       const filteredData = data.filter((i) => i.category === "salad");
-  //       setItems(filteredData);
-  //     });
-  // }, []);
 
   return (
     <section
