@@ -13,7 +13,7 @@ const Menu = () => {
   const soup = items.filter((i) => i.category === "soup");
 
   return (
-    <div className="h-full">
+    <div className="bg-white">
       {/* React Halmet  */}
       <Helmet>
         <title>Hungry Place | Our Menu</title>
@@ -21,9 +21,7 @@ const Menu = () => {
       <div>
         <Cover img={coverPhoto} title={"Our Menu"} />
       </div>
-      <div className="pb-6">
-        <SectionTitle heading="Today's Offer" subHeading="Don't miss" />
-      </div>
+      <SectionTitle heading="Today's Offer" subHeading="Don't miss" />
     </div>
   );
 };
