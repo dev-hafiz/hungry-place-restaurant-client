@@ -1,7 +1,10 @@
+import Cover from "../../Shared/Cover/Cover";
+import foodImg from "../../../assets/shop/banner2.jpg";
+
 const Orders = () => {
   return (
     <div>
-      <h1>This is Order JS Page</h1>
+      <Cover title="Our Foods" img={foodImg} />
     </div>
   );
 };
