@@ -20,9 +20,11 @@ const NavBar = () => {
       <li>
         <Link to="/menu">Our Menu</Link>
       </li>
+
       <li>
-        <a>Dashboard</a>
+        <Link to="/order">Order</Link>
       </li>
+
       <li>
         <a>Our Menu</a>
       </li>
