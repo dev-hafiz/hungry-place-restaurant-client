@@ -24,6 +24,17 @@ const Login = () => {
     console.log(email, passwprd);
   };
 
+  //Captcha Validation Handler
+  const handleCaptchaValidation = () => {
+    const user_type_captcha = captchaRef.current.value;
+
+    if (validateCaptcha(user_type_captcha)) {
+      setDisable(false);
+    } else {
+      setDisable(true);
+    }
+  };
+
   return (
     <div className="hero min-h-screen bg-white">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -73,7 +84,12 @@ const Login = () => {
                 className="input input-bordered"
                 required
               />
-              <button className="btn btn-xs btn-outline mt-3	">validate</button>
+              <button
+                onClick={handleCaptchaValidation}
+                className="btn btn-xs btn-outline mt-3	"
+              >
+                validate
+              </button>
             </div>
             <div className="form-control mt-6">
               <input
