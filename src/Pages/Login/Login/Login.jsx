@@ -1,4 +1,13 @@
 const Login = () => {
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const passwprd = form.password.value;
+    console.log(email, passwprd);
+  };
+  
   return (
     <div className="hero min-h-screen bg-white">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -11,7 +20,7 @@ const Login = () => {
           </p>
         </div>
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <form className="card-body">
+          <form onSubmit={handleFormSubmit} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
