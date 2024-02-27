@@ -1,10 +1,17 @@
 import AOS from "aos";
+import { FaCartPlus } from "react-icons/fa6";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import logo from "./../../../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../../Hooks/useAuth";
+import useCart from "../../../Hooks/useCart";
+import useAdmin from "../../../Hooks/useAdmin";
 
 const NavBar = () => {
+  const { user, logOut } = useAuth();
+  const [isAdmin] = useAdmin();
+  const [cart] = useCart();
   //AOS animation used here
   useEffect(() => {
     AOS.init();
@@ -24,9 +31,35 @@ const NavBar = () => {
       <li>
         <Link to="/order/salad">Order</Link>
       </li>
+      {user?.email && isAdmin?.admin && (
+        <Link to="/dashboard/adminHome">DashBoard</Link>
+      )}
+      {user?.email && !isAdmin?.admin && (
+        <Link to="/dashboard/userHome">DashBoard</Link>
+      )}
 
       <li>
-        <a>Our Menu</a>
+        <NavLink to="/dashboard/mycart">
+          <button className="btn">
+            <FaCartPlus />
+            <div className="badge badge-secondary">+ {cart.length || 0}</div>
+          </button>
+        </NavLink>
+      </li>
+      <li>
+        {user?.email ? (
+          <div className="flex">
+            <p>{user.displayName}</p>
+            <button onClick={logOut} className="btn btn-sm">
+              LogOut
+            </button>
+          </div>
+        ) : (
+          <NavLink to="/login">
+            {" "}
+            <button className="btn btn-sm">Login</button>
+          </NavLink>
+        )}
       </li>
     </>
   );

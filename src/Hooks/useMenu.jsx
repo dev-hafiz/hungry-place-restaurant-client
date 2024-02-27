@@ -1,19 +1,29 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 
 const useMenu = () => {
-  const [items, setItems] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // useEffect(() => {
+  //   fetch("https://hungry-place-restaurant-server.vercel.app/menu")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setItems(data);
+  //       setLoading(loading);
+  //     });
+  // }, [loading]);
+  const {
+    data: items = [],
+    isPending: loading,
+    refetch,
+  } = useQuery({
+    queryKey: ["items"],
+    queryFn: async () => {
+      const res = fetch(
+        "https://hungry-place-restaurant-server.vercel.app/menu"
+      );
+      return (await res).json();
+    },
+  });
 
-  useEffect(() => {
-    fetch("http://localhost:5000/menu")
-      .then((res) => res.json())
-      .then((data) => {
-        setItems(data);
-        setLoading(loading);
-      });
-  }, [loading]);
-
-  return [items, loading];
+  return [items, loading, refetch];
 };
 
 export default useMenu;

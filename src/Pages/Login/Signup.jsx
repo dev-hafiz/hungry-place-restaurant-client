@@ -1,20 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import { FaCartPlus, FaGoogle } from "react-icons/fa6";
-
 import {
-  loadCaptchaEnginge,
   LoadCanvasTemplate,
+  loadCaptchaEnginge,
   validateCaptcha,
 } from "react-simple-captcha";
-import useAuth from "../../../Hooks/useAuth";
-import { useLocation, useNavigate } from "react-router-dom";
 
-const Login = () => {
-  const { signInWithGoogle } = useAuth();
-  //react hooks
-  const navigate = useNavigate();
-  const location = useLocation();
-
+const Signup = () => {
   //Button Disable State
   const [disable, setDisable] = useState(true);
   //UseRef for Captcha
@@ -30,7 +21,7 @@ const Login = () => {
     const form = event.target;
     const email = form.email.value;
     const passwprd = form.password.value;
-    // console.log(email, passwprd);
+    console.log(email, passwprd);
   };
 
   //Captcha Validation Handler
@@ -44,16 +35,11 @@ const Login = () => {
     }
   };
 
-  //Google Login Handler
-  const googleLoginHandler = () => {
-    // console.log("Button Is Clicked");
-    signInWithGoogle(location, navigate);
-  };
   return (
     <div className="hero min-h-screen bg-white">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:w-2/4">
-          <h1 className="text-5xl font-bold">Login now!</h1>
+          <h1 className="text-5xl font-bold">Sign Up Now!</h1>
           <p className="py-6">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
@@ -105,21 +91,14 @@ const Login = () => {
                 disabled={disable}
                 className="btn btn-primar"
                 type="submit"
-                value="Login"
+                value="Sign Up"
               />
             </div>
           </form>
-
-          <button
-            onClick={googleLoginHandler}
-            className="ml-10 mb-4 text-white btn btn-secondary w-1/2 "
-          >
-            <FaGoogle />
-          </button>
         </div>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default Signup;
