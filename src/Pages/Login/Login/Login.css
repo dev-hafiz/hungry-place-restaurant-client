@@ -170,3 +170,21 @@
       opacity: 0;
   }
 }
+
+/* Image animation  */
+
+.image {
+  transition: transform 3s ease-in-out;
+}
+
+@keyframes translate {
+  
+ 
+  100% {
+      transform: translate(40px, 40px); 
+  }
+}
+
+.image.animated {
+  animation: translate 3s infinite alternate;
+}

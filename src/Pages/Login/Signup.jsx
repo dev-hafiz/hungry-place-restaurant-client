@@ -31,7 +31,13 @@ const Signup = () => {
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center ml-6  lg:w-2/4">
           <div className="login-container">
-            <img src={loginImg} alt="login image" />
+            <div className="image-container">
+              <img
+                src={loginImg}
+                className="image animated"
+                alt="login image"
+              />
+            </div>
             <div className="bubble"></div>
             <div className="bubble"></div>
             <div className="bubble"></div>
