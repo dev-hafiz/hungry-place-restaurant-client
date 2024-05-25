@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { FaCartPlus, FaGoogle } from "react-icons/fa6";
+import "./Login.css";
 
 import {
   loadCaptchaEnginge,
@@ -8,6 +8,8 @@ import {
 } from "react-simple-captcha";
 import useAuth from "../../../Hooks/useAuth";
 import { useLocation, useNavigate } from "react-router-dom";
+import loginImg from "../../../assets/LoginImg.png";
+import googleBtn from "../../../assets/google.png";
 
 const Login = () => {
   const { signInWithGoogle } = useAuth();
@@ -52,70 +54,70 @@ const Login = () => {
   return (
     <div className="hero min-h-screen bg-white">
       <div className="hero-content flex-col lg:flex-row-reverse">
-        <div className="text-center lg:w-2/4">
-          <h1 className="text-5xl font-bold">Login now!</h1>
-          <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
+        <div className="text-center ml-6  lg:w-2/4">
+          <img src={loginImg} alt="login image" />
         </div>
-        <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-slate-600">
-          <form onSubmit={handleFormSubmit} className="card-body">
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
-              <input
-                type="email"
-                name="email"
-                placeholder="email"
-                className="input input-bordered"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
-              <input
-                type="password"
-                name="password"
-                placeholder="password"
-                className="input input-bordered"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <LoadCanvasTemplate />
-              </label>
-              <input
-                type="text"
-                ref={captchaRef}
-                name="captcha"
-                placeholder="Type the Captcha in field"
-                className="input input-bordered"
-                required
-                onBlur={handleCaptchaValidation}
-              />
-            </div>
-            <div className="form-control mt-6">
-              <input
-                disabled={disable}
-                className="btn btn-primar"
-                type="submit"
-                value="Login"
-              />
-            </div>
-          </form>
 
-          <button
-            onClick={googleLoginHandler}
-            className="ml-10 mb-4 text-white btn btn-secondary w-1/2 "
-          >
-            <FaGoogle />
-          </button>
+        <div className="card shrink-0 w-full max-w-sm ">
+          <h3 className="login-title">WELCOME BACK!</h3>
+          <p className="login-sub-title">
+            Don’t have a account, <span className="toggle-text">Sign up</span>
+          </p>
+          <div>
+            <form onSubmit={handleFormSubmit}>
+              <div>
+                <label className="label">
+                  <span className="lebel-text">Email</span>
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="example@gmail.com"
+                  className="input-box"
+                  required
+                />
+              </div>
+              <div className="mt-2">
+                <label className="label">
+                  <span className="lebel-text">Password</span>
+                </label>
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="enter your password"
+                  className="input-box"
+                  required
+                />
+              </div>
+              <div>
+                <label className="label mt-3 block">
+                  <span className="lebel-text ">
+                    <LoadCanvasTemplate />
+                  </span>
+
+                  <input
+                    type="text"
+                    ref={captchaRef}
+                    name="captcha"
+                    placeholder="Type the Captcha"
+                    onBlur={handleCaptchaValidation}
+                    className="input-box mt-2 "
+                    required
+                  />
+                </label>
+              </div>
+              <input className="submit-btn" type="submit" value="Login" />
+            </form>
+          </div>
+          <div className="text-center">
+            <p className="line-design ">or continue with</p>
+          </div>
+
+          <div>
+            <button onClick={googleLoginHandler} className="social-btn">
+              <img src={googleBtn} alt="google login button" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
