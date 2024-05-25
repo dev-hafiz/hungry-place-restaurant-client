@@ -12,7 +12,7 @@ import loginImg from "../../../assets/LoginImg.png";
 import googleBtn from "../../../assets/google.png";
 
 const Login = () => {
-  const { signInWithGoogle } = useAuth();
+  const { signInWithGoogle, logInWithEmailPassword } = useAuth();
   //react hooks
   const navigate = useNavigate();
   const location = useLocation();
@@ -31,8 +31,9 @@ const Login = () => {
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
-    const passwprd = form.password.value;
-    // console.log(email, passwprd);
+    const password = form.password.value;
+    // console.log(email, password);
+    logInWithEmailPassword(email, password, location, navigate);
   };
 
   //Captcha Validation Handler

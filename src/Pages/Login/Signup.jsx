@@ -6,7 +6,7 @@ import googleBtn from "../../assets/google.png";
 import useAuth from "../../Hooks/useAuth";
 
 const Signup = () => {
-  const { signInWithGoogle } = useAuth();
+  const { signInWithGoogle, registerWithEmailAndPassword } = useAuth();
   //react hooks
   const navigate = useNavigate();
   const location = useLocation();
@@ -15,9 +15,19 @@ const Signup = () => {
     event.preventDefault();
     const form = event.target;
     const name = form.name.value;
+    const photoUrl = form.photoUrl.value;
     const email = form.email.value;
-    const passwprd = form.password.value;
-    console.log(name, email, passwprd);
+    const password = form.password.value;
+    // console.log(email, password, name, photoUrl, location, navigate);
+
+    registerWithEmailAndPassword(
+      email,
+      password,
+      name,
+      photoUrl,
+      location,
+      navigate
+    );
   };
 
   //Google Login Handler
@@ -46,7 +56,7 @@ const Signup = () => {
         </div>
 
         <div className="card shrink-0 w-full max-w-sm ">
-          <h3 className="login-title mt-3">WELCOME BACK!</h3>
+          <h3 className="login-title">WELCOME BACK!</h3>
           <p className="login-sub-title">
             Already have an account?{" "}
             <span className="toggle-text">
@@ -69,6 +79,18 @@ const Signup = () => {
               </div>
               <div>
                 <label className="label">
+                  <span className="lebel-text">Photo URL</span>
+                </label>
+                <input
+                  type="text"
+                  name="photoUrl"
+                  placeholder="Photo URL"
+                  className="input-box"
+                  required
+                />
+              </div>
+              <div>
+                <label className="label">
                   <span className="lebel-text">Email</span>
                 </label>
                 <input
@@ -79,7 +101,7 @@ const Signup = () => {
                   required
                 />
               </div>
-              <div className="mt-2">
+              <div>
                 <label className="label">
                   <span className="lebel-text">Password</span>
                 </label>

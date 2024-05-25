@@ -7,9 +7,11 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import initializeAuthentication from "../firebase/firebase.init";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 initializeAuthentication();
 
@@ -46,13 +48,31 @@ const useFirebase = () => {
       });
   };
 
-  //Register User With Email & Password
-  const registerUserWithEmailPassword = () => {
-    // eslint-disable-next-line no-undef
-    createUserWithEmailAndPassword(auth, email, password)
+  //Method: register with email & password
+  const registerWithEmailAndPassword = (
+    email,
+    password,
+    name,
+    photoUrl,
+    location,
+    navigate
+  ) => {
+    let from = location.state?.from?.pathname || "/";
+
+    createUserWithEmailAndPassword(auth, email, password, name, photoUrl)
       .then((result) => {
         const user = result.user;
+        //Save user Info in database
+        saveUserInDb(user?.email, user?.displayName, "POST");
+        navigate(from, { replace: true });
+        updateUserProfile(name, photoUrl);
         setUser(user);
+        Swal.fire({
+          icon: "success",
+          title: `${name}, your account created successfully!`,
+          showConfirmButton: false,
+          timer: 2000,
+        });
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -63,11 +83,24 @@ const useFirebase = () => {
       });
   };
 
+  //Method: update user profile
+  const updateUserProfile = (name, photoUrl) => {
+    updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL: photoUrl,
+    }).catch((error) => {
+      const errorMessage = error.message;
+      setError(errorMessage);
+    });
+  };
+
   // Login with Email and Password Method
-  const logInWithEmailPassword = (email, password) => {
+  const logInWithEmailPassword = (email, password, location, navigate) => {
+    let from = location.state?.from?.pathname || "/";
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
         const user = result.user;
+        navigate(from, { replace: true });
         setUser(user);
       })
       .catch((error) => {
@@ -134,7 +167,7 @@ const useFirebase = () => {
     error,
     loading,
     signInWithGoogle,
-    registerUserWithEmailPassword,
+    registerWithEmailAndPassword,
     logInWithEmailPassword,
     logOut,
   };

@@ -33,7 +33,7 @@
   padding: 0px 20px;
   border: 1px solid #C8D3F9;
   color: #fff;
-  margin-top: 18px;
+  margin-top: 16px;
   font-size: 18px;
   cursor: pointer;
   transition: .5s linear;
@@ -45,8 +45,8 @@
 
 .login-sub-title{
   color: #444B59;
-  margin-top:8px;
-  margin-bottom: 20px;
+  margin-top:6px;
+  margin-bottom: 16px;
 
 }
 
