@@ -55,11 +55,17 @@ const Login = () => {
     <div className="hero min-h-screen bg-white">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center ml-6  lg:w-2/4">
-          <img src={loginImg} alt="login image" />
+          <div className="login-container">
+            <img src={loginImg} alt="login image" />
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+          </div>
         </div>
 
         <div className="card shrink-0 w-full max-w-sm ">
-          <h3 className="login-title">WELCOME BACK!</h3>
+          <h3 className="login-title mt-3">WELCOME BACK!</h3>
           <p className="login-sub-title">
             Don’t have a account, <span className="toggle-text">Sign up</span>
           </p>
@@ -101,7 +107,7 @@ const Login = () => {
                     name="captcha"
                     placeholder="Type the Captcha"
                     onBlur={handleCaptchaValidation}
-                    className="input-box mt-2 "
+                    className="captcha-input mt-2 "
                     required
                   />
                 </label>
