@@ -7,7 +7,7 @@ import {
   validateCaptcha,
 } from "react-simple-captcha";
 import useAuth from "../../../Hooks/useAuth";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import loginImg from "../../../assets/LoginImg.png";
 import googleBtn from "../../../assets/google.png";
 
@@ -67,7 +67,10 @@ const Login = () => {
         <div className="card shrink-0 w-full max-w-sm ">
           <h3 className="login-title mt-3">WELCOME BACK!</h3>
           <p className="login-sub-title">
-            Don’t have a account, <span className="toggle-text">Sign up</span>
+            Don’t have an account?{" "}
+            <span className="toggle-text">
+              <Link to="/register">Register</Link>
+            </span>
           </p>
           <div>
             <form onSubmit={handleFormSubmit}>

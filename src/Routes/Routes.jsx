@@ -35,16 +35,18 @@ export const router = createBrowserRouter([
         path: "order/:category",
         element: <Orders />,
       },
-      {
-        path: "login",
-        element: <Login />,
-      },
-      {
-        path: "signup",
-        element: <Signup />,
-      },
     ],
   },
+
+  {
+    path: "login",
+    element: <Login />,
+  },
+  {
+    path: "register",
+    element: <Signup />,
+  },
+
   {
     path: "dashboard",
     element: (

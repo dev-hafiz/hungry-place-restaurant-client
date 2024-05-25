@@ -1,100 +1,103 @@
-import { useEffect, useRef, useState } from "react";
-import {
-  LoadCanvasTemplate,
-  loadCaptchaEnginge,
-  validateCaptcha,
-} from "react-simple-captcha";
+import { useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import loginImg from "../../assets/LoginImg.png";
+import googleBtn from "../../assets/google.png";
+
+import useAuth from "../../Hooks/useAuth";
 
 const Signup = () => {
-  //Button Disable State
-  const [disable, setDisable] = useState(true);
-  //UseRef for Captcha
-  const captchaRef = useRef(null);
-
-  //Captcha load inside useEffect
-  useEffect(() => {
-    loadCaptchaEnginge(6);
-  }, []);
+  const { signInWithGoogle } = useAuth();
+  //react hooks
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
+    const name = form.name.value;
     const email = form.email.value;
     const passwprd = form.password.value;
-    console.log(email, passwprd);
+    console.log(name, email, passwprd);
   };
 
-  //Captcha Validation Handler
-  const handleCaptchaValidation = () => {
-    const user_type_captcha = captchaRef.current.value;
-
-    if (validateCaptcha(user_type_captcha)) {
-      setDisable(false);
-    } else {
-      setDisable(true);
-    }
+  //Google Login Handler
+  const googleLoginHandler = () => {
+    // console.log("Button Is Clicked");
+    signInWithGoogle(location, navigate);
   };
 
   return (
     <div className="hero min-h-screen bg-white">
       <div className="hero-content flex-col lg:flex-row-reverse">
-        <div className="text-center lg:w-2/4">
-          <h1 className="text-5xl font-bold">Sign Up Now!</h1>
-          <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
+        <div className="text-center ml-6  lg:w-2/4">
+          <div className="login-container">
+            <img src={loginImg} alt="login image" />
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+            <div className="bubble"></div>
+          </div>
         </div>
-        <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-slate-600">
-          <form onSubmit={handleFormSubmit} className="card-body">
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
-              <input
-                type="email"
-                name="email"
-                placeholder="email"
-                className="input input-bordered"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
-              <input
-                type="password"
-                name="password"
-                placeholder="password"
-                className="input input-bordered"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <LoadCanvasTemplate />
-              </label>
-              <input
-                type="text"
-                ref={captchaRef}
-                name="captcha"
-                placeholder="Type the Captcha in field"
-                className="input input-bordered"
-                required
-                onBlur={handleCaptchaValidation}
-              />
-            </div>
-            <div className="form-control mt-6">
-              <input
-                disabled={disable}
-                className="btn btn-primar"
-                type="submit"
-                value="Sign Up"
-              />
-            </div>
-          </form>
+
+        <div className="card shrink-0 w-full max-w-sm ">
+          <h3 className="login-title mt-3">WELCOME BACK!</h3>
+          <p className="login-sub-title">
+            Already have an account?{" "}
+            <span className="toggle-text">
+              <Link to="/login">Login</Link>
+            </span>
+          </p>
+          <div>
+            <form onSubmit={handleFormSubmit}>
+              <div>
+                <label className="label">
+                  <span className="lebel-text">Name</span>
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="your name"
+                  className="input-box"
+                  required
+                />
+              </div>
+              <div>
+                <label className="label">
+                  <span className="lebel-text">Email</span>
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="example@gmail.com"
+                  className="input-box"
+                  required
+                />
+              </div>
+              <div className="mt-2">
+                <label className="label">
+                  <span className="lebel-text">Password</span>
+                </label>
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="enter your password"
+                  className="input-box"
+                  required
+                />
+              </div>
+
+              <input className="submit-btn" type="submit" value="Register" />
+            </form>
+          </div>
+          <div className="text-center">
+            <p className="line-design ">or continue with</p>
+          </div>
+
+          <div>
+            <button onClick={googleLoginHandler} className="social-btn">
+              <img src={googleBtn} alt="google login button" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
