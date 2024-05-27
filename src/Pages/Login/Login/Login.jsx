@@ -17,8 +17,6 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  //Button Disable State
-  const [disable, setDisable] = useState(true);
   //UseRef for Captcha
   const captchaRef = useRef(null);
 
@@ -36,18 +34,6 @@ const Login = () => {
     logInWithEmailPassword(email, password, location, navigate);
   };
 
-  //Captcha Validation Handler
-  const handleCaptchaValidation = () => {
-    const user_type_captcha = captchaRef.current.value;
-
-    if (validateCaptcha(user_type_captcha)) {
-      setDisable(false);
-    } else {
-      setDisable(true);
-    }
-  };
-
-  //Google Login Handler
   const googleLoginHandler = () => {
     // console.log("Button Is Clicked");
     signInWithGoogle(location, navigate);
@@ -116,7 +102,6 @@ const Login = () => {
                     ref={captchaRef}
                     name="captcha"
                     placeholder="Type the Captcha"
-                    onBlur={handleCaptchaValidation}
                     className="captcha-input mt-2 "
                     required
                   />

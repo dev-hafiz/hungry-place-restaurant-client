@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import loginImg from "../../assets/LoginImg.png";
 import googleBtn from "../../assets/google.png";

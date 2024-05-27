@@ -9,7 +9,7 @@ const Main = () => {
 
   return (
     <div className="h-screen bg-white text-black">
-      {hideHeaderFooter || <NavBar />}
+      {/* {hideHeaderFooter || <NavBar />} */}
       <Outlet />
       {hideHeaderFooter || <Footer />}
     </div>
