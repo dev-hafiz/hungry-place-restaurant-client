@@ -22,8 +22,6 @@ const useFirebase = () => {
   const [loading, setLoading] = useState(true);
 
   //Logged user is here
-  // console.log("User ffrom useFirebase");
-
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
 

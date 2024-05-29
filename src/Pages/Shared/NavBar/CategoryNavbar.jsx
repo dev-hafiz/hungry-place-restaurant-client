@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-no-duplicate-props */
+import useCart from "../../../Hooks/useCart";
 import logo1 from "../../../assets/Logo1.png";
 const CategoryNavbar = () => {
+  const [cart] = useCart();
   return (
     <header className="bg-white">
       <div className="container mx-auto pr-4 py-4 flex items-center">
@@ -8,7 +10,7 @@ const CategoryNavbar = () => {
           <img className="h-10 md:h-full" src={logo1} alt="" />
         </div>
 
-        <div className="w-full max-w-xs xl:max-w-lg 2xl:max-w-2xl bg-gray-100 rounded-md hidden xl:flex items-center">
+        <div className="w-2/4 mx-auto  bg-gray-100 rounded-md hidden xl:flex items-center">
           <select
             className="bg-transparent uppercase font-bold text-sm p-2 mr-4"
             name=""
@@ -38,15 +40,8 @@ const CategoryNavbar = () => {
           </svg>
         </div>
 
-        <div className="ml-auto md:w-48 hidden sm:flex flex-col place-items-end">
-          <span className="font-bold">+88 00 332 65-66</span>
-          <span className="font-semibold text-sm text-gray-400">
-            Support 24/7
-          </span>
-        </div>
-
         <nav className="contents">
-          <ul className="ml-4 xl:w-48 flex items-center justify-end">
+          <ul className="ml-4 flex items-center justify-end">
             <li className="ml-2 lg:ml-4 relative inline-block">
               <a className="" href="">
                 <svg
@@ -91,7 +86,7 @@ const CategoryNavbar = () => {
             <li className="ml-2 lg:ml-4 relative inline-block">
               <a className="" href="">
                 <div className="absolute -top-1 right-0 z-10 bg-red-500 text-xs font-bold px-1 py-0.5 rounded-xl">
-                  <p className="text-white">12</p>
+                  <p className="text-white">{cart.length || 0}</p>
                 </div>
                 <svg
                   className="h-9 lg:h-10 p-2 text-gray-500"
@@ -115,7 +110,7 @@ const CategoryNavbar = () => {
 
         <div className="ml-4 hidden sm:flex flex-col font-bold">
           <span className="text-xs text-gray-400">Your Cart</span>
-          <span>$2,650,59</span>
+          <span>$250.00</span>
         </div>
       </div>
 

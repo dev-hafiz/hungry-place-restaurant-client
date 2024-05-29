@@ -1,0 +1,49 @@
+.custom-navbar{
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.btn-login{
+  outline: none;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 16px;
+  font-weight: 400;
+  transition: .3s linear;
+}
+.btn-logout{
+  outline: none;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 16px;
+  font-weight: 400;
+  transition: .3s linear;
+}
+.btn-login:hover{
+  background: #298844;
+  color: #fff;
+}
+.btn-logout:hover{
+  background: #CF2424;
+  color: #fff;
+}
+
+.fa-icon{
+  font-size: 22px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+.support-text{
+  font-size: 16px;
+  margin-top: -2px;
+  transition: .3s linear;
+}
+
+.support-text:hover{
+  color: blue;
+  cursor: pointer;
+}
