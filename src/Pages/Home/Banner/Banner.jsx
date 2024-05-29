@@ -73,14 +73,14 @@ const Banner = () => {
         </div>
       </div>
       <div>
-        {" "}
         <div className="lg:container  mx-auto flex flex-wrap my-16">
           <div className="w-full lg:w-1/2 flex items-center ">
             {/* Content for the first column */}
             <div className="left-box">
               <h1 className="heading">
-                Delicious & Affordable <br />
-                <span className="highlight">Meals Near You.</span>
+                Nutritious, Delicious Meals
+                <br />
+                <span className="highlight"> for Healthy Living </span>
               </h1>
               <p className="description">
                 Discover and order your favorite dishes with our food app.
@@ -110,14 +110,14 @@ const Banner = () => {
         </div>
       </div>
       <div>
-        {" "}
         <div className="lg:container  mx-auto flex flex-wrap my-16">
           <div className="w-full lg:w-1/2 flex items-center ">
             {/* Content for the first column */}
             <div className="left-box">
               <h1 className="heading">
-                Delicious & Affordable <br />
-                <span className="highlight">Meals Near You.</span>
+                Budget-Friendly, Delicious
+                <br />
+                <span className="highlight">Meals Near You</span>
               </h1>
               <p className="description">
                 Discover and order your favorite dishes with our food app.
