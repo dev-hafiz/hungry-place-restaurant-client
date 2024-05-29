@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Footer from "../Pages/Shared/Footer/Footer";
 import NavBar from "../Pages/Shared/NavBar/NavBar";
+import CategoryNavbar from "../Pages/Shared/NavBar/CategoryNavbar";
 
 const Main = () => {
   const location = useLocation();
@@ -10,6 +11,7 @@ const Main = () => {
   return (
     <div className="h-screen bg-white text-black">
       {/* {hideHeaderFooter || <NavBar />} */}
+      <CategoryNavbar />
       <Outlet />
       {hideHeaderFooter || <Footer />}
     </div>
