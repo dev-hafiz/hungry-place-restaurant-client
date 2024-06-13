@@ -11,6 +11,13 @@
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
 }
+.headingThree{
+  font-size:36px ;
+  color: #CF2424;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 40px;
+}
 .highlight{
   display: inline-block;
   --tw-skew-x: -12deg;
@@ -69,10 +76,19 @@
   color: #2b548e;
 }
 
-
-
-
-
 .banner-img{ 
   border-radius: 2.5rem;
+}
+
+.read-btn{
+  border-radius: 10px;
+  padding: 8px 40px;
+  font-weight: 500;
+  background: #cf2424;
+  font-size: 18px;
+  color: #fff;
+  transition: .3s linear;
+}
+.read-btn:hover{
+  background: #AA1A1A;
 }
