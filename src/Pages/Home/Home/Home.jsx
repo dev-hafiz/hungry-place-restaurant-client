@@ -5,6 +5,7 @@ import Testimonials from "../Testimonials/Testimonials";
 import useMenu from "../../../Hooks/useMenu";
 import FoodCategory from "../FoodCategory/FoodCategory";
 import RichAndHealthy from "../RichAndHealthy/RichAndHealthy";
+import DeliveryInfo from "../DeliveryInfo/DeliveryInfo";
 
 const Home = () => {
   const [items] = useMenu();
@@ -17,6 +18,7 @@ const Home = () => {
       <Banner />
       <FoodCategory />
       <RichAndHealthy />
+      <DeliveryInfo />
       <Featured />
       <Testimonials />
     </div>

@@ -9,7 +9,7 @@ const RichAndHealthy = () => {
         Rich & Healthy
       </h3>
       <div className="grid grid-cols-1 mt-8 md:grid-cols-12 gap-4">
-        <div className="md:col-span-4 ">
+        <div className="md:col-span-4   ">
           <img src={chef} alt="Chef Photo" />
         </div>
         <div className="md:col-span-8">
@@ -17,7 +17,7 @@ const RichAndHealthy = () => {
             Highest quality artisangrains, <br /> proteins & seasonal
             ingredients
           </h3>
-          <p className="text-[#2A435D] p-4 text-[16px] mb-2">
+          <p className="text-[#2A435D]   p-4 text-[16px] mb-2">
             Righteous indignation targets those beguiled by fleeting pleasures,
             so blinded by <br /> desire they fail to foresee consequences. This
             demoralization renders them <br /> unable to resist momentary
@@ -64,10 +64,10 @@ const RichAndHealthy = () => {
                 </div>
               </div>
               <div className="text-center ">
-                <button className="read-btn ">Reade More</button>
+                <button className="order-btn">Read More</button>
               </div>
             </div>
-            <div className="md:col-span-6 flex justify-end ">
+            <div className="md:col-span-6 flex justify-center ">
               <img src={food} alt="side banner" className="mt-[-4px]" />
             </div>
           </div>
