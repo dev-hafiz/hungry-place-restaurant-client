@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-import SectionTitle from "../../../../Components/SectionTitle/SectionTitle";
 import useAxiosPublic from "../../../../Hooks/useAxiosPublic";
 import Swal from "sweetalert2";
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
@@ -54,10 +53,7 @@ const AddProduct = () => {
   return (
     <div className="w-full  p-6">
       <div className="w-full">
-        <SectionTitle
-          heading={"Add Item"}
-          subHeading={"Add your Favorite food"}
-        />
+        <h1>Add your Favorite food</h1>
       </div>
       <div>
         <form onSubmit={handleSubmit(onSubmit)}>

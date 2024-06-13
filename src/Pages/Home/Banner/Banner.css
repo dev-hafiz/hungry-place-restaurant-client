@@ -5,6 +5,12 @@
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
 }
+.headinTwo{
+  font-size:40px ;
+  color: #243E63;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
 .highlight{
   display: inline-block;
   --tw-skew-x: -12deg;

@@ -1,5 +1,4 @@
 import { loadStripe } from "@stripe/stripe-js";
-import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "./CheckoutForm";
 
@@ -9,7 +8,7 @@ const Payment = () => {
   return (
     <div className="w-full">
       <div className="w-full">
-        <SectionTitle heading={"Payment"} subHeading={"Pay for Orders"} />
+        <h1>Pay For Order</h1>
       </div>
       {/* Card Elements  */}
       <div className="px-8 w-2/3 ">

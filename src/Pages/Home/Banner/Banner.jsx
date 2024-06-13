@@ -7,8 +7,21 @@ import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import styled from "styled-components";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
+import { useState } from "react";
+import video1 from "../../../../public/assets/video/video1.mp4";
+import videoSrc from "../../../../public/assets/video/foodVideo.mp4";
 
 const Banner = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   const AutoplaySlider = withAutoplay(AwesomeSlider);
 
   const StyledSlider = styled(AutoplaySlider)`
@@ -23,7 +36,7 @@ const Banner = () => {
     }
     height: 600px;
     .awssld__bullets .awssld__bullets--active {
-      background-color: red;
+      background-color: #cf2424;
     }
     .awssld__bullets button {
       background-color: lightgray;
@@ -52,9 +65,29 @@ const Banner = () => {
               </p>
               <div className="flex items-center">
                 <button className="order-btn">Order Now</button>
-                <button className="play-btn">
+                <button onClick={openModal} className="play-btn">
                   <PiPlayCircleThin className="fa-play" />
                 </button>
+                {showModal && (
+                  <div className="fixed inset-0 flex items-center justify-center z-50">
+                    <div
+                      className="bg-black bg-opacity-50 absolute inset-0"
+                      onClick={closeModal}
+                    ></div>
+                    <div className=" p-2  max-w-3xl">
+                      <span
+                        className="absolute top-0 right-0 m-4 text-3xl cursor-pointer"
+                        onClick={closeModal}
+                      >
+                        &times;
+                      </span>
+                      <video controls autoPlay className="w-full ">
+                        <source src={video1} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -89,9 +122,29 @@ const Banner = () => {
               </p>
               <div className="flex items-center">
                 <button className="order-btn">Order Now</button>
-                <button className="play-btn">
+                <button onClick={openModal} className="play-btn">
                   <PiPlayCircleThin className="fa-play" />
                 </button>
+                {showModal && (
+                  <div className="fixed inset-0 flex items-center justify-center z-50">
+                    <div
+                      className="bg-black bg-opacity-50 absolute inset-0"
+                      onClick={closeModal}
+                    ></div>
+                    <div className=" p-2  max-w-3xl">
+                      <span
+                        className="absolute top-0 right-0 m-4 text-3xl cursor-pointer"
+                        onClick={closeModal}
+                      >
+                        &times;
+                      </span>
+                      <video controls autoPlay className="w-full ">
+                        <source src={videoSrc} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -126,9 +179,29 @@ const Banner = () => {
               </p>
               <div className="flex items-center">
                 <button className="order-btn">Order Now</button>
-                <button className="play-btn">
+                <button onClick={openModal} className="play-btn">
                   <PiPlayCircleThin className="fa-play" />
                 </button>
+                {showModal && (
+                  <div className="fixed inset-0 flex items-center justify-center z-50">
+                    <div
+                      className="bg-black bg-opacity-50 absolute inset-0"
+                      onClick={closeModal}
+                    ></div>
+                    <div className=" p-2  max-w-3xl">
+                      <span
+                        className="absolute top-0 right-0 m-4 text-3xl cursor-pointer"
+                        onClick={closeModal}
+                      >
+                        &times;
+                      </span>
+                      <video controls autoPlay className="w-full ">
+                        <source src={video1} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/useAuth";
 import { useNavigate } from "react-router-dom";

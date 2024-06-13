@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useEffect, useState } from "react";
-import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
@@ -20,10 +19,7 @@ const Testimonials = () => {
 
   return (
     <div className="mt-16 max-w-screen-lg	mx-auto pb-20">
-      <SectionTitle
-        subHeading={"What Our Clients Say"}
-        heading={"Testimonials"}
-      />
+      <h1>What Our Clients Say</h1>
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper ">
         {reviews.map((review) => (
           <SwiperSlide key={review._id}>

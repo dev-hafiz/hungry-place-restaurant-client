@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-import SectionTitle from "../../../../Components/SectionTitle/SectionTitle";
 import useAuth from "../../../../Hooks/useAuth";
 
 const PaymentHistory = () => {
@@ -20,10 +19,7 @@ const PaymentHistory = () => {
 
   return (
     <div className="w-full px-6">
-      <SectionTitle
-        heading={"Payment History"}
-        subHeading={"Your total payment data"}
-      />
+      <h1>Payment History</h1>
       <h1>Total Payments : {payments.length}</h1>
 
       <div>

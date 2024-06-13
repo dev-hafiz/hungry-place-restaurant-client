@@ -8,7 +8,6 @@ const Dashboard = () => {
   const [cart] = useCart();
 
   const [isAdmin] = useAdmin();
-  console.log("Is Admin ", isAdmin);
 
   return (
     <div className="drawer lg:drawer-open">

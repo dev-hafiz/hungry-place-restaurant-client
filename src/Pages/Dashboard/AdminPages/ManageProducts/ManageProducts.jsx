@@ -1,5 +1,4 @@
 import { FaEdit, FaTrash } from "react-icons/fa";
-import SectionTitle from "../../../../Components/SectionTitle/SectionTitle";
 import useMenu from "../../../../Hooks/useMenu";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
@@ -41,10 +40,7 @@ const ManageProducts = () => {
   return (
     <div className="w-full">
       <div className="w-full">
-        <SectionTitle
-          heading={"Manage Products"}
-          subHeading={"Manage your Products"}
-        />
+        <h1>Manage your Products</h1>
       </div>
       <div className="pr-6">
         <table className="table">

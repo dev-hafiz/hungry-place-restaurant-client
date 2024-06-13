@@ -1,5 +1,4 @@
 import Swal from "sweetalert2";
-import SectionTitle from "../../../../Components/SectionTitle/SectionTitle";
 import useAxiosPublic from "../../../../Hooks/useAxiosPublic";
 import { useForm } from "react-hook-form";
 import { useLoaderData } from "react-router-dom";
@@ -57,10 +56,7 @@ const UpdateProduct = () => {
   return (
     <div className="w-full">
       <div className="w-full">
-        <SectionTitle
-          heading={"Update Products"}
-          subHeading={"Manage your Products"}
-        />
+        <h1>Update Product</h1>
       </div>
 
       {/* Update Form  */}

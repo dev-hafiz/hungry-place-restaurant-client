@@ -1,14 +1,9 @@
-import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import featureImg from "../../../assets/home/featured.jpg";
 const Featured = () => {
   return (
     <div className="bg-featuredBg bg-fixed bg-cover">
       <div className="bg-gradient-to-r py-20 from-black to-[rgba(21, 21, 21, 0.3)] h-screen">
-        <SectionTitle
-          color="white"
-          subHeading="Check it out"
-          heading="Featured Menu"
-        />
+        <h1>Featured Menu</h1>
         <div className="pb-12 max-w-screen-lg	mx-auto flex space-x-8 items-center">
           <img
             className="w-[500px] rounded-md"
