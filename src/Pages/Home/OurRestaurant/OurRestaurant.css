@@ -1,0 +1,54 @@
+.icon-img{
+  border: 2px solid #CF2424;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.des > h5 {
+  font-size: 28px;
+  color: #CF2424;
+  font-weight: 700;
+  margin-top: 10px;
+}
+.des > p {
+  font-size: 16px;
+  color: #243E63;
+  margin: 10px 0;
+}
+
+.icon-img > img {
+  width: 40px;
+  height: 40px;
+}
+
+.read-active{
+  background: #CF2424;
+  color: #fff;
+  font-weight: 500;
+  padding: 4px 24px;
+  border-radius: 20px;
+  margin-left: 30px;
+  transition: .3s linear;
+}
+
+.read-active:hover{
+  color: #CF2424;
+  background: #fff;
+}
+
+.read-In-active{
+  color: #CF2424;
+  font-weight: 500;
+  padding: 4px 24px;
+  border-radius: 20px;
+  margin-left: 30px;
+  transition: .3s linear;
+}
+
+.read-In-active:hover{
+  background: #CF2424;
+  color: #fff;
+}
