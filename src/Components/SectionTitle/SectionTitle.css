@@ -1,0 +1,12 @@
+.recepie-text{
+  font-size: 18px;
+  color: #081828;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.custom-link{
+  color: #888;
+  font-size: 16px;
+  font-weight: 500;
+}

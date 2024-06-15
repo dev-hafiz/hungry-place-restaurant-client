@@ -15,6 +15,7 @@ import AdminHome from "../Pages/Dashboard/AdminPages/AdminHome/AdminHome";
 import UserHome from "../Pages/Dashboard/UserPages/UserHome/UserHome";
 import Payment from "../Pages/Dashboard/Payment/Payment";
 import PaymentHistory from "../Pages/Dashboard/UserPages/PaymentHistory/PaymentHistory";
+import Recepies from "../Pages/Recepies/Recepies";
 
 export const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "recepies",
+        element: <Recepies />,
       },
     ],
   },

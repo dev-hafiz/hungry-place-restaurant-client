@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import Swal from "sweetalert2";
-import useAuth from "../../../Hooks/useAuth";
+import useAuth from "../../Hooks/useAuth";
 import { useNavigate } from "react-router-dom";
-import useCart from "../../../Hooks/useCart";
+import useCart from "../../Hooks/useCart";
 
 // eslint-disable-next-line no-unused-vars
 const FoodCard = (item) => {

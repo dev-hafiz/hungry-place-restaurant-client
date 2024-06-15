@@ -17,16 +17,16 @@ const TopNavbar = () => {
         <div className="text-gray-500 order-3 w-full md:w-auto md:order-2 px-4 max-sm:mb-6">
           <ul className="flex font-semibold justify-between ">
             <li className="md:px-4 md:py-2 text-indigo-500">
-              <a href="#">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li className="md:px-4 md:py-2 hover:text-indigo-400">
-              <a href="#">Foods</a>
+              <Link to="/recepies">Recepies</Link>
             </li>
             <li className="md:px-4 md:py-2 hover:text-indigo-400">
-              <a href="#">About</a>
+              <Link to="/">About</Link>
             </li>
             <li className="md:px-4 md:py-2 hover:text-indigo-400">
-              <a href="#">Contact</a>
+              <Link to="/">Contact</Link>
             </li>
 
             {user?.email && isAdmin?.admin && (
@@ -36,7 +36,7 @@ const TopNavbar = () => {
             )}
             {user?.email && !isAdmin?.admin && (
               <li className="md:px-4 md:py-2 hover:text-indigo-400">
-                <Link to="/dashboard/userHome">DashBoard</Link>
+                <Link to="/dashboard/userHome">Dashboard</Link>
               </li>
             )}
           </ul>
