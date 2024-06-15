@@ -1,0 +1,30 @@
+.rating{
+  max-width: 100px;
+  margin-bottom: 20px;
+  margin-right: -100;
+}
+.profile-circle{
+  border: 2px solid white;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customSwiper {
+  width: 500px;
+  padding: 0px 40px 40px 40px;
+}
+
+.profile-title{
+  font-size: 18px;
+  margin: 6px 0px;
+}
+
+.profile-des{
+  font-size: 15px;
+  margin: 6px 0px;
+  font-weight: normal;
+}
