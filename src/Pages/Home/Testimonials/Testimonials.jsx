@@ -34,7 +34,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="mt-16 max-w-screen-lg	mx-auto pb-20 relative">
+    <div className="mt-16 custom-bg pb-20 relative">
       <h3 className="headinTwo text-center pb-4  relative before:absolute before:bg-[#CF2424] before:h-1 before:w-20 before:content-''  before:bottom-0 before:left-1/2 before:-translate-x-1/2">
         Customer&apos;s Review
       </h3>
