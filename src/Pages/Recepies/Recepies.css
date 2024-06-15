@@ -104,10 +104,10 @@
   align-items: center;
   padding: 2px 6px;
   transition: .3s linear;
- background: #ff4500;
+  background: #ff4500;
   border-radius: 4px;
   color: white;
-
+  gap:4px;
 }
 .cart-btn:hover{
   background: #e5e5e5;

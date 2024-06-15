@@ -2,7 +2,7 @@
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import { CiSearch } from "react-icons/ci";
 import "./Recepies.css";
-import { CiShoppingCart } from "react-icons/ci";
+import { IoIosArrowForward } from "react-icons/io";
 
 const Recepies = () => {
   return (
@@ -98,7 +98,49 @@ const Recepies = () => {
                     <p>$ 5</p>
                   </div>
                   <button className="cart-btn">
-                    Order <CiShoppingCart />
+                    Details <IoIosArrowForward />
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__image">
+                  <img
+                    src="https://images.unsplash.com/photo-1610970878459-a0e464d7592b?q=80&w=1524&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Salad"
+                  />
+                </div>
+                <div class="card__info">
+                  <div class="car__info--title">
+                    <h3>Burger</h3>
+                    <p>Fresh & sweet</p>
+                  </div>
+
+                  <div class="card__info--price">
+                    <p>$ 10</p>
+                  </div>
+                  <button className="cart-btn">
+                    Details <IoIosArrowForward />
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__image">
+                  <img
+                    src="https://images.unsplash.com/photo-1676037150408-4b59a542fa7c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Salad"
+                  />
+                </div>
+                <div class="card__info">
+                  <div class="car__info--title">
+                    <h3>Fish Fry</h3>
+                    <p>Fresh & sweet</p>
+                  </div>
+
+                  <div class="card__info--price">
+                    <p>$ 5</p>
+                  </div>
+                  <button className="cart-btn">
+                    Details <IoIosArrowForward />
                   </button>
                 </div>
               </div>
