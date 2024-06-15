@@ -1,16 +1,19 @@
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import { CiSearch } from "react-icons/ci";
 import "./Recepies.css";
+import { IoHeartOutline } from "react-icons/io5";
+import { IoIosArrowForward } from "react-icons/io";
+
 const Recepies = () => {
   return (
     <div className="bg-[#F9F9F9]">
       <SectionTitle />
 
-      <div className="lg:container mt-10 mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
-          <div className=" col-span-12 md:col-span-4">
+      <div className=" mt-10 ">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-1">
+          <div className=" col-span-12 md:col-span-3">
             {/* Search Area  */}
-            <div className="search-area">
+            <div className="left-area">
               <h4 className="search-text">Search Food</h4>
               <div className="search-input-wrapper">
                 <input
@@ -23,7 +26,7 @@ const Recepies = () => {
             </div>
 
             {/* Filter By Categories  */}
-            <div className="search-area">
+            <div className="left-area">
               <h4 className="search-text">Filter By Categories</h4>
               <div className=" flex items-center gap-2 mb-1">
                 <input type="checkbox" className="checkbox  checkbox-xs" />
@@ -43,7 +46,7 @@ const Recepies = () => {
               </div>
             </div>
             {/* Filter By Price  */}
-            <div className="search-area ">
+            <div className="left-area ">
               <h4 className="search-text">Filter By Price</h4>
               <div className=" flex items-center gap-2 mb-1">
                 <input type="checkbox" className="checkbox  checkbox-xs" />
@@ -75,8 +78,99 @@ const Recepies = () => {
               </div>
             </div>
           </div>
-          <div className=" col-span-12 md:col-span-8">
-            Right Column (8 units)
+          <div className=" col-span-12 md:col-span-9">
+            <div className="right-area flex flex-wrap items-center">
+              <div className="item-card">
+                <div className="heart-btn">
+                  <IoHeartOutline />
+                </div>
+                <div className="card-image">
+                  <img
+                    src="https://i.ibb.co/CMbvnmb/cup-prev-ui.png"
+                    alt="food card"
+                  />
+                </div>
+                <div className="card-description">
+                  <h3 className="card-title">Morning Set</h3>
+                  <p className="card-info">
+                    Set of coffee and chocolate cookies as a top tier among our
+                    customers and a perfect way to start your day.
+                  </p>
+                </div>
+                <div className="card-sub-des flex items-center gap-1">
+                  <span>Ingredients:</span>
+                  <div className="card-action-one">sugar</div>
+                  <div className="card-action-two">cheam</div>
+                  <div className="card-action-three">jam</div>
+                </div>
+                <div className="flex items-center mt-2 justify-between">
+                  <p className="card-price"> $16</p>
+                  <button className="card-btn flex items-center gap-1">
+                    Make an order <IoIosArrowForward />
+                  </button>
+                </div>
+              </div>
+              <div className="item-card">
+                <div className="heart-btn">
+                  <IoHeartOutline />
+                </div>
+                <div className="card-image">
+                  <img
+                    src="https://i.ibb.co/CMbvnmb/cup-prev-ui.png"
+                    alt="food card"
+                  />
+                </div>
+                <div className="card-description">
+                  <h3 className="card-title">Morning Set</h3>
+                  <p className="card-info">
+                    Set of coffee and chocolate cookies as a top tier among our
+                    customers and a perfect way to start your day.
+                  </p>
+                </div>
+                <div className="card-sub-des flex items-center gap-1">
+                  <span>Ingredients:</span>
+                  <div className="card-action-one">sugar</div>
+                  <div className="card-action-two">cheam</div>
+                  <div className="card-action-three">jam</div>
+                </div>
+                <div className="flex items-center mt-2 justify-between">
+                  <p className="card-price"> $16</p>
+                  <button className="card-btn flex items-center gap-1">
+                    Make an order <IoIosArrowForward />
+                  </button>
+                </div>
+              </div>
+              <div className="item-card">
+                <div className="heart-btn">
+                  <IoHeartOutline />
+                </div>
+                <div className="card-image">
+                  <img
+                    src="https://i.ibb.co/CMbvnmb/cup-prev-ui.png"
+                    alt="food card"
+                  />
+                </div>
+                <div className="card-description">
+                  <h3 className="card-title">Morning Set</h3>
+                  <p className="card-info">
+                    Set of coffee and chocolate cookies as a top tier among our
+                    customers and a perfect way to start your day.
+                  </p>
+                </div>
+                <div className="card-sub-des flex items-center gap-1">
+                  <span>Ingredients:</span>
+                  <div className="card-action-one">sugar</div>
+                  <div className="card-action-two">cheam</div>
+                  <div className="card-action-three">jam</div>
+                </div>
+                <div className="flex items-center mt-2 justify-between">
+                  <p className="card-price"> $16</p>
+                  <button className="card-btn flex items-center gap-1">
+                    Make an order <IoIosArrowForward />
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

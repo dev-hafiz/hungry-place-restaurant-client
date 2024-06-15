@@ -1,8 +1,13 @@
-.search-area{
+.left-area{
   background: #fff;
   padding: 24px;
   margin: 30px 20px 40px 30px;
   
+}
+.right-area{
+  background: #fff;
+  padding: 24px;
+  margin: 30px 20px 20px 0px;
 }
 
 .search-text{
@@ -20,12 +25,16 @@
   border: 1px solid #e5e5e5;
   width: 100%;
   padding: 8px 6px;
+  border-radius: 3px;
 }
 
 .search-input-wrapper > input {
   width: 100%;
   outline: none;
   border: none;
+}
+.search-input-wrapper > input::placeholder {
+ padding: 0px 8px;
 }
 
 .search-icon{
@@ -42,4 +51,88 @@
   font-weight: 400;
   font-size: 16px;
   margin-right: 3px;
+}
+
+/* Item Card  */
+.item-card{
+  width: 300px;
+  background: #f8f8f8;
+  border-radius: 30px;
+  padding: 30px;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  margin: 6px;
+}
+
+.heart-btn{
+  position: absolute;
+  right: 22px;
+  top: 17px;
+  font-size: 34px;
+  cursor: pointer;
+}
+.card-image > img{
+ width: 100%;
+ height: 100%;
+}
+
+.card-title{
+  font-size: 24px;
+  font-weight: 700;
+  margin: 6px 0px;
+}
+
+.card-info{
+  font-size: 12px;
+}
+
+.card-sub-des {
+  margin: 6px 0px;
+}
+.card-sub-des > span {
+  font-size: 12px;
+  font-weight: 700;
+  margin-right: 10px;
+  
+}
+.card-action-one{
+  background: #01c001;
+  padding: 1px 8px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 12px;
+  width: auto;
+}
+.card-action-two{
+  background: #FFA1A1;
+  padding: 1px 8px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 12px;
+  width: auto;
+}
+.card-action-three{
+  background: #ba04f1;
+  padding: 1px 8px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 12px;
+  width: auto;
+}
+
+.card-price{
+  font-size: 32px;
+  font-weight: 600;
+  color: #080808;
+}
+
+.card-btn{
+  background: #080808;
+  color: #fff;
+  padding: 8px 22px;
+  border-radius: 50px;
+}
+.card-btn:hover{
+  background: #181818;
+  transition: .3s linear;
 }
