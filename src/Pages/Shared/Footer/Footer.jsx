@@ -1,124 +1,341 @@
-import AOS from "aos";
+/* eslint-disable react/no-unknown-property */
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 import visa from "./../../../assets/cards/visa.png";
 import master from "./../../../assets/cards/master.png";
 import american from "./../../../assets/cards/american.png";
 import paypal from "./../../../assets/cards/paypal.png";
 import payoneer from "./../../../assets/cards/payoneer.png";
+import { Link } from "react-router-dom";
+import logo from "../../../assets/Logo1.png";
 
 const Footer = () => {
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5 bg-footerBg text-white pt-20 pb-10 px-12 ps-14">
+      <footer className="w-full">
         <div>
-          <h1 className="font-mono font-bold text-xl mb-10">OPENING HOURS</h1>
-          <div className="grid lg:grid-cols-3">
-            <p className="font-mono font-bold">MONDAY</p>
-            <div className="divider ms-[-80px]"></div>
-            <p className="ms-2 font-mono text-red-600 font-bold">
-              09:00 - 06:00
-            </p>
-          </div>
-          <div className="grid lg:grid-cols-3">
-            <p className="font-mono font-bold">THUESDAY</p>
-            <div className="divider ms-[-65px]"></div>
-            <p className="ms-2 font-mono text-red-600 font-bold">
-              09:00 - 06:00
-            </p>
-          </div>
-          <div className="grid lg:grid-cols-3">
-            <p className="font-mono font-bold">WEDNESDAY</p>
-            <div className="divider ms-[-63px]"></div>
-            <p className="ms-2 font-mono text-red-600 font-bold">
-              09:00 - 06:00
-            </p>
-          </div>
-          <div className="grid lg:grid-cols-3">
-            <p className="font-mono font-bold">THURSDAY</p>
-            <div className="divider ms-[-70px]"></div>
-            <p className="ms-2 font-mono text-red-600 font-bold">
-              09:00 - 06:00
-            </p>
-          </div>
-          <div className="grid lg:grid-cols-3">
-            <p className="font-mono font-bold">FRIDAY</p>
-            <div className="divider ms-[-78px]"></div>
-            <p className="ms-2 font-mono text-red-600 font-bold">
-              09:00 - 06:00
-            </p>
-          </div>
-          <div className="grid lg:grid-cols-3">
-            <p className="font-mono font-bold">SATRURDAY</p>
-            <div className="divider ms-[-68px]"></div>
-            <p className="ms-2 font-mono text-red-600 font-bold">
-              09:00 - 06:00
-            </p>
-          </div>
-          <div className="grid lg:grid-cols-3">
-            <p className="font-mono font-bold">SUNDAY</p>
-            <div className="divider ms-[-80px]"></div>
-            <p className="ms-2 font-mono text-zinc-500 font-bold">CLOSED</p>
-          </div>
-        </div>
-        <div>
-          <h1 className="font-mono font-bold text-xl mb-10">CONTUCT US</h1>
-          <p className="text-[#84928A] font-mono font-bold">hungry@place.com</p>
-          <p className="text-[#84928A] font-mono font-bold">+1 441 333 997</p>
-          <p className="text-[#84928A] font-mono font-bold">
-            Park Ave, New York,
-            <br />
-            NY, USA
-          </p>
+          <div className="mx-auto max-w-7xl  px-4 sm:px-6 ">
+            <div className="flex flex-col xl:flex-row gap-8 pt-14 pb-14">
+              <div className="w-full   xl:max-w-[265px] max-xl:mb-8">
+                <Link to="/" className="flex justify-center md:justify-start">
+                  <img src={logo} alt="footer logo" className="mb-5  " />
+                </Link>
+                <div className="flex max-xl:items-center max-xl:justify-between  flex-col sm:flex-row xl:flex-col">
+                  <div className="flex gap-8 xl:flex-col">
+                    {/* img gallery start  */}
 
-          <h1 className="font-mono mt-20 font-bold mb-10">
-            SIGNUP FOR OUR NEWSLETTER
-          </h1>
-          <div className="mt-[-20px] flex items-center">
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="input bg-[#191919] input-bordered input-error w-full max-w-xs"
-            />
-            <button className="btn bg-[#FB1D25] ms-3">&gt;</button>
+                    <div class="grid grid-cols-2 md:grid-cols-2 gap-2  max-w-[400px] md:max-w-[600px] pr-14 ">
+                      <img
+                        class="hover:opacity-75 w-24 h-24 rounded-md"
+                        src="https://images.pexels.com/photos/1199957/pexels-photo-1199957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      />
+                      <img
+                        class="hover:opacity-75  w-24 h-24 rounded-md"
+                        src="https://images.pexels.com/photos/277253/pexels-photo-277253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      />
+                      <img
+                        class="hover:opacity-75  w-24 h-24 rounded-md"
+                        src="https://images.pexels.com/photos/1998920/pexels-photo-1998920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      />
+                      <img
+                        class="hover:opacity-75  w-24 h-24 rounded-md"
+                        src="https://images.pexels.com/photos/1988624/pexels-photo-1988624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      />
+                    </div>
+                    {/* img gallery end  */}
+                  </div>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 min-[890px]:grid-cols-5 lg:grid-cols-5 gap-4 xl:gap-8 w-full max-w-sm mx-auto sm:max-w-3xl min-[890px]:max-w-full">
+                <div className="w-full  text-left">
+                  <h4 className="text-xl text-gray-900 font-medium mb-7">
+                    Company
+                  </h4>
+                  <ul className=" transition-all duration-500">
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className="text-gray-600 hover:text-gray-900"
+                      >
+                        Home
+                      </a>
+                    </li>
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className=" text-gray-600 hover:text-gray-900"
+                      >
+                        About
+                      </a>
+                    </li>
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className=" text-gray-600 hover:text-gray-900"
+                      >
+                        Pricing
+                      </a>
+                    </li>
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className=" text-gray-600 hover:text-gray-900"
+                      >
+                        Menu
+                      </a>
+                    </li>
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className=" text-gray-600 hover:text-gray-900"
+                      >
+                        Special Offers
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="w-full  text-left">
+                  <h4 className="text-xl text-gray-900 font-medium mb-7">
+                    Recepies
+                  </h4>
+                  <ul className=" transition-all duration-500">
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className="text-gray-600 hover:text-gray-900"
+                      >
+                        Fresh Mango Salsa
+                      </a>
+                    </li>
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className=" text-gray-600 hover:text-gray-900"
+                      >
+                        Margherita Pizza
+                      </a>
+                    </li>
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className=" text-gray-600 hover:text-gray-900"
+                      >
+                        Chocolate Lava Cake
+                      </a>
+                    </li>
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className=" text-gray-600 hover:text-gray-900"
+                      >
+                        Spicy Thai Basil Beef
+                      </a>
+                    </li>
+                    <li className="">
+                      <a
+                        href="javascript:;"
+                        className=" text-gray-600 hover:text-gray-900"
+                      >
+                        Vegan Quinoa Salad
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="w-full  text-left">
+                  <h4 className="text-xl text-gray-900 font-medium mb-7">
+                    Food APIs
+                  </h4>
+                  <ul className="  transition-all duration-500">
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className="text-gray-600 hover:text-gray-900"
+                      >
+                        FAQs
+                      </a>
+                    </li>
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className=" text-gray-600 hover:text-gray-900"
+                      >
+                        Quick Start
+                      </a>
+                    </li>
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className=" text-gray-600 hover:text-gray-900"
+                      >
+                        Documentation
+                      </a>
+                    </li>
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className=" text-gray-600 hover:text-gray-900"
+                      >
+                        User Guide
+                      </a>
+                    </li>
+                    <li className="">
+                      <a
+                        href="javascript:;"
+                        className=" text-gray-600 hover:text-gray-900"
+                      >
+                        Plugin Guide
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="w-full text-left">
+                  <h4 className="text-xl text-gray-900 font-medium mb-7">
+                    Blogs
+                  </h4>
+                  <ul className="transition-all duration-500">
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className="text-gray-600 hover:text-gray-900"
+                      >
+                        Food News
+                      </a>
+                    </li>
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className=" text-gray-600 hover:text-gray-900"
+                      >
+                        Cooking Tips
+                      </a>
+                    </li>
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className=" text-gray-600 hover:text-gray-900"
+                      >
+                        Recipe Updates
+                      </a>
+                    </li>
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className=" text-gray-600 hover:text-gray-900"
+                      >
+                        Food Events
+                      </a>
+                    </li>
+                    <li className="">
+                      <a
+                        href="javascript:;"
+                        className=" text-gray-600 hover:text-gray-900"
+                      >
+                        Food Stories
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="w-full text-left">
+                  <h4 className="text-xl text-gray-900 font-medium mb-7">
+                    Support
+                  </h4>
+                  <ul className="transition-all duration-500">
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className="text-gray-600 hover:text-gray-900"
+                      >
+                        Customer Support
+                      </a>
+                    </li>
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className=" text-gray-600 hover:text-gray-900"
+                      >
+                        Cookies
+                      </a>
+                    </li>
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className=" text-gray-600 hover:text-gray-900"
+                      >
+                        License
+                      </a>
+                    </li>
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className=" text-gray-600 hover:text-gray-900"
+                      >
+                        Terms & Conditions
+                      </a>
+                    </li>
+                    <li className="mb-6">
+                      <a
+                        href="javascript:;"
+                        className=" text-gray-600 hover:text-gray-900"
+                      >
+                        Privacy Policy
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mx-auto max-w-7xl  ">
+            <div className="py-2 border-t border-gray-200">
+              <div className="flex items-center justify-center flex-col sm:justify-between sm:flex-row">
+                <div className=" bg-white ">
+                  <div className=" lg:container  mx-auto text-black  ">
+                    <div className="flex justify-center md:justify-start ">
+                      <div className="flex items-center border w-auto rounded-lg px-4 py-1  hover:bg-[#e5e5e5] transition-all duration-3000 ease-linear cursor-pointer">
+                        <img
+                          src="https://cdn-icons-png.flaticon.com/512/888/888857.png"
+                          className="w-7 md:w-6"
+                        />
+                        <div className="text-left ml-3">
+                          <p className="text-xs text-[#243E63]">Download on </p>
+                          <p className="text-xs"> Play Store</p>
+                        </div>
+                      </div>
+                      <div className="flex hover:bg-[#e5e5e5] transition-all duration-3000 ease-linear  cursor-pointer items-center border w-auto rounded-lg px-4 ml-2">
+                        <img
+                          src="https://cdn-icons-png.flaticon.com/512/888/888841.png"
+                          className="w-7 md:w-6"
+                        />
+                        <div className="text-left ml-3">
+                          <p className="text-xs text-[#243E63]">Download on </p>
+                          <p className="text-xs "> Apple Store </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <span className="text-sm text-gray-500 ">
+                  ©
+                  <a
+                    href="https://dev-hafiz.netlify.app/"
+                    className="ml-1 mr-1"
+                  >
+                    Dev Hafiz
+                  </a>
+                  2024, All rights reserved.
+                </span>
+                <div className=" flex justify-end  gap-2">
+                  <img width="50px" src={visa} alt="visa" />
+                  <img width="50px" src={master} alt="master" />
+                  <img width="50px" src={american} alt="american" />
+                  <img width="50px" src={paypal} alt="paypal" />
+                  <img width="50px" src={payoneer} alt="payoneer" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div>
-          <h1 className="font-mono font-bold text-xl">OTHER LOCATIONS</h1>
-          <h1 className="font-mono  font-bold mt-10">FIRST BRANCH</h1>
-          <p className="text-[#84928A] mt-3 font-mono font-bold">
-            2432 Saint Alley,
-            <br />
-            TAMPA, AF 5435
-          </p>
-          <div className="divider"></div>
-          <h1 className="font-mono  font-bold mt-6">SECOND BRANCH</h1>
-          <p className="text-[#84928A] mt-3 font-mono font-bold">
-            5345 Waston Street,
-            <br />
-            CAMDEN, NJ 9087
-          </p>
-        </div>
-      </div>
-
-      <div className="bg-black items-center text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-        <div>
-          <p className="text-[#8E9584] ms-10">
-            &copy; 2023{" "}
-            <span className="text-gray-600  font-bold backdrop:">
-              Hafizur Rahman
-            </span>
-            , All Right Reserved
-          </p>
-        </div>
-        <div className=" flex justify-end me-4 gap-2">
-          <img width="50px" src={visa} alt="visa" />
-          <img width="50px" src={master} alt="master" />
-          <img width="50px" src={american} alt="american" />
-          <img width="50px" src={paypal} alt="paypal" />
-          <img width="50px" src={payoneer} alt="payoneer" />
-        </div>
-      </div>
+      </footer>
     </div>
   );
 };

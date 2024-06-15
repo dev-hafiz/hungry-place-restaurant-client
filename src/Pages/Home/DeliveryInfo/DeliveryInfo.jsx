@@ -3,10 +3,7 @@ import foodLogo from "../../../assets/icon/food 1.png";
 
 const DeliveryInfo = () => {
   return (
-    <div className="lg:container  mx-auto pt-10  relative mb-24 ">
-      <h3 className="text-2xl text-[#243E63] font-bold pb-2 -mb-20 pl-4 relative before:absolute before:bg-[#CF2424] before:h-1 before:w-14 font-serif before:content-'' before:bottom-0 before:left-4">
-        Delivery Info
-      </h3>
+    <div className="lg:container  mx-auto pt-10  mb-24 ">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4   items-center  ">
         <div className="md:col-span-6 p-4">
           <h3 className="headingFour text-[#243E63]">
