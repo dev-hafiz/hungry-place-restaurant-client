@@ -9,7 +9,7 @@ import { useState } from "react";
 const Recepies = () => {
   const [items] = useMenu();
 
-  // const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
   // ----------- Input Filter -----------
   const [searchTitle, setSearchTitle] = useState("");
@@ -22,12 +22,12 @@ const Recepies = () => {
     (item) => item.name.toLowerCase().indexOf(searchTitle.toLowerCase()) !== -1
   );
 
-  // ----------- Radio Filtering -----------
-  // const handleChange = (event) => {
-  //   setSelectedCategory(event.target.value);
-  // };
+  // ----------- Category Filtering -----------
+  const handleChange = (event) => {
+    setSelectedCategory(event.target.value);
+  };
 
-  function filteredData(items, searchTitle) {
+  function filteredData(items, selected, searchTitle) {
     let filteredMenuItems = items;
 
     // Filtering Input Items
@@ -35,10 +35,16 @@ const Recepies = () => {
       filteredMenuItems = filteredItems;
     }
 
+    if (selected) {
+      filteredMenuItems = filteredMenuItems.filter(
+        ({ category, price }) => category === selected || price === selected
+      );
+    }
+
     return filteredMenuItems;
   }
 
-  const result = filteredData(items, searchTitle);
+  const result = filteredData(items, selectedCategory, searchTitle);
 
   return (
     <div className="bg-[#F9F9F9]">
@@ -66,19 +72,39 @@ const Recepies = () => {
             <div className="left-area">
               <h4 className="search-text">Filter By Categories</h4>
               <div className=" flex items-center gap-2 mb-1">
-                <input type="checkbox" className="checkbox  checkbox-xs" />
+                <input
+                  type="checkbox"
+                  onChange={handleChange}
+                  value={""}
+                  className="checkbox  checkbox-xs"
+                />
                 <p className="filter-text">All Food</p>
               </div>
               <div className=" flex items-center gap-2 mb-1">
-                <input type="checkbox" className="checkbox  checkbox-xs" />
+                <input
+                  type="checkbox"
+                  onChange={handleChange}
+                  value={"Fast food"}
+                  className="checkbox  checkbox-xs"
+                />
                 <p className="filter-text">Fast Food</p>
               </div>
               <div className=" flex items-center gap-2 mb-1">
-                <input type="checkbox" className="checkbox  checkbox-xs" />
+                <input
+                  type="checkbox"
+                  onChange={handleChange}
+                  value={"Deshi food"}
+                  className="checkbox  checkbox-xs"
+                />
                 <p className="filter-text">Deshi Food</p>
               </div>
               <div className=" flex items-center gap-2 mb-1">
-                <input type="checkbox" className="checkbox  checkbox-xs" />
+                <input
+                  type="checkbox"
+                  onChange={handleChange}
+                  value={"Chinese food"}
+                  className="checkbox  checkbox-xs"
+                />
                 <p className="filter-text">Chinese Food</p>
               </div>
             </div>
