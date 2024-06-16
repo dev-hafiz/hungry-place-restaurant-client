@@ -67,7 +67,7 @@ const ManageProducts = () => {
                     <div className="avatar">
                       <div className="mask mask-squircle w-12 h-12">
                         <img
-                          src={item?.image}
+                          src={item?.image_url}
                           alt="Avatar Tailwind CSS Component"
                         />
                       </div>

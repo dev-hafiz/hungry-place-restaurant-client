@@ -10,6 +10,7 @@ import withAutoplay from "react-awesome-slider/dist/autoplay";
 import { useState } from "react";
 import video1 from "../../../../public/assets/video/video1.mp4";
 import videoSrc from "../../../../public/assets/video/foodVideo.mp4";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   const [showModal, setShowModal] = useState(false);
@@ -64,7 +65,9 @@ const Banner = () => {
                 delivery. Delicious meals are just a few taps away.
               </p>
               <div className="flex items-center">
-                <button className="order-btn">Order Now</button>
+                <Link to="/recepies">
+                  <button className="order-btn">Order Now</button>
+                </Link>
                 <button onClick={openModal} className="play-btn">
                   <PiPlayCircleThin className="fa-play" />
                 </button>
@@ -121,7 +124,9 @@ const Banner = () => {
                 delivery. Delicious meals are just a few taps away.
               </p>
               <div className="flex items-center">
-                <button className="order-btn">Order Now</button>
+                <Link to="/recepies">
+                  <button className="order-btn">Order Now</button>
+                </Link>
                 <button onClick={openModal} className="play-btn">
                   <PiPlayCircleThin className="fa-play" />
                 </button>
@@ -178,7 +183,9 @@ const Banner = () => {
                 delivery. Delicious meals are just a few taps away.
               </p>
               <div className="flex items-center">
-                <button className="order-btn">Order Now</button>
+                <Link to="/recepies">
+                  <button className="order-btn">Order Now</button>
+                </Link>
                 <button onClick={openModal} className="play-btn">
                   <PiPlayCircleThin className="fa-play" />
                 </button>

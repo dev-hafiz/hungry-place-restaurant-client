@@ -3,8 +3,43 @@ import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import { CiSearch } from "react-icons/ci";
 import "./Recepies.css";
 import { IoIosArrowForward } from "react-icons/io";
+import useMenu from "../../Hooks/useMenu";
+import { useState } from "react";
 
 const Recepies = () => {
+  const [items] = useMenu();
+
+  // const [selectedCategory, setSelectedCategory] = useState(null);
+
+  // ----------- Input Filter -----------
+  const [searchTitle, setSearchTitle] = useState("");
+
+  const handleSearchInputChange = (event) => {
+    setSearchTitle(event.target.value);
+  };
+
+  const filteredItems = items.filter(
+    (item) => item.name.toLowerCase().indexOf(searchTitle.toLowerCase()) !== -1
+  );
+
+  // ----------- Radio Filtering -----------
+  // const handleChange = (event) => {
+  //   setSelectedCategory(event.target.value);
+  // };
+
+  function filteredData(items, searchTitle) {
+    let filteredMenuItems = items;
+
+    // Filtering Input Items
+    if (searchTitle) {
+      filteredMenuItems = filteredItems;
+    }
+
+    return filteredMenuItems;
+  }
+
+  const result = filteredData(items, searchTitle);
+
   return (
     <div className="bg-[#F9F9F9]">
       <SectionTitle />
@@ -20,6 +55,8 @@ const Recepies = () => {
                   type="text"
                   className="input-search"
                   placeholder="Search Here..."
+                  onChange={handleSearchInputChange}
+                  value={searchTitle}
                 />
                 <CiSearch className="search-icon" />
               </div>
@@ -81,69 +118,27 @@ const Recepies = () => {
           <div className=" col-span-12 md:col-span-9">
             <div className="right-area flex flex-wrap items-center">
               {/* food card  */}
-              <div class="card">
-                <div class="card__image">
-                  <img
-                    src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                    alt="Salad"
-                  />
-                </div>
-                <div class="card__info">
-                  <div class="car__info--title">
-                    <h3>Salad</h3>
-                    <p>Fresh & sweet</p>
-                  </div>
 
-                  <div class="card__info--price">
-                    <p>$ 5</p>
+              {result.map((item) => (
+                <div class="card" key={item._id}>
+                  <div class="card__image">
+                    <img src={item?.image_url} alt="Food Card" />
                   </div>
-                  <button className="cart-btn">
-                    Details <IoIosArrowForward />
-                  </button>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card__image">
-                  <img
-                    src="https://images.unsplash.com/photo-1610970878459-a0e464d7592b?q=80&w=1524&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Salad"
-                  />
-                </div>
-                <div class="card__info">
-                  <div class="car__info--title">
-                    <h3>Burger</h3>
-                    <p>Fresh & sweet</p>
-                  </div>
+                  <div class="card__info">
+                    <div class="car__info--title">
+                      <h3>{item?.name}</h3>
+                      <p>{item?.category}</p>
+                    </div>
 
-                  <div class="card__info--price">
-                    <p>$ 10</p>
+                    <div class="card__info--price">
+                      <p>$ {item?.price}</p>
+                    </div>
+                    <button className="cart-btn">
+                      Details <IoIosArrowForward />
+                    </button>
                   </div>
-                  <button className="cart-btn">
-                    Details <IoIosArrowForward />
-                  </button>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card__image">
-                  <img
-                    src="https://images.unsplash.com/photo-1676037150408-4b59a542fa7c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Salad"
-                  />
-                </div>
-                <div class="card__info">
-                  <div class="car__info--title">
-                    <h3>Fish Fry</h3>
-                    <p>Fresh & sweet</p>
-                  </div>
-
-                  <div class="card__info--price">
-                    <p>$ 5</p>
-                  </div>
-                  <button className="cart-btn">
-                    Details <IoIosArrowForward />
-                  </button>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

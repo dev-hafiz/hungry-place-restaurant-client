@@ -1,4 +1,16 @@
+import useMenu from "../../../Hooks/useMenu";
+
 const FoodCategory = () => {
+  const [items] = useMenu();
+  // console.log("items", items);
+  const fastFoods = items.filter((item) => item.category === "Fast food");
+  const deshiFoods = items.filter((item) => item.category === "Deshi food");
+  const chineseFoods = items.filter((item) => item.category === "Chinese food");
+
+  console.log("Category Fast Food", fastFoods);
+  console.log("Category Deshi Food", deshiFoods);
+  console.log("Category Chinese Food", chineseFoods);
+
   return (
     <div className="lg:container  mx-auto  mt-32 mb-24  relative">
       <h3 className="headinTwo text-center pb-4  relative before:absolute before:bg-[#CF2424] before:h-1 before:w-20 before:content-''  before:bottom-0 before:left-1/2 before:-translate-x-1/2">

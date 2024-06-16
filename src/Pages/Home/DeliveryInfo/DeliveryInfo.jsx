@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import deliveryImg from "../../../assets/home/bike.png";
 import foodLogo from "../../../assets/icon/food 1.png";
 
@@ -29,7 +30,9 @@ const DeliveryInfo = () => {
               </div>
               <img src={foodLogo} width={"46px"} alt="delivery Logo" />
             </div>
-            <button className="order-btn">Order Now</button>
+            <Link to="/recepies">
+              <button className="order-btn">Order Now</button>
+            </Link>
           </div>
         </div>
         <div className="md:col-span-6 flex sm:justify-center md:justify-end">

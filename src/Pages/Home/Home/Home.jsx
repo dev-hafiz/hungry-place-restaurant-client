@@ -9,8 +9,8 @@ import DeliveryInfo from "../DeliveryInfo/DeliveryInfo";
 import OurRestaurant from "../OurRestaurant/OurRestaurant";
 
 const Home = () => {
-  const [items] = useMenu();
-  console.log(items);
+  // const [items] = useMenu();
+  // console.log(items);
   return (
     <div className=" bg-white">
       <Helmet>

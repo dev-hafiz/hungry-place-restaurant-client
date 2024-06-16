@@ -58,11 +58,11 @@
 
 
 .card {
-   width: 295px;
+   width: 300px;
    overflow: hidden;
    border-radius: 25px;
    border: 1px solid lavender;
-   margin: 10px;
+   margin: 5px;
    box-shadow: 5px 5px 15px 5px rgba(230, 230, 250, 1);
 }
 
