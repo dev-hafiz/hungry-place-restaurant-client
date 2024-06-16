@@ -8,6 +8,7 @@ import { useState } from "react";
 
 const Recepies = () => {
   const [items] = useMenu();
+  console.log(items);
 
   const [selectedCategory, setSelectedCategory] = useState(null);
 
@@ -112,7 +113,12 @@ const Recepies = () => {
             <div className="left-area ">
               <h4 className="search-text">Filter By Price</h4>
               <div className=" flex items-center gap-2 mb-1">
-                <input type="checkbox" className="checkbox  checkbox-xs" />
+                <input
+                  type="checkbox"
+                  className="checkbox  checkbox-xs"
+                  onChange={handleChange}
+                  value={14}
+                />
                 <p className="filter-text">$0 - $50</p>
               </div>
               <div className=" flex items-center gap-2 mb-1">
@@ -146,22 +152,24 @@ const Recepies = () => {
               {/* food card  */}
 
               {result.map((item) => (
-                <div class="card" key={item._id}>
+                <div class="card-items" key={item._id}>
                   <div class="card__image">
                     <img src={item?.image_url} alt="Food Card" />
                   </div>
-                  <div class="card__info">
-                    <div class="car__info--title">
-                      <h3>{item?.name}</h3>
-                      <p>{item?.category}</p>
-                    </div>
-
+                  <div className="flex flex-col items-start">
                     <div class="card__info--price">
                       <p>$ {item?.price}</p>
                     </div>
-                    <button className="cart-btn">
-                      Details <IoIosArrowForward />
-                    </button>
+                    <div class="card__info">
+                      <div class="car__info--title">
+                        <h3>{item?.name}</h3>
+                        <p>{item?.category}</p>
+                      </div>
+
+                      <button className="cart-btn">
+                        Details <IoIosArrowForward />
+                      </button>
+                    </div>
                   </div>
                 </div>
               ))}

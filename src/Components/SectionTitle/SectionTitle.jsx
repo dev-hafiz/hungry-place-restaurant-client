@@ -22,7 +22,7 @@ const SectionTitle = () => {
                 <IoIosArrowForward className="custom-link" />
               </li>
               <li>
-                <Link to="/recepies" className="custom-link">
+                <Link to="/recepies" className="custom-link-active">
                   Recepies
                 </Link>
               </li>
