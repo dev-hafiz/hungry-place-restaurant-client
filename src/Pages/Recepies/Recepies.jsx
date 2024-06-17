@@ -8,7 +8,7 @@ import { useState } from "react";
 
 const Recepies = () => {
   const [items] = useMenu();
-  console.log(items);
+  // console.log(items);
 
   const [selectedCategory, setSelectedCategory] = useState(null);
 
@@ -74,37 +74,45 @@ const Recepies = () => {
               <h4 className="search-text">Filter By Categories</h4>
               <div className=" flex items-center gap-2 mb-1">
                 <input
-                  type="checkbox"
+                  type="radio"
+                  name="flexRadioNoLabel"
+                  className="radio-sm"
+                  id="radioNoLabel01"
                   onChange={handleChange}
                   value={""}
-                  className="checkbox  checkbox-xs"
                 />
                 <p className="filter-text">All Food</p>
               </div>
               <div className=" flex items-center gap-2 mb-1">
                 <input
-                  type="checkbox"
+                  type="radio"
+                  name="flexRadioNoLabel"
+                  className="radio-sm"
+                  id="radioNoLabel01"
                   onChange={handleChange}
                   value={"Fast food"}
-                  className="checkbox  checkbox-xs"
                 />
                 <p className="filter-text">Fast Food</p>
               </div>
               <div className=" flex items-center gap-2 mb-1">
                 <input
-                  type="checkbox"
+                  type="radio"
+                  name="flexRadioNoLabel"
+                  className="radio-sm"
+                  id="radioNoLabel01"
                   onChange={handleChange}
                   value={"Deshi food"}
-                  className="checkbox  checkbox-xs"
                 />
                 <p className="filter-text">Deshi Food</p>
               </div>
               <div className=" flex items-center gap-2 mb-1">
                 <input
-                  type="checkbox"
+                  type="radio"
+                  name="flexRadioNoLabel"
+                  className="radio-sm"
+                  id="radioNoLabel01"
                   onChange={handleChange}
                   value={"Chinese food"}
-                  className="checkbox  checkbox-xs"
                 />
                 <p className="filter-text">Chinese Food</p>
               </div>
@@ -114,36 +122,58 @@ const Recepies = () => {
               <h4 className="search-text">Filter By Price</h4>
               <div className=" flex items-center gap-2 mb-1">
                 <input
-                  type="checkbox"
-                  className="checkbox  checkbox-xs"
+                  type="radio"
+                  name="flexRadioNoLabel"
+                  className="radio-sm"
+                  id="radioNoLabel01"
                   onChange={handleChange}
-                  value={14}
+                  value={""}
+                />
+                <p className="filter-text">$All Price</p>
+              </div>
+              <div className=" flex items-center gap-2 mb-1">
+                <input
+                  type="radio"
+                  name="flexRadioNoLabel"
+                  className="radio-sm"
+                  id="radioNoLabel01"
+                  onChange={handleChange}
+                  value={12}
                 />
                 <p className="filter-text">$0 - $50</p>
               </div>
               <div className=" flex items-center gap-2 mb-1">
-                <input type="checkbox" className="checkbox  checkbox-xs" />
+                <input
+                  type="radio"
+                  name="flexRadioNoLabel"
+                  className="radio-sm"
+                  id="radioNoLabel01"
+                  onChange={handleChange}
+                  value={65}
+                />
                 <p className="filter-text">$50 - $100</p>
               </div>
               <div className=" flex items-center gap-2 mb-1">
-                <input type="checkbox" className="checkbox  checkbox-xs" />
+                <input
+                  type="radio"
+                  name="flexRadioNoLabel"
+                  className="radio-sm"
+                  id="radioNoLabel01"
+                  onChange={handleChange}
+                  value={75}
+                />
                 <p className="filter-text">$100 - $150</p>
               </div>
               <div className=" flex items-center gap-2 mb-1">
-                <input type="checkbox" className="checkbox  checkbox-xs" />
-                <p className="filter-text">$150 - $200</p>
-              </div>
-              <div className=" flex items-center gap-2 mb-1">
-                <input type="checkbox" className="checkbox  checkbox-xs" />
-                <p className="filter-text">$200 - $250</p>
-              </div>
-              <div className=" flex items-center gap-2 mb-1">
-                <input type="checkbox" className="checkbox  checkbox-xs" />
-                <p className="filter-text">$250 - $300</p>
-              </div>
-              <div className=" flex items-center gap-2 mb-1">
-                <input type="checkbox" className="checkbox  checkbox-xs" />
-                <p className="filter-text">$300 - $Over</p>
+                <input
+                  type="radio"
+                  name="flexRadioNoLabel"
+                  className="radio-sm"
+                  id="radioNoLabel01"
+                  onChange={handleChange}
+                  value={170}
+                />
+                <p className="filter-text">$150 - $Over</p>
               </div>
             </div>
           </div>

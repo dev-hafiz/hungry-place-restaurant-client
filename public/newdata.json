@@ -1,7 +1,7 @@
 [
   {
     "name": "Gourmet Burger",
-    "calories": 600,
+    "calories": "600",
     "ingredients": [
       "beef patty",
       "truffle cheese",
@@ -11,276 +11,13 @@
     ],
     "preparation_time": "20 minutes",
     "description": "A luxurious burger with premium ingredients.",
-    "price": 45,
+    "price": "45",
     "category": "Fast food",
     "image_url": "https://images.unsplash.com/photo-1528279027-68f0d7fce9f1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    "name": "Seafood Platter",
-    "calories": 700,
-    "ingredients": [
-      "lobster",
-      "shrimp",
-      "crab legs",
-      "scallops",
-      "lemon butter sauce"
-    ],
-    "preparation_time": "30 minutes",
-    "description": "An extravagant seafood feast with a variety of fresh catches.",
-    "price": 75,
-    "category": "Fast food",
-    "image_url": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2VhZm9vZHxlbnwwfDB8MHx8fDA%3D"
-  },
-  {
-    "name": "Wagyu Steak",
-    "calories": 800,
-    "ingredients": [
-      "wagyu beef",
-      "mashed potatoes",
-      "asparagus",
-      "red wine sauce"
-    ],
-    "preparation_time": "25 minutes",
-    "description": "A premium wagyu steak cooked to perfection.",
-    "price": 60,
-    "category": "Fast food",
-    "image_url": "https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Lobster Roll",
-    "calories": 600,
-    "ingredients": [
-      "lobster meat",
-      "buttered roll",
-      "mayonnaise",
-      "celery",
-      "lettuce"
-    ],
-    "preparation_time": "15 minutes",
-    "description": "A classic New England sandwich featuring succulent lobster meat.",
-    "price": 50,
-    "category": "Fast food",
-    "image_url": "https://images.unsplash.com/photo-1550507992-eb63ffee0847?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Truffle Fries",
-    "calories": 400,
-    "ingredients": [
-      "potatoes",
-      "truffle oil",
-      "parmesan cheese",
-      "parsley"
-    ],
-    "preparation_time": "20 minutes",
-    "description": "Crispy fries drizzled with aromatic truffle oil and sprinkled with parmesan cheese.",
-    "price": 45,
-    "category": "Fast food",
-    "image_url": "https://images.unsplash.com/photo-1518013431117-eb1465fa5752?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Sushi Platter",
-    "calories": 500,
-    "ingredients": [
-      "assorted sushi rolls",
-      "sashimi",
-      "pickled ginger",
-      "wasabi",
-      "soy sauce"
-    ],
-    "preparation_time": "30 minutes",
-    "description": "An assortment of fresh and delicious sushi rolls and sashimi.",
-    "price": 55,
-    "category": "Fast food",
-    "image_url": "https://images.unsplash.com/photo-1676037150408-4b59a542fa7c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Cheese steak",
-    "calories": 700,
-    "ingredients": [
-      "sliced beef",
-      "onions",
-      "bell peppers",
-      "provolone cheese",
-      "hoagie roll"
-    ],
-    "preparation_time": "25 minutes",
-    "description": "A classic Philadelphia sandwich with tender beef and melted cheese.",
-    "price": 50,
-    "category": "Fast food",
-    "image_url": "https://www.seriouseats.com/thmb/oWVCAeDaoffhJtED8TAK0fFHW9o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20230530-SEA-PhillyCheesesteak-AmandaSuarez-50-cbbe92bf3a304c99a1771ef7255b4c4f.jpg"
-  },
-  {
-    "name": "Gourmet Pizza",
-    "calories": 800,
-    "ingredients": [
-      "wood-fired pizza crust",
-      "truffle sauce",
-      "prosciutto",
-      "arugula",
-      "parmesan shavings"
-    ],
-    "preparation_time": "20 minutes",
-    "description": "A gourmet pizza topped with premium ingredients.",
-    "price": 65,
-    "category": "Fast food",
-    "image_url": "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "BBQ Ribs",
-    "calories": 1000,
-    "ingredients": [
-      "pork ribs",
-      "BBQ sauce",
-      "spices"
-    ],
-    "preparation_time": "2 hours",
-    "description": "Tender pork ribs slathered in smoky BBQ sauce.",
-    "price": 55,
-    "category": "Fast food",
-    "image_url": "https://plus.unsplash.com/premium_photo-1663012872761-33dd73e292cc?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Grilled Salmon",
-    "calories": 450,
-    "ingredients": [
-      "salmon fillet",
-      "lemon",
-      "dill",
-      "olive oil"
-    ],
-    "preparation_time": "25 minutes",
-    "description": "Grilled salmon fillet with a hint of lemon and dill.",
-    "price": 48,
-    "category": "Fast food",
-    "image_url": "https://images.unsplash.com/photo-1676300185292-e23bb3db50fa?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Buffalo Wings",
-    "calories": 600,
-    "ingredients": [
-      "chicken wings",
-      "buffalo sauce",
-      "celery",
-      "blue cheese dressing"
-    ],
-    "preparation_time": "20 minutes",
-    "description": "Spicy buffalo chicken wings served with celery and blue cheese dressing.",
-    "price": 42,
-    "category": "Fast food",
-    "image_url": "https://images.unsplash.com/photo-1598514982901-ae62764ae75e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Pork Sandwich",
-    "calories": 700,
-    "ingredients": [
-      "pulled pork",
-      "BBQ sauce",
-      "coleslaw",
-      "bun"
-    ],
-    "preparation_time": "15 minutes",
-    "description": "A savory pulled pork sandwich with tangy coleslaw.",
-    "price": 46,
-    "category": "Fast food",
-    "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Wrapped Shrimp",
-    "calories": 400,
-    "ingredients": [
-      "shrimp",
-      "bacon",
-      "garlic",
-      "lemon"
-    ],
-    "preparation_time": "20 minutes",
-    "description": "Juicy shrimp wrapped in crispy bacon.",
-    "price": 52,
-    "category": "Fast food",
-    "image_url": "https://images.unsplash.com/photo-1625943553852-781c6dd46faa?q=80&w=1490&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Fried Calamari",
-    "calories": 450,
-    "ingredients": [
-      "calamari",
-      "flour",
-      "spices",
-      "lemon",
-      "marinara sauce"
-    ],
-    "preparation_time": "20 minutes",
-    "description": "Lightly breaded and fried calamari served with marinara sauce.",
-    "price": 47,
-    "category": "Fast food",
-    "image_url": "https://images.unsplash.com/photo-1603133872575-9989ab68d24c?q=80&w=1413&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Duck Confit",
-    "calories": 850,
-    "ingredients": [
-      "duck legs",
-      "salt",
-      "garlic",
-      "thyme",
-      "duck fat"
-    ],
-    "preparation_time": "2 hours",
-    "description": "Tender duck legs cooked in their own fat.",
-    "price": 68,
-    "category": "Fast food",
-    "image_url": "https://images.unsplash.com/photo-1642231877874-ce3e205f39c0?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Shrimp Scampi",
-    "calories": 650,
-    "ingredients": [
-      "shrimp",
-      "garlic",
-      "white wine",
-      "butter",
-      "parsley"
-    ],
-    "preparation_time": "25 minutes",
-    "description": "Shrimp cooked in a garlic butter and white wine sauce.",
-    "price": 58,
-    "category": "Fast food",
-    "image_url": "https://images.unsplash.com/photo-1633504581786-316c8002b1b9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Filet Mignon",
-    "calories": 700,
-    "ingredients": [
-      "filet mignon",
-      "salt",
-      "pepper",
-      "butter",
-      "garlic"
-    ],
-    "preparation_time": "20 minutes",
-    "description": "A tender and juicy filet mignon steak.",
-    "price": 70,
-    "category": "Fast food",
-    "image_url": "https://images.unsplash.com/photo-1606419420761-4f2aa891ed19?q=80&w=1398&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Lamb Chops",
-    "calories": 750,
-    "ingredients": [
-      "lamb chops",
-      "rosemary",
-      "garlic",
-      "olive oil"
-    ],
-    "preparation_time": "30 minutes",
-    "description": "Grilled lamb chops with rosemary and garlic.",
-    "price": 65,
-    "category": "Fast food",
-    "image_url": "https://images.unsplash.com/photo-1595777216528-071e0127ccbf?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
     "name": "Pao Chicken",
-    "calories": 500,
+    "calories": "500",
     "ingredients": [
       "chicken",
       "peanuts",
@@ -290,221 +27,13 @@
     ],
     "preparation_time": "30 minutes",
     "description": "A spicy stir-fry dish made with chicken, peanuts, and vegetables.",
-    "price": 18,
+    "price": "18",
     "category": "Chinese food",
     "image_url": "https://images.unsplash.com/photo-1600555379765-f82335a7b1b0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    "name": "Sour Pork",
-    "calories": 600,
-    "ingredients": [
-      "pork",
-      "pineapple",
-      "bell peppers",
-      "vinegar",
-      "sugar"
-    ],
-    "preparation_time": "25 minutes",
-    "description": "Crispy pork in a sweet and tangy sauce with pineapple and bell peppers.",
-    "price": 16,
-    "category": "Chinese food",
-    "image_url": "https://images.unsplash.com/photo-1660808600062-defd9cc275d3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Tso's Chicken",
-    "calories": 700,
-    "ingredients": [
-      "chicken",
-      "soy sauce",
-      "garlic",
-      "ginger",
-      "chili peppers"
-    ],
-    "preparation_time": "30 minutes",
-    "description": "Deep-fried chicken in a sweet and spicy sauce.",
-    "price": 19,
-    "category": "Chinese food",
-    "image_url": "https://images.unsplash.com/photo-1577303935007-0d306ee638cf?q=80&w=1440&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Beef Broccoli",
-    "calories": 550,
-    "ingredients": [
-      "beef",
-      "broccoli",
-      "soy sauce",
-      "ginger",
-      "garlic"
-    ],
-    "preparation_time": "20 minutes",
-    "description": "Tender beef stir-fried with broccoli in a savory sauce.",
-    "price": 17,
-    "category": "Chinese food",
-    "image_url": "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Mapo Tofu",
-    "calories": 450,
-    "ingredients": [
-      "tofu",
-      "ground pork",
-      "chili bean paste",
-      "garlic",
-      "scallions"
-    ],
-    "preparation_time": "25 minutes",
-    "description": "Spicy tofu with ground pork in a flavorful sauce.",
-    "price": 15,
-    "category": "Chinese food",
-    "image_url": "https://images.unsplash.com/photo-1509680859026-7d8cfc6894f4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Dumplings",
-    "calories": 300,
-    "ingredients": [
-      "pork",
-      "cabbage",
-      "ginger",
-      "soy sauce",
-      "wonton wrappers"
-    ],
-    "preparation_time": "40 minutes",
-    "description": "Steamed or fried dumplings filled with a savory pork mixture.",
-    "price": 12,
-    "category": "Chinese food",
-    "image_url": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Peking Duck",
-    "calories": 800,
-    "ingredients": [
-      "duck",
-      "hoisin sauce",
-      "scallions",
-      "cucumbers",
-      "pancakes"
-    ],
-    "preparation_time": "2 hours",
-    "description": "Crispy roasted duck served with pancakes and hoisin sauce.",
-    "price": 35,
-    "category": "Chinese food",
-    "image_url": "https://images.unsplash.com/photo-1580476262843-d5e9b687d4d4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Chow Mein",
-    "calories": 650,
-    "ingredients": [
-      "noodles",
-      "chicken",
-      "vegetables",
-      "soy sauce",
-      "sesame oil"
-    ],
-    "preparation_time": "20 minutes",
-    "description": "Stir-fried noodles with chicken and mixed vegetables.",
-    "price": 14,
-    "category": "Chinese food",
-    "image_url": "https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=1384&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Hot Soup",
-    "calories": 150,
-    "ingredients": [
-      "tofu",
-      "mushrooms",
-      "bamboo shoots",
-      "vinegar",
-      "pepper"
-    ],
-    "preparation_time": "25 minutes",
-    "description": "A flavorful soup with a perfect balance of spicy and sour.",
-    "price": 10,
-    "category": "Chinese food",
-    "image_url": "https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Spring Rolls",
-    "calories": 200,
-    "ingredients": [
-      "cabbage",
-      "carrots",
-      "pork",
-      "soy sauce",
-      "spring roll wrappers"
-    ],
-    "preparation_time": "30 minutes",
-    "description": "Crispy rolls filled with vegetables and pork.",
-    "price": 8,
-    "category": "Chinese food",
-    "image_url": "https://images.unsplash.com/photo-1594020292985-216a72a2c7ce?q=80&w=1481&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Fried Rice",
-    "calories": 550,
-    "ingredients": [
-      "rice",
-      "shrimp",
-      "peas",
-      "carrots",
-      "soy sauce"
-    ],
-    "preparation_time": "20 minutes",
-    "description": "Stir-fried rice with shrimp and vegetables.",
-    "price": 12,
-    "category": "Chinese food",
-    "image_url": "https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    "name": "Szechuan Chicken",
-    "calories": 600,
-    "ingredients": [
-      "chicken",
-      "chili peppers",
-      "Szechuan peppercorns",
-      "garlic",
-      "ginger"
-    ],
-    "preparation_time": "30 minutes",
-    "description": "Spicy chicken stir-fry with Szechuan peppercorns.",
-    "price": 18,
-    "category": "Chinese food",
-    "image_url": "https://www.corriecooks.com/wp-content/uploads/2023/08/Szechuan-Chicken.jpg"
-  },
-  {
-    "name": "Lo Mein",
-    "calories": 650,
-    "ingredients": [
-      "noodles",
-      "beef",
-      "vegetables",
-      "soy sauce",
-      "sesame oil"
-    ],
-    "preparation_time": "20 minutes",
-    "description": "Soft noodles stir-fried with beef and mixed vegetables.",
-    "price": 14,
-    "category": "Chinese food",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJNXlpYfp3nverTmVmtW-omwyBUAZ6nbODoQ&s"
-  },
-  {
-    "name": "Egg Soup",
-    "calories": 100,
-    "ingredients": [
-      "chicken broth",
-      "eggs",
-      "cornstarch",
-      "scallions",
-      "white pepper"
-    ],
-    "preparation_time": "15 minutes",
-    "description": "Light and savory soup with delicate egg ribbons.",
-    "price": 9,
-    "category": "Chinese food",
-    "image_url": "https://images.unsplash.com/photo-1636044985968-df032e572431?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
     "name": "Beef Wellington",
-    "calories": 800,
+    "calories": "800",
     "ingredients": [
       "beef tenderloin",
       "mushrooms",
@@ -514,13 +43,45 @@
     ],
     "preparation_time": "2 hours",
     "description": "A savory dish of tender beef wrapped in puff pastry.",
-    "price": 75,
+    "price": "75",
     "category": "Deshi food",
     "image_url": "https://images.unsplash.com/photo-1546964053-d018e345e490?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
+    "name": "Seafood Platter",
+    "calories": "700",
+    "ingredients": [
+      "lobster",
+      "shrimp",
+      "crab legs",
+      "scallops",
+      "lemon butter sauce"
+    ],
+    "preparation_time": "30 minutes",
+    "description": "An extravagant seafood feast with a variety of fresh catches.",
+    "price": "75",
+    "category": "Fast food",
+    "image_url": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2VhZm9vZHxlbnwwfDB8MHx8fDA%3D"
+  },
+  {
+    "name": "Filet Mignon",
+    "calories": "700",
+    "ingredients": [
+      "filet mignon",
+      "salt",
+      "pepper",
+      "butter",
+      "garlic"
+    ],
+    "preparation_time": "20 minutes",
+    "description": "A tender and juicy filet mignon steak.",
+    "price": "170",
+    "category": "Fast food",
+    "image_url": "https://images.unsplash.com/photo-1606419420761-4f2aa891ed19?q=80&w=1398&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
     "name": "Coq au Vin",
-    "calories": 600,
+    "calories": "600",
     "ingredients": [
       "chicken",
       "red wine",
@@ -530,13 +91,44 @@
     ],
     "preparation_time": "2 hours 30 minutes",
     "description": "A classic French stew made with chicken braised in wine.",
-    "price": 50,
+    "price": "50",
     "category": "Deshi food",
     "image_url": "https://images.unsplash.com/photo-1628430042373-7fdf9431ccf9?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
+    "name": "Wagyu Steak",
+    "calories": "800",
+    "ingredients": [
+      "wagyu beef",
+      "mashed potatoes",
+      "asparagus",
+      "red wine sauce"
+    ],
+    "preparation_time": "25 minutes",
+    "description": "A premium wagyu steak cooked to perfection.",
+    "price": "60",
+    "category": "Fast food",
+    "image_url": "https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "name": "Sour Pork",
+    "calories": "600",
+    "ingredients": [
+      "pork",
+      "pineapple",
+      "bell peppers",
+      "vinegar",
+      "sugar"
+    ],
+    "preparation_time": "25 minutes",
+    "description": "Crispy pork in a sweet and tangy sauce with pineapple and bell peppers.",
+    "price": "16",
+    "category": "Chinese food",
+    "image_url": "https://images.unsplash.com/photo-1660808600062-defd9cc275d3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
     "name": "Lobster Thermidor",
-    "calories": 700,
+    "calories": "700",
     "ingredients": [
       "lobster",
       "egg yolks",
@@ -546,13 +138,45 @@
     ],
     "preparation_time": "1 hour ",
     "description": "A rich dish of lobster meat cooked in a creamy sauce.",
-    "price": 90,
+    "price": "90",
     "category": "Deshi food",
     "image_url": "https://images.unsplash.com/photo-1563336522-c3bd728d3b45?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
+    "name": "Lobster Roll",
+    "calories": "600",
+    "ingredients": [
+      "lobster meat",
+      "buttered roll",
+      "mayonnaise",
+      "celery",
+      "lettuce"
+    ],
+    "preparation_time": "15 minutes",
+    "description": "A classic New England sandwich featuring succulent lobster meat.",
+    "price": "170",
+    "category": "Fast food",
+    "image_url": "https://images.unsplash.com/photo-1550507992-eb63ffee0847?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "name": "Tso's Chicken",
+    "calories": "700",
+    "ingredients": [
+      "chicken",
+      "soy sauce",
+      "garlic",
+      "ginger",
+      "chili peppers"
+    ],
+    "preparation_time": "30 minutes",
+    "description": "Deep-fried chicken in a sweet and spicy sauce.",
+    "price": "19",
+    "category": "Chinese food",
+    "image_url": "https://images.unsplash.com/photo-1577303935007-0d306ee638cf?q=80&w=1440&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
     "name": "Rack of Lamb",
-    "calories": 750,
+    "calories": "750",
     "ingredients": [
       "rack of lamb",
       "garlic",
@@ -562,29 +186,44 @@
     ],
     "preparation_time": "1 hour",
     "description": "Tender rack of lamb roasted with herbs and garlic.",
-    "price": 65,
+    "price": "65",
     "category": "Deshi food",
     "image_url": "https://images.unsplash.com/photo-1646809156467-6e825869b29f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    "name": "Osso Buco",
-    "calories": 600,
+    "name": "Truffle Fries",
+    "calories": "400",
     "ingredients": [
-      "veal shanks",
-      "carrots",
-      "celery",
-      "tomatoes",
-      "white wine"
+      "potatoes",
+      "truffle oil",
+      "parmesan cheese",
+      "parsley"
     ],
-    "preparation_time": "3 hours",
-    "description": "Braised veal shanks served with a flavorful sauce.",
-    "price": 55,
-    "category": "Deshi food",
-    "image_url": "https://images.unsplash.com/photo-1618312368656-33f718157750?q=80&w=1419&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "preparation_time": "20 minutes",
+    "description": "Crispy fries drizzled with aromatic truffle oil and sprinkled with parmesan cheese.",
+    "price": "45",
+    "category": "Fast food",
+    "image_url": "https://images.unsplash.com/photo-1518013431117-eb1465fa5752?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "name": "Beef Broccoli",
+    "calories": "550",
+    "ingredients": [
+      "beef",
+      "broccoli",
+      "soy sauce",
+      "ginger",
+      "garlic"
+    ],
+    "preparation_time": "20 minutes",
+    "description": "Tender beef stir-fried with broccoli in a savory sauce.",
+    "price": "17",
+    "category": "Chinese food",
+    "image_url": "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "name": "Bouillabaisse",
-    "calories": 500,
+    "calories": "500",
     "ingredients": [
       "fish",
       "shrimp",
@@ -594,13 +233,141 @@
     ],
     "preparation_time": "2 hours",
     "description": "A traditional Provençal fish stew.",
-    "price": 60,
+    "price": "60",
     "category": "Deshi food",
     "image_url": "https://images.unsplash.com/photo-1609016580259-e04ddc09a850?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
+    "name": "Sushi Platter",
+    "calories": "500",
+    "ingredients": [
+      "assorted sushi rolls",
+      "sashimi",
+      "pickled ginger",
+      "wasabi",
+      "soy sauce"
+    ],
+    "preparation_time": "30 minutes",
+    "description": "An assortment of fresh and delicious sushi rolls and sashimi.",
+    "price": "55",
+    "category": "Fast food",
+    "image_url": "https://images.unsplash.com/photo-1676037150408-4b59a542fa7c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "name": "Mapo Tofu",
+    "calories": "450",
+    "ingredients": [
+      "tofu",
+      "ground pork",
+      "chili bean paste",
+      "garlic",
+      "scallions"
+    ],
+    "preparation_time": "25 minutes",
+    "description": "Spicy tofu with ground pork in a flavorful sauce.",
+    "price": "15",
+    "category": "Chinese food",
+    "image_url": "https://images.unsplash.com/photo-1509680859026-7d8cfc6894f4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "name": "Egg Soup",
+    "calories": "100",
+    "ingredients": [
+      "chicken broth",
+      "eggs",
+      "cornstarch",
+      "scallions",
+      "white pepper"
+    ],
+    "preparation_time": "15 minutes",
+    "description": "Light and savory soup with delicate egg ribbons.",
+    "price": "9",
+    "category": "Chinese food",
+    "image_url": "https://images.unsplash.com/photo-1636044985968-df032e572431?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "name": "Cheese steak",
+    "calories": "700",
+    "ingredients": [
+      "sliced beef",
+      "onions",
+      "bell peppers",
+      "provolone cheese",
+      "hoagie roll"
+    ],
+    "preparation_time": "25 minutes",
+    "description": "A classic Philadelphia sandwich with tender beef and melted cheese.",
+    "price": "50",
+    "category": "Fast food",
+    "image_url": "https://www.seriouseats.com/thmb/oWVCAeDaoffhJtED8TAK0fFHW9o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20230530-SEA-PhillyCheesesteak-AmandaSuarez-50-cbbe92bf3a304c99a1771ef7255b4c4f.jpg"
+  },
+  {
+    "name": "Dumplings",
+    "calories": "300",
+    "ingredients": [
+      "pork",
+      "cabbage",
+      "ginger",
+      "soy sauce",
+      "wonton wrappers"
+    ],
+    "preparation_time": "40 minutes",
+    "description": "Steamed or fried dumplings filled with a savory pork mixture.",
+    "price": "12",
+    "category": "Chinese food",
+    "image_url": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "name": "Osso Buco",
+    "calories": "600",
+    "ingredients": [
+      "veal shanks",
+      "carrots",
+      "celery",
+      "tomatoes",
+      "white wine"
+    ],
+    "preparation_time": "3 hours",
+    "description": "Braised veal shanks served with a flavorful sauce.",
+    "price": "55",
+    "category": "Deshi food",
+    "image_url": "https://images.unsplash.com/photo-1618312368656-33f718157750?q=80&w=1419&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "name": "Gourmet Pizza",
+    "calories": "800",
+    "ingredients": [
+      "wood-fired pizza crust",
+      "truffle sauce",
+      "prosciutto",
+      "arugula",
+      "parmesan shavings"
+    ],
+    "preparation_time": "20 minutes",
+    "description": "A gourmet pizza topped with premium ingredients.",
+    "price": "65",
+    "category": "Fast food",
+    "image_url": "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "name": "Peking Duck",
+    "calories": "800",
+    "ingredients": [
+      "duck",
+      "hoisin sauce",
+      "scallions",
+      "cucumbers",
+      "pancakes"
+    ],
+    "preparation_time": "2 hours",
+    "description": "Crispy roasted duck served with pancakes and hoisin sauce.",
+    "price": "35",
+    "category": "Chinese food",
+    "image_url": "https://images.unsplash.com/photo-1580476262843-d5e9b687d4d4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
     "name": "Duck à l'Orange",
-    "calories": 800,
+    "calories": "800",
     "ingredients": [
       "duck",
       "oranges",
@@ -610,13 +377,27 @@
     ],
     "preparation_time": "2 hours",
     "description": "Roast duck with a sweet and tangy orange sauce.",
-    "price": 70,
+    "price": "70",
     "category": "Deshi food",
     "image_url": "https://images.unsplash.com/photo-1615557960916-5f4791effe9d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
+    "name": "BBQ Ribs",
+    "calories": "1000",
+    "ingredients": [
+      "pork ribs",
+      "BBQ sauce",
+      "spices"
+    ],
+    "preparation_time": "2 hours",
+    "description": "Tender pork ribs slathered in smoky BBQ sauce.",
+    "price": "55",
+    "category": "Fast food",
+    "image_url": "https://plus.unsplash.com/premium_photo-1663012872761-33dd73e292cc?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
     "name": "Salmon En ",
-    "calories": 650,
+    "calories": "650",
     "ingredients": [
       "salmon",
       "spinach",
@@ -626,13 +407,60 @@
     ],
     "preparation_time": "1 hour",
     "description": "Salmon fillet wrapped in puff pastry with a spinach filling.",
-    "price": 55,
+    "price": "55",
     "category": "Deshi food",
     "image_url": "https://images.unsplash.com/photo-1644677867674-6d6667fd562f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
+    "name": "Chow Mein",
+    "calories": "650",
+    "ingredients": [
+      "noodles",
+      "chicken",
+      "vegetables",
+      "soy sauce",
+      "sesame oil"
+    ],
+    "preparation_time": "20 minutes",
+    "description": "Stir-fried noodles with chicken and mixed vegetables.",
+    "price": "14",
+    "category": "Chinese food",
+    "image_url": "https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=1384&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "name": "Grilled Salmon",
+    "calories": "450",
+    "ingredients": [
+      "salmon fillet",
+      "lemon",
+      "dill",
+      "olive oil"
+    ],
+    "preparation_time": "25 minutes",
+    "description": "Grilled salmon fillet with a hint of lemon and dill.",
+    "price": "48",
+    "category": "Fast food",
+    "image_url": "https://images.unsplash.com/photo-1676300185292-e23bb3db50fa?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "name": "Hot Soup",
+    "calories": "150",
+    "ingredients": [
+      "tofu",
+      "mushrooms",
+      "bamboo shoots",
+      "vinegar",
+      "pepper"
+    ],
+    "preparation_time": "25 minutes",
+    "description": "A flavorful soup with a perfect balance of spicy and sour.",
+    "price": "10",
+    "category": "Chinese food",
+    "image_url": "https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
     "name": "Seafood Paella",
-    "calories": 750,
+    "calories": "750",
     "ingredients": [
       "rice",
       "shrimp",
@@ -642,13 +470,44 @@
     ],
     "preparation_time": "1 hours",
     "description": "A traditional Spanish rice dish loaded with seafood.",
-    "price": 58,
+    "price": "58",
     "category": "Deshi food",
     "image_url": "https://images.unsplash.com/photo-1644677859249-e0c8f5b4a74b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
+    "name": "Buffalo Wings",
+    "calories": "600",
+    "ingredients": [
+      "chicken wings",
+      "buffalo sauce",
+      "celery",
+      "blue cheese dressing"
+    ],
+    "preparation_time": "20 minutes",
+    "description": "Spicy buffalo chicken wings served with celery and blue cheese dressing.",
+    "price": "170",
+    "category": "Fast food",
+    "image_url": "https://images.unsplash.com/photo-1598514982901-ae62764ae75e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "name": "Spring Rolls",
+    "calories": "200",
+    "ingredients": [
+      "cabbage",
+      "carrots",
+      "pork",
+      "soy sauce",
+      "spring roll wrappers"
+    ],
+    "preparation_time": "30 minutes",
+    "description": "Crispy rolls filled with vegetables and pork.",
+    "price": "8",
+    "category": "Chinese food",
+    "image_url": "https://images.unsplash.com/photo-1594020292985-216a72a2c7ce?q=80&w=1481&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
     "name": "Stuffed Peppers",
-    "calories": 400,
+    "calories": "400",
     "ingredients": [
       "bell peppers",
       "ground beef",
@@ -658,13 +517,13 @@
     ],
     "preparation_time": "1 hour",
     "description": "Bell peppers stuffed with a savory beef and rice mixture.",
-    "price": 45,
+    "price": "45",
     "category": "Deshi food",
     "image_url": "https://images.unsplash.com/photo-1644677859469-701242656fa8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "name": "Moussaka",
-    "calories": 650,
+    "calories": "650",
     "ingredients": [
       "eggplant",
       "ground lamb",
@@ -674,13 +533,60 @@
     ],
     "preparation_time": "1 hours",
     "description": "A layered casserole with eggplant, ground lamb, and béchamel sauce.",
-    "price": 50,
+    "price": "50",
     "category": "Deshi food",
     "image_url": "https://images.unsplash.com/photo-1644677867331-03f28942e35c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
+    "name": "Fried Rice",
+    "calories": "550",
+    "ingredients": [
+      "rice",
+      "shrimp",
+      "peas",
+      "carrots",
+      "soy sauce"
+    ],
+    "preparation_time": "20 minutes",
+    "description": "Stir-fried rice with shrimp and vegetables.",
+    "price": "12",
+    "category": "Chinese food",
+    "image_url": "https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "name": "Pork Sandwich",
+    "calories": "700",
+    "ingredients": [
+      "pulled pork",
+      "BBQ sauce",
+      "coleslaw",
+      "bun"
+    ],
+    "preparation_time": "15 minutes",
+    "description": "A savory pulled pork sandwich with tangy coleslaw.",
+    "price": "46",
+    "category": "Fast food",
+    "image_url": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "name": "Szechuan Chicken",
+    "calories": "600",
+    "ingredients": [
+      "chicken",
+      "chili peppers",
+      "Szechuan peppercorns",
+      "garlic",
+      "ginger"
+    ],
+    "preparation_time": "30 minutes",
+    "description": "Spicy chicken stir-fry with Szechuan peppercorns.",
+    "price": "18",
+    "category": "Chinese food",
+    "image_url": "https://www.corriecooks.com/wp-content/uploads/2023/08/Szechuan-Chicken.jpg"
+  },
+  {
     "name": "Chicken Alfredo",
-    "calories": 700,
+    "calories": "700",
     "ingredients": [
       "chicken",
       "fettuccine",
@@ -690,29 +596,44 @@
     ],
     "preparation_time": "30 minutes",
     "description": "Creamy pasta with chicken and a rich Alfredo sauce.",
-    "price": 46,
+    "price": "46",
     "category": "Deshi food",
     "image_url": "https://images.unsplash.com/photo-1644677867801-037a2395a5b7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    "name": "Bouillabaisse",
-    "calories": 600,
+    "name": "Wrapped Shrimp",
+    "calories": "400",
     "ingredients": [
-      "fish",
-      "mussels",
       "shrimp",
-      "tomatoes",
-      "saffron"
+      "bacon",
+      "garlic",
+      "lemon"
     ],
-    "preparation_time": "2 hours",
-    "description": "A traditional French seafood stew with a variety of fish and shellfish.",
-    "price": 55,
-    "category": "Deshi food",
-    "image_url": "https://images.unsplash.com/photo-1644677859366-89905db969a4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "preparation_time": "20 minutes",
+    "description": "Juicy shrimp wrapped in crispy bacon.",
+    "price": "52",
+    "category": "Fast food",
+    "image_url": "https://images.unsplash.com/photo-1625943553852-781c6dd46faa?q=80&w=1490&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "name": "Lo Mein",
+    "calories": "650",
+    "ingredients": [
+      "noodles",
+      "beef",
+      "vegetables",
+      "soy sauce",
+      "sesame oil"
+    ],
+    "preparation_time": "20 minutes",
+    "description": "Soft noodles stir-fried with beef and mixed vegetables.",
+    "price": "14",
+    "category": "Chinese food",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJNXlpYfp3nverTmVmtW-omwyBUAZ6nbODoQ&s"
   },
   {
     "name": " Gorgonzola",
-    "calories": 550,
+    "calories": "550",
     "ingredients": [
       "potato gnocchi",
       "gorgonzola cheese",
@@ -722,13 +643,29 @@
     ],
     "preparation_time": "30 minutes",
     "description": "Soft potato gnocchi in a creamy gorgonzola sauce.",
-    "price": 42,
+    "price": "42",
     "category": "Deshi food",
     "image_url": "https://images.unsplash.com/photo-1644677867674-6d6667fd562f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
+    "name": "Fried Calamari",
+    "calories": "450",
+    "ingredients": [
+      "calamari",
+      "flour",
+      "spices",
+      "lemon",
+      "marinara sauce"
+    ],
+    "preparation_time": "20 minutes",
+    "description": "Lightly breaded and fried calamari served with marinara sauce.",
+    "price": "47",
+    "category": "Fast food",
+    "image_url": "https://images.unsplash.com/photo-1603133872575-9989ab68d24c?q=80&w=1413&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
     "name": "Lamb Shanks",
-    "calories": 800,
+    "calories": "800",
     "ingredients": [
       "lamb shanks",
       "red wine",
@@ -738,8 +675,71 @@
     ],
     "preparation_time": "3 hours",
     "description": "Slow-cooked lamb shanks in a rich red wine sauce.",
-    "price": 65,
+    "price": "65",
     "category": "Deshi food",
     "image_url": "https://images.unsplash.com/photo-1613232683444-de0a4942e932?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "name": "Duck Confit",
+    "calories": "850",
+    "ingredients": [
+      "duck legs",
+      "salt",
+      "garlic",
+      "thyme",
+      "duck fat"
+    ],
+    "preparation_time": "2 hours",
+    "description": "Tender duck legs cooked in their own fat.",
+    "price": "68",
+    "category": "Fast food",
+    "image_url": "https://images.unsplash.com/photo-1642231877874-ce3e205f39c0?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "name": "Shrimp Scampi",
+    "calories": "650",
+    "ingredients": [
+      "shrimp",
+      "garlic",
+      "white wine",
+      "butter",
+      "parsley"
+    ],
+    "preparation_time": "25 minutes",
+    "description": "Shrimp cooked in a garlic butter and white wine sauce.",
+    "price": "58",
+    "category": "Fast food",
+    "image_url": "https://images.unsplash.com/photo-1633504581786-316c8002b1b9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "name": "Lamb Chops",
+    "calories": "750",
+    "ingredients": [
+      "lamb chops",
+      "rosemary",
+      "garlic",
+      "olive oil"
+    ],
+    "preparation_time": "30 minutes",
+    "description": "Grilled lamb chops with rosemary and garlic.",
+    "price": "65",
+    "category": "Fast food",
+    "image_url": "https://images.unsplash.com/photo-1595777216528-071e0127ccbf?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "name": "Bouillabaisse",
+    "calories": "600",
+    "ingredients": [
+      "fish",
+      "mussels",
+      "shrimp",
+      "tomatoes",
+      "saffron"
+    ],
+    "preparation_time": "2 hours",
+    "description": "A traditional French seafood stew with a variety of fish and shellfish.",
+    "price": "55",
+    "category": "Deshi food",
+    "image_url": "https://images.unsplash.com/photo-1644677859366-89905db969a4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ]
