@@ -3,13 +3,13 @@ import "./SectionTitle.css";
 import { GoHome } from "react-icons/go";
 import { IoIosArrowForward } from "react-icons/io";
 
-const SectionTitle = () => {
+const SectionTitle = ({ title, details }) => {
   return (
     <div className="border-b bg-white border-gray-200 px-10 py-5 shadow-sm">
       <div className="container mx-auto">
         <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2">
           <div>
-            <p className="recepie-text">All Recepie</p>
+            <p className="recepie-text">{title}</p>
           </div>
           <div>
             <ul className="flex items-center gap-1 justify-center md:justify-end">
@@ -22,8 +22,29 @@ const SectionTitle = () => {
                 <IoIosArrowForward className="custom-link" />
               </li>
               <li>
-                <Link to="/recepies" className="custom-link-active">
+                <Link
+                  to="/recepies"
+                  className={`custom-link ${
+                    !details ? "custom-link-active" : ""
+                  }`}
+                >
                   Recepies
+                </Link>
+              </li>
+              {details ? (
+                <li>
+                  <IoIosArrowForward
+                    className={`custom-link ${
+                      details ? "custom-link-active" : ""
+                    }`}
+                  />
+                </li>
+              ) : (
+                ""
+              )}
+              <li>
+                <Link to="" className="custom-link-active flex items-center ">
+                  {details}
                 </Link>
               </li>
             </ul>

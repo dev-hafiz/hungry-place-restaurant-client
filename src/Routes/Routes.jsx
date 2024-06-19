@@ -16,6 +16,7 @@ import UserHome from "../Pages/Dashboard/UserPages/UserHome/UserHome";
 import Payment from "../Pages/Dashboard/Payment/Payment";
 import PaymentHistory from "../Pages/Dashboard/UserPages/PaymentHistory/PaymentHistory";
 import Recepies from "../Pages/Recepies/Recepies";
+import RecepieDetails from "../Pages/Recepies/RecepieDetails/RecepieDetails";
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ export const router = createBrowserRouter([
       {
         path: "recepies",
         element: <Recepies />,
+      },
+      {
+        path: "recepies/:id",
+        element: <RecepieDetails />,
       },
     ],
   },

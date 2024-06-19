@@ -49,7 +49,7 @@ const Recepies = () => {
 
   return (
     <div className="bg-[#F9F9F9]">
-      <SectionTitle />
+      <SectionTitle title="All Recepie" />
 
       <div className=" mt-10 ">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-1">
