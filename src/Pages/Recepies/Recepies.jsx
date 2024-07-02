@@ -182,16 +182,16 @@ const Recepies = () => {
               {/* food card  */}
 
               {result.map((item) => (
-                <div class="card-items" key={item._id}>
-                  <div class="card__image">
+                <div className="card-items" key={item._id}>
+                  <div className="card__image">
                     <img src={item?.image_url} alt="Food Card" />
                   </div>
                   <div className="flex flex-col items-start">
-                    <div class="card__info--price">
+                    <div className="card__info--price">
                       <p>$ {item?.price}</p>
                     </div>
-                    <div class="card__info">
-                      <div class="car__info--title">
+                    <div className="card__info">
+                      <div className="car__info--title">
                         <h3>{item?.name}</h3>
                         <p>{item?.category}</p>
                       </div>

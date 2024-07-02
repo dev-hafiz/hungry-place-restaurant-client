@@ -98,7 +98,7 @@
 }
 .card__info--price {
    text-align: right;
-   background: #ff4500;
+   background: #CF2424;
    margin-left: 30px;
    margin-bottom: -10px;
    color: #fff;
@@ -111,7 +111,7 @@
   align-items: center;
   padding: 2px 6px;
   transition: .3s linear;
-  background: #ff4500;
+  background: #CF2424;
   border-radius: 4px;
   color: white;
   gap:4px;

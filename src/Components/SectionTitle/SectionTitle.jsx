@@ -33,11 +33,7 @@ const SectionTitle = ({ title, details }) => {
               </li>
               {details ? (
                 <li>
-                  <IoIosArrowForward
-                    className={`custom-link ${
-                      details ? "custom-link-active" : ""
-                    }`}
-                  />
+                  <IoIosArrowForward className="custom-link" />
                 </li>
               ) : (
                 ""
