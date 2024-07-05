@@ -22,7 +22,7 @@ const RecepieDetails = () => {
   };
 
   return (
-    <div className="bg-[#F9F9F9]">
+    <div className="bg-[#F9F9F9] ">
       <SectionTitle title="Recepie Details" details="Details" />
       {/* Order Area  */}
       <div className="lg:container pb-24 mx-auto">

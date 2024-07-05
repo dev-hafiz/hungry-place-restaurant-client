@@ -51,7 +51,8 @@ const Recepies = () => {
     <div className="bg-[#F9F9F9]">
       <SectionTitle title="All Recepie" />
 
-      <div className=" mt-10 ">
+     <div className=" container mx-auto">
+     <div className=" mt-10 ">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-1">
           <div className=" col-span-12 md:col-span-3">
             {/* Search Area  */}
@@ -178,7 +179,7 @@ const Recepies = () => {
             </div>
           </div>
           <div className=" col-span-12 md:col-span-9">
-            <div className="right-area flex flex-wrap items-center">
+            <div className="right-area flex flex-wrap items-center justify-around">
               {/* food card  */}
 
               {result.map((item) => (
@@ -207,6 +208,7 @@ const Recepies = () => {
           </div>
         </div>
       </div>
+     </div>
     </div>
   );
 };
