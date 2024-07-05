@@ -10,11 +10,9 @@ import logo from "../../../assets/Logo1.png";
 
 const Footer = () => {
   return (
-    <div>
-      <footer className="w-full">
-        <div>
-          <div className="mx-auto max-w-7xl  px-4 sm:px-6 ">
-            <div className="flex flex-col xl:flex-row gap-8 pt-14 pb-14">
+    <div className="lg:container mx-auto">
+          <div className=" px-4 sm:px-6 ">
+            <div className="flex flex-col xl:flex-row  pt-14 pb-14">
               <div className="w-full   xl:max-w-[265px] max-xl:mb-8">
                 <Link to="/" className="flex justify-center md:justify-start">
                   <img src={logo} alt="footer logo" className="mb-5  " />
@@ -285,7 +283,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="mx-auto max-w-7xl  ">
+          <div className="">
             <div className="py-2 border-t border-gray-200">
               <div className="flex items-center justify-center flex-col sm:justify-between sm:flex-row">
                 <div className=" bg-white ">
@@ -335,8 +333,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </footer>
-    </div>
   );
 };
 
