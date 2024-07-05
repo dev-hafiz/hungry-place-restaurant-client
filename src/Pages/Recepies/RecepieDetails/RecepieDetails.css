@@ -10,7 +10,9 @@
   padding: 20px;
   border-radius: 4px;
   border: 1px solid #e5e5e5;
-  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .item-img {
