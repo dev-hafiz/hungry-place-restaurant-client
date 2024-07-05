@@ -169,7 +169,12 @@
   font-family: "Manrope", sans-serif;
 }
 
-/* Reviews  area  */
+/*-----------------
+   Reviews  area  
+------------------*/
+.reviews-left-col {
+  height: 480px;
+}
 .reviews-left-col{
   background: #fff;
   padding: 50px 20px 40px 20px;
@@ -182,7 +187,65 @@
   border: 1px solid #e5e5e5;
 }
 
-/* Review Card Design */
+/*----------------------------
+  Review overall ratings area 
+-----------------------------*/
+.single-block {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 4px;
+  margin-top: 30px;
+}
+ .give-review h4 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  font-family: "Manrope", sans-serif; ;
+}
+
+.single-block .give-review ul, ol {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+.give-review ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.give-review ul li span {
+  color: #666;
+  display: inline-block;
+  margin-right: 14px;
+  min-width: 80px;
+  font-family: "Manrope", sans-serif; 
+}
+
+.rating-icon{
+  color: #FFA000;
+  font-size: 18px;
+}
+
+.give-review .review-btn {
+  margin-top: 30px;
+  padding: 12px 30px;
+  width: 100%;
+  background-color: #ffa000;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.give-review .review-btn:hover {
+  color: #fff;
+  background-color: #081828;
+}
+
+/*-----------------
+ Review Card Design
+--------------------*/
 .single-review {
   position: relative;
   padding-left: 80px;

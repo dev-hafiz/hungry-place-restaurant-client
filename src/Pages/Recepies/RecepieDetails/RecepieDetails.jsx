@@ -6,6 +6,7 @@ import { useState } from "react";
 import profile1 from "../../../assets/reviewProfile/profile1.jpg";
 import profile2 from "../../../assets/reviewProfile/profile2.jpg";
 import profile3 from "../../../assets/reviewProfile/profile3.jpg";
+import { MdOutlineStar, MdOutlineStarBorder } from "react-icons/md";
 
 const RecepieDetails = () => {
   const [quantity, setQuantity] = useState({ value: 1 });
@@ -141,119 +142,58 @@ const RecepieDetails = () => {
 
         <div className="grid grid-cols-12 gap-9">
           <div className="reviews-left-col col-span-12 md:col-span-4">
-            <div>
-              <div className="flex w-4/5 justify-center flex-col">
-                <div className="flex flex-col sm:flex-row ">
-                  <>
-                    <div className="flex items-center text-[20px] font-bold text-[#243E63]">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-8 w-8 text-yellow-400"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      4.7 (Overall)
-                    </div>
-                  </>
-                </div>
-                <div className="text-gray-700">
-                  <p className="font-medium my-2">Reviews</p>
-                  <ul className="mb-6 mt-2 space-y-3">
-                    <li className="flex items-center text-sm font-medium ">
-                      <span className="w-3">5</span>
-                      <span className="mr-4 text-yellow-400">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-5 w-5"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      </span>
-                      <div className="mr-4 h-2 w-96 overflow-hidden rounded-full bg-gray-300">
-                        <div className="h-full w-10/12 bg-yellow-400"></div>
-                      </div>
-                      <span className="w-3">56</span>
-                    </li>
-                    <li className="flex items-center text-sm font-medium">
-                      <span className="w-3">4</span>
-                      <span className="mr-4 text-yellow-400">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-5 w-5"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      </span>
-                      <div className="mr-4 h-2 w-96 overflow-hidden rounded-full bg-gray-300">
-                        <div className="h-full w-8/12 bg-yellow-400"></div>
-                      </div>
-                      <span className="w-3">12</span>
-                    </li>
-                    <li className="flex items-center text-sm font-medium">
-                      <span className="w-3">3</span>
-                      <span className="mr-4 text-yellow-400">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-5 w-5"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      </span>
-                      <div className="mr-4 h-2 w-96 overflow-hidden rounded-full bg-gray-300">
-                        <div className="h-full w-1/12 bg-yellow-400"></div>
-                      </div>
-                      <span className="w-3">4</span>
-                    </li>
-                    <li className="flex items-center text-sm font-medium">
-                      <span className="w-3">2</span>
-                      <span className="mr-4 text-yellow-400">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-5 w-5"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      </span>
-                      <div className="mr-4 h-2 w-96 overflow-hidden rounded-full bg-gray-300">
-                        <div className="h-full w-0 bg-yellow-400"></div>
-                      </div>
-                      <span className="w-3">0</span>
-                    </li>
-                    <li className="flex items-center text-sm font-medium">
-                      <span className="w-3">1</span>
-                      <span className="mr-4 text-yellow-400">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-5 w-5"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      </span>
-                      <div className="mr-4 h-2 w-96 overflow-hidden rounded-full bg-gray-300">
-                        <div className="h-full w-1/12 bg-yellow-400"></div>
-                      </div>
-                      <span className="w-3">5</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="flex items-center  justify-center">
-                <button className="w-full  mt-4 rounded-sm bg-[#FFA000] hover:bg-yellow-500  transition duration-300 ease-linear py-3 text-white font-medium">
-                  Write a review
-                </button>
-              </div>
+            <div className="single-block give-review">
+              <h4>4.5 (Overall)</h4>
+              <ul>
+                <li>
+                  <span>5 stars - 38</span>
+                  <MdOutlineStar className="rating-icon" />
+                  <MdOutlineStar className="rating-icon" />
+                  <MdOutlineStar className="rating-icon" />
+                  <MdOutlineStar className="rating-icon" />
+                  <MdOutlineStarBorder className="rating-icon" />
+                </li>
+                <li>
+                  <span>4 stars - 10</span>
+                  <MdOutlineStar className="rating-icon" />
+                  <MdOutlineStar className="rating-icon" />
+                  <MdOutlineStar className="rating-icon" />
+                  <MdOutlineStar className="rating-icon" />
+                  <MdOutlineStarBorder className="rating-icon" />
+                </li>
+                <li>
+                  <span>3 stars - 3</span>
+                  <MdOutlineStar className="rating-icon" />
+                  <MdOutlineStar className="rating-icon" />
+                  <MdOutlineStar className="rating-icon" />
+                  <MdOutlineStarBorder className="rating-icon" />
+                  <MdOutlineStarBorder className="rating-icon" />
+                </li>
+                <li>
+                  <span>2 stars - 1</span>
+                  <MdOutlineStar className="rating-icon" />
+                  <MdOutlineStar className="rating-icon" />
+                  <MdOutlineStarBorder className="rating-icon" />
+                  <MdOutlineStarBorder className="rating-icon" />
+                  <MdOutlineStarBorder className="rating-icon" />
+                </li>
+                <li>
+                  <span>1 star - 0</span>
+                  <MdOutlineStar className="rating-icon" />
+                  <MdOutlineStarBorder className="rating-icon" />
+                  <MdOutlineStarBorder className="rating-icon" />
+                  <MdOutlineStarBorder className="rating-icon" />
+                  <MdOutlineStarBorder className="rating-icon" />
+                </li>
+              </ul>
+              <button
+                type="button"
+                className="btn review-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Leave a Review
+              </button>
             </div>
           </div>
           <div className="reviews-right-col col-span-12 md:col-span-8">
@@ -273,42 +213,11 @@ const RecepieDetails = () => {
                 </h4>
                 <ul className="stars">
                   <div className="flex items-center mt-1">
-                    <svg
-                      className="w-4 h-4 fill-current text-yellow-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
-                    <svg
-                      className="w-4 h-4 fill-current text-yellow-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
-                    <svg
-                      className="w-4 h-4 fill-current text-yellow-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
-                    <svg
-                      className="w-4 h-4 fill-current text-yellow-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
-                    <svg
-                      className="w-4 h-4 fill-current text-yellow-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
-                  
+                    <MdOutlineStar className="rating-icon" />
+                    <MdOutlineStar className="rating-icon" />
+                    <MdOutlineStar className="rating-icon" />
+                    <MdOutlineStar className="rating-icon" />
+                    <MdOutlineStar className="rating-icon" />
                   </div>
                 </ul>
                 <p className="review-des">
@@ -333,41 +242,11 @@ const RecepieDetails = () => {
                 </h4>
                 <ul className="stars">
                   <div className="flex items-center mt-1">
-                    <svg
-                      className="w-4 h-4 fill-current text-yellow-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
-                    <svg
-                      className="w-4 h-4 fill-current text-yellow-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
-                    <svg
-                      className="w-4 h-4 fill-current text-yellow-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
-                    <svg
-                      className="w-4 h-4 fill-current text-yellow-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
-                    <svg
-                      className="w-4 h-4 fill-current text-gray-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
+                    <MdOutlineStar className="rating-icon" />
+                    <MdOutlineStar className="rating-icon" />
+                    <MdOutlineStar className="rating-icon" />
+                    <MdOutlineStar className="rating-icon" />
+                    <MdOutlineStarBorder className="rating-icon" />
                   </div>
                 </ul>
                 <p className="review-des">
@@ -392,41 +271,11 @@ const RecepieDetails = () => {
                 </h4>
                 <ul className="stars">
                   <div className="flex items-center mt-1">
-                    <svg
-                      className="w-4 h-4 fill-current text-yellow-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
-                    <svg
-                      className="w-4 h-4 fill-current text-yellow-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
-                    <svg
-                      className="w-4 h-4 fill-current text-yellow-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
-                    <svg
-                      className="w-4 h-4 fill-current text-yellow-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
-                    <svg
-                      className="w-4 h-4 fill-current text-gray-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
+                    <MdOutlineStar className="rating-icon" />
+                    <MdOutlineStar className="rating-icon" />
+                    <MdOutlineStar className="rating-icon" />
+                    <MdOutlineStar className="rating-icon" />
+                    <MdOutlineStarBorder className="rating-icon" />
                   </div>
                 </ul>
                 <p className="review-des">
