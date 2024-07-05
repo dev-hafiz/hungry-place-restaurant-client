@@ -181,3 +181,75 @@
   padding: 50px 20px 40px 20px;
   border: 1px solid #e5e5e5;
 }
+
+/* Review Card Design */
+.single-review {
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: 30px;
+}
+.single-review img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.review-info {
+  position: relative;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 25px;
+}
+.focus-title{
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+.person-name{
+  
+    font-size: 15px;
+    display: block;
+    color: #888;
+    margin-top: 7px;
+}
+.stars {
+  margin-top: 8px;
+  margin-bottom: 14px;
+}
+
+.review-des{
+  font-size: 15px;
+  line-height: 24px;
+  color: #888;
+}
+
+.review-info::before {
+  position: absolute;
+  top: 12px;
+  right: 100%;
+  width: 0;
+  height: 0;
+  border: solid transparent;
+  content: '';
+  pointer-events: none;
+  margin-top: 9px;
+  border-width: 10px;
+  border-color: transparent;
+  border-right-color: #e5e5e5;
+}
+.review-info::after {
+  position: absolute;
+  top: 12px;
+  right: 100%;
+  width: 0;
+  height: 0;
+  border: solid transparent;
+  content: '';
+  pointer-events: none;
+  margin-top: 10px;
+  border-width: 9px;
+  border-color: transparent;
+  border-right-color: #fff;
+}
