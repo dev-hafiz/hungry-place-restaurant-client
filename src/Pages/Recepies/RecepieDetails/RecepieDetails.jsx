@@ -198,9 +198,9 @@ const RecepieDetails = () => {
 
             {/* More Info */}
             <div>
-              <h3 className="details-title mt-9">More Info</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
-                <div>
+              <h3 className="details-title mt-9 pl-3">More Info</h3>
+              <div className="grid grid-cols-2 md:grid-cols-2 gap-4 ">
+                <div className="pl-3">
                   <div className="info-box">
                     <IoCheckmarkCircleOutline className="check-icon" />
                     <p>Home Delivery</p>
