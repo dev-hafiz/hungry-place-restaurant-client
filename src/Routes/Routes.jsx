@@ -34,6 +34,10 @@ export const router = createBrowserRouter([
       {
         path: "recepies/:id",
         element: <RecepieDetails />,
+        loader: ({ params }) =>
+          fetch(
+            `https://hungry-place-restaurant-server.vercel.app/menu/${params.id}`
+          ),
       },
     ],
   },

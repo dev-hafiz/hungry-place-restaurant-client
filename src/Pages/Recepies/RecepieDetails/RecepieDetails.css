@@ -170,6 +170,17 @@
   font-family: "Manrope", sans-serif;
 }
 
+.preparation-time{
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #e5e5e5;
+  width: 150px;
+  font-family: "Roboto", sans-serif;
+}
+
 /*-----------------
    Reviews  area  
 ------------------*/

@@ -8,8 +8,13 @@ import profile2 from "../../../assets/reviewProfile/profile2.png";
 import profile3 from "../../../assets/reviewProfile/profile3.png";
 import { MdOutlineStar, MdOutlineStarBorder } from "react-icons/md";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
+import { useLoaderData } from "react-router-dom";
+import { BsClockHistory } from "react-icons/bs";
 
 const RecepieDetails = () => {
+  const recepie = useLoaderData();
+  console.log("Load Recepie from server-->", recepie);
+
   const [quantity, setQuantity] = useState({ value: 1 });
 
   const increment = () => {
@@ -31,28 +36,22 @@ const RecepieDetails = () => {
           <div className="grid grid-cols-12 gap-2">
             <div className="left-col col-span-12 md:col-span-4">
               <div className="item-img">
-                <img
-                  src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2VhZm9vZHxlbnwwfDB8MHx8fDA%3D"
-                  alt=""
-                />
+                <img src={recepie?.image_url} alt="recepie image" />
               </div>
             </div>
             <div className="right-col col-span-12 md:col-span-8">
               <div className="item-des">
-                <h3 className="item-title">Franch Salmon Fry</h3>
+                <h3 className="item-title">{recepie?.name}</h3>
                 <div className="flex items-center">
                   <IoPricetagOutline className="mr-1" />
-                  <span className="category-text">Category : fast food</span>
+                  <span className="category-text">
+                    Category : {recepie?.category}
+                  </span>
                 </div>
                 <div className="ratings"></div>
-                <p className="item-price">$ 44.00</p>
-                <p className="item-sub-title">Delicious Franch fish fry</p>
-                <p className="item-description">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Harum, fugit libero. Corrupti magnam ad quisquam eum, fuga
-                  ullam cum velit accusamus earum necessitatibus repellendus sed
-                  rem quae aspernatur odio illum.
-                </p>
+                <p className="item-price">$ {recepie?.price}.00</p>
+                <p className="item-sub-title">Delicious {recepie?.category}</p>
+                <p className="item-description">{recepie?.description}</p>
                 <p className="food-quantity">Quantity</p>
                 <div className="sm:order-1 w-28 my-2">
                   <div className="mx-auto flex h-8 items-stretch text-gray-600">
@@ -88,51 +87,33 @@ const RecepieDetails = () => {
           <div className="grid grid-cols-12 gap-2">
             <div className="details-left-col col-span-12 md:col-span-6">
               <h3 className="details-title">Details</h3>
-              <p className="details-des">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptate ipsum fuga odit obcaecati sequi dicta neque officiis
-                voluptates, dolores deserunt. Corporis eveniet nisi dicta eos
-                nemo sapiente, quia quo vero molestias soluta quidem odio
-                voluptate fugit ipsum praesentium et unde.
-              </p>
-              <h3 className="details-title">Features</h3>
+              <p className="details-des">{recepie?.description}</p>
+              <h3 className="details-title">Ingredients</h3>
               <ul className="features">
-                <li>Capture 4K30 Video and 12MP Photos</li>
-                <li>Capture 4K30 Video and 12MP Photos</li>
-                <li>Capture 4K30 Video and 12MP Photos</li>
-                <li>Capture 4K30 Video and 12MP Photos</li>
-                <li>Capture 4K30 Video and 12MP Photos</li>
+                {recepie?.ingredients.map((ingredient, index) => (
+                  <li key={index}>{ingredient}</li>
+                ))}
               </ul>
             </div>
             <div className="details-right-col col-span-12 md:col-span-6">
               <div className="right-container">
-                <h3 className="details-title">Specifications</h3>
-                <p className="normal-list">
-                  Weight: <span>35.5oz (1006g)</span>
-                </p>
-                <p className="normal-list">
-                  Weight: <span>35.5oz (1006g)</span>
-                </p>
-                <p className="normal-list">
-                  Weight: <span>35.5oz (1006g)</span>
-                </p>
-                <p className="normal-list">
-                  Weight: <span>35.5oz (1006g)</span>
-                </p>
+                <h3 className="details-title">Preparation Time</h3>
+                <div className="preparation-time  -mt-3">
+                  <BsClockHistory className="check-icon" />{" "}
+                  <p>{recepie?.preparation_time}</p>
+                </div>
+                <h3 className="details-title mt-5">Calories</h3>
+                <div className="preparation-time -mt-3">
+                  <p>{recepie?.calories} Calories</p>
+                </div>
               </div>
-              <div className="right-container mt-6">
-                <h3 className="details-title">Order Options:</h3>
-                <p className="normal-list">
-                  Courier: <span> 2 - 4 days, $22.50</span>
+              <div className="right-container mt-6 ">
+                <h3 className="details-title">Order Time:</h3>
+                <p className="normal-list -mt-3">
+                  Open: 10:30am – 10pm (Everyday)
                 </p>
                 <p className="normal-list">
-                  Courier: <span> 2 - 4 days, $22.50</span>
-                </p>
-                <p className="normal-list">
-                  Courier: <span> 2 - 4 days, $22.50</span>
-                </p>
-                <p className="normal-list">
-                  Courier: <span> 2 - 4 days, $22.50</span>
+                  Courier: <span> 30min - 1hr (depends on the duration)</span>
                 </p>
               </div>
             </div>
