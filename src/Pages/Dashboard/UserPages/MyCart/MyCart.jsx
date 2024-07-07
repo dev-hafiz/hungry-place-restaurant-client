@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const MyCart = () => {
   const [cart, refetch] = useCart();
-  const total = cart.reduce((sum, item) => item.price + sum, 0);
+  const total = cart.reduce((sum, item) => parseFloat(item.price) + sum, 0);
 
   //Send delete request in server side from client side
   const handleDelete = (id) => {
@@ -41,7 +41,7 @@ const MyCart = () => {
     <>
       <div className="flex justify-evenly mt-10 items-center  px-12 font-semibold">
         <h3 className="text-3xl mr-8">TOTAL ITEMS : {cart.length}</h3>
-        <h3 className="text-3xl mr-8">TOTAL PRICE : {total.toFixed(2)} </h3>
+        <h3 className="text-3xl mr-8">TOTAL PRICE : {total} </h3>
 
         {cart.length ? (
           <Link to="/dashboard/payment">
@@ -81,7 +81,7 @@ const MyCart = () => {
                       <div className="avatar">
                         <div className="mask mask-squircle w-12 h-12">
                           <img
-                            src={item?.image}
+                            src={item?.image_url}
                             alt="Avatar Tailwind CSS Component"
                           />
                         </div>

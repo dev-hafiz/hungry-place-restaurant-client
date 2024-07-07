@@ -8,10 +8,18 @@ import profile2 from "../../../assets/reviewProfile/profile2.png";
 import profile3 from "../../../assets/reviewProfile/profile3.png";
 import { MdOutlineStar, MdOutlineStarBorder } from "react-icons/md";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { BsClockHistory } from "react-icons/bs";
+import useAuth from "../../../Hooks/useAuth";
+import useCart from "../../../Hooks/useCart";
+import Swal from "sweetalert2";
 
 const RecepieDetails = () => {
+  const { user } = useAuth();
+  //From tanSteack Query
+  const [, refetch] = useCart();
+  const navgate = useNavigate();
+
   const recepie = useLoaderData();
   console.log("Load Recepie from server-->", recepie);
 
@@ -25,6 +33,55 @@ const RecepieDetails = () => {
     setQuantity((prevQuantity) => ({
       value: prevQuantity.value > 1 ? prevQuantity.value - 1 : 1,
     }));
+  };
+
+  // Add Food to cart
+
+  const handleAddToCart = () => {
+    const { name, image_url, price, _id } = recepie;
+    if (user.uid && user.email) {
+      const orderItem = {
+        foodId: _id,
+        price,
+        name,
+        image_url,
+        email: user.email,
+      };
+
+      fetch("https://hungry-place-restaurant-server.vercel.app/carts", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(orderItem),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.insertedId) {
+            refetch();
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "Your order added in cart ",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+          }
+        });
+    } else {
+      Swal.fire({
+        title: "Please Login to order",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Login",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navgate("/login");
+        }
+      });
+    }
   };
 
   return (
@@ -73,7 +130,10 @@ const RecepieDetails = () => {
                   </div>
                 </div>
                 <div>
-                  <button className="add-to-cart">
+                  <button
+                    onClick={() => handleAddToCart(recepie)}
+                    className="add-to-cart"
+                  >
                     Add To Cart <FaCartShopping className="ml-2" />
                   </button>
                 </div>
@@ -90,7 +150,7 @@ const RecepieDetails = () => {
               <p className="details-des">{recepie?.description}</p>
               <h3 className="details-title">Ingredients</h3>
               <ul className="features">
-                {recepie?.ingredients.map((ingredient, index) => (
+                {recepie?.ingredients?.map((ingredient, index) => (
                   <li key={index}>{ingredient}</li>
                 ))}
               </ul>
