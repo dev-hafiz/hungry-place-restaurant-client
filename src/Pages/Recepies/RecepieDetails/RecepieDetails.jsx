@@ -4,8 +4,8 @@ import { IoPricetagOutline } from "react-icons/io5";
 import { FaCartShopping } from "react-icons/fa6";
 import { useState } from "react";
 import profile1 from "../../../assets/reviewProfile/profile1.jpg";
-import profile2 from "../../../assets/reviewProfile/profile2.jpg";
-import profile3 from "../../../assets/reviewProfile/profile3.jpg";
+import profile2 from "../../../assets/reviewProfile/profile2.png";
+import profile3 from "../../../assets/reviewProfile/profile3.png";
 import { MdOutlineStar, MdOutlineStarBorder } from "react-icons/md";
 
 const RecepieDetails = () => {
@@ -139,10 +139,9 @@ const RecepieDetails = () => {
         </div>
 
         {/* Reviews Area  */}
-
         <div className="grid grid-cols-12 gap-9">
-          <div className="reviews-left-col col-span-12 md:col-span-4">
-            <div className="single-block give-review">
+          <div className=" col-span-12 md:col-span-4">
+            <div className="reviews-left-col single-block give-review">
               <h4>4.5 (Overall)</h4>
               <ul>
                 <li>
@@ -195,7 +194,15 @@ const RecepieDetails = () => {
                 Leave a Review
               </button>
             </div>
+
+            {/* More Info */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
+              <h3 className="details-title">More Info</h3>
+              <div className="bg-blue-500 text-white p-4">Column 1</div>
+              <div className="bg-green-500 text-white p-4">Column 2</div>
+            </div>
           </div>
+
           <div className="reviews-right-col col-span-12 md:col-span-8">
             <h3 className="details-title">Latest Reviews</h3>
 

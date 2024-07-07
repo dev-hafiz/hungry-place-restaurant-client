@@ -109,8 +109,9 @@
 }
 
 .details-title{
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 20px;
+  font-family: "Manrope", sans-serif;
 }
 
 .details-des{
@@ -172,14 +173,14 @@
 /*-----------------
    Reviews  area  
 ------------------*/
-.reviews-left-col {
-  height: 480px;
-}
+
 .reviews-left-col{
   background: #fff;
   padding: 50px 20px 40px 20px;
   border: 1px solid #e5e5e5;
+  height: 430px;
 }
+
 
 .reviews-right-col{
   background: #fff;
@@ -192,9 +193,8 @@
 -----------------------------*/
 .single-block {
   background-color: #fff;
-  padding: 30px;
   border-radius: 4px;
-  margin-top: 30px;
+  
 }
  .give-review h4 {
   font-size: 20px;
@@ -316,3 +316,8 @@
   border-color: transparent;
   border-right-color: #fff;
 }
+
+
+ /*------------------------
+   Suggested Foods Area
+ -------------------------*/
