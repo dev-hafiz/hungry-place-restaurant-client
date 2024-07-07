@@ -7,6 +7,7 @@ import profile1 from "../../../assets/reviewProfile/profile1.jpg";
 import profile2 from "../../../assets/reviewProfile/profile2.png";
 import profile3 from "../../../assets/reviewProfile/profile3.png";
 import { MdOutlineStar, MdOutlineStarBorder } from "react-icons/md";
+import { IoCheckmarkCircleOutline } from "react-icons/io5";
 
 const RecepieDetails = () => {
   const [quantity, setQuantity] = useState({ value: 1 });
@@ -196,10 +197,86 @@ const RecepieDetails = () => {
             </div>
 
             {/* More Info */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
-              <h3 className="details-title">More Info</h3>
-              <div className="bg-blue-500 text-white p-4">Column 1</div>
-              <div className="bg-green-500 text-white p-4">Column 2</div>
+            <div>
+              <h3 className="details-title mt-9">More Info</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
+                <div>
+                  <div className="info-box">
+                    <IoCheckmarkCircleOutline className="check-icon" />
+                    <p>Home Delivery</p>
+                  </div>
+                  <div className="info-box">
+                    <IoCheckmarkCircleOutline className="check-icon" />
+                    <p>Nightlife</p>
+                  </div>
+                  <div className="info-box">
+                    <IoCheckmarkCircleOutline className="check-icon" />
+                    <p>Indoor Seating</p>
+                  </div>
+                  <div className="info-box">
+                    <IoCheckmarkCircleOutline className="check-icon" />
+                    <p>Luxury Dining</p>
+                  </div>
+                  <div className="info-box">
+                    <IoCheckmarkCircleOutline className="check-icon" />
+                    <p>Live Music</p>
+                  </div>
+                  <div className="info-box">
+                    <IoCheckmarkCircleOutline className="check-icon" />
+                    <p>Rooftop</p>
+                  </div>
+                  <div className="info-box">
+                    <IoCheckmarkCircleOutline className="check-icon" />
+                    <p>Romantic Dining</p>
+                  </div>
+                  <div className="info-box">
+                    <IoCheckmarkCircleOutline className="check-icon" />
+                    <p>Family Friendly</p>
+                  </div>
+                  <div className="info-box">
+                    <IoCheckmarkCircleOutline className="check-icon" />
+                    <p>Table Booking</p>
+                  </div>
+                </div>
+                <div>
+                  <div className="info-box">
+                    <IoCheckmarkCircleOutline className="check-icon" />
+                    <p>Party Music</p>
+                  </div>
+                  <div className="info-box">
+                    <IoCheckmarkCircleOutline className="check-icon" />
+                    <p>Kid Friendly</p>
+                  </div>
+                  <div className="info-box">
+                    <IoCheckmarkCircleOutline className="check-icon" />
+                    <p>Available for Functions</p>
+                  </div>
+                  <div className="info-box">
+                    <IoCheckmarkCircleOutline className="check-icon" />
+                    <p>Smoking Area</p>
+                  </div>
+                  <div className="info-box">
+                    <IoCheckmarkCircleOutline className="check-icon" />
+                    <p>Live Sports Screening</p>
+                  </div>
+                  <div className="info-box">
+                    <IoCheckmarkCircleOutline className="check-icon" />
+                    <p>Outdoor Seating</p>
+                  </div>
+                  <div className="info-box">
+                    <IoCheckmarkCircleOutline className="check-icon" />
+                    <p> Bar Available</p>
+                  </div>
+                  <div className="info-box">
+                    <IoCheckmarkCircleOutline className="check-icon" />
+                    <p> Wifi Available</p>
+                  </div>
+                  <div className="info-box">
+                    <IoCheckmarkCircleOutline className="check-icon" />
+                    <p> Gaming Space</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 

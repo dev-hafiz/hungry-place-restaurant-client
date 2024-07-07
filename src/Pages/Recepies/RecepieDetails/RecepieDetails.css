@@ -181,6 +181,23 @@
   height: 430px;
 }
 
+.info-box{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.info-box p{
+  font-weight: 400;
+  font-size: 15px;
+  font-style: normal;
+  font-family: "Manrope", sans-serif;
+}
+.check-icon{
+  font-size: 22px;
+  color: #D22F2F;
+}
+
 
 .reviews-right-col{
   background: #fff;
