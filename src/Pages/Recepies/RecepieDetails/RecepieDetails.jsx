@@ -21,51 +21,145 @@ const RecepieDetails = () => {
   const navgate = useNavigate();
 
   const recepie = useLoaderData();
-  console.log("Load Recepie from server-->", recepie);
 
-  const [quantity, setQuantity] = useState({ value: 1 });
+  const [stateQuantity, setStateQuantity] = useState(1);
 
   const increment = () => {
-    setQuantity((prevQuantity) => ({ value: prevQuantity.value + 1 }));
+    setStateQuantity((prevQuantity) => prevQuantity + 1);
   };
 
   const decrement = () => {
-    setQuantity((prevQuantity) => ({
-      value: prevQuantity.value > 1 ? prevQuantity.value - 1 : 1,
-    }));
+    setStateQuantity((prevQuantity) =>
+      prevQuantity > 1 ? prevQuantity - 1 : 1
+    );
   };
 
   // Add Food to cart
 
-  const handleAddToCart = () => {
-    const { name, image_url, price, _id } = recepie;
-    if (user.uid && user.email) {
-      const orderItem = {
-        foodId: _id,
-        price,
-        name,
-        image_url,
-        email: user.email,
-      };
+  // const handleAddToCart = (quantity) => {
+  //   const { name, image_url, price, _id } = recepie;
 
-      fetch("https://hungry-place-restaurant-server.vercel.app/carts", {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(orderItem),
-      })
+  //   if (user.uid && user.email) {
+  //     const totalPrice = price * quantity;
+  //     const orderItem = {
+  //       foodId: _id,
+  //       price: totalPrice,
+  //       name,
+  //       image_url,
+  //       email: user.email,
+  //       quantity: quantity,
+  //     };
+
+  //     fetch("https://hungry-place-restaurant-server.vercel.app/carts", {
+  //       method: "POST",
+  //       headers: {
+  //         "content-type": "application/json",
+  //       },
+  //       body: JSON.stringify(orderItem),
+  //     })
+  //       .then((res) => res.json())
+  //       .then((data) => {
+  //         if (data.insertedId) {
+  //           refetch();
+  //           Swal.fire({
+  //             position: "top-end",
+  //             icon: "success",
+  //             title: "Your order added in cart ",
+  //             showConfirmButton: false,
+  //             timer: 1500,
+  //           });
+  //         }
+  //       });
+  //   } else {
+  //     Swal.fire({
+  //       title: "Please Login to order",
+  //       icon: "warning",
+  //       showCancelButton: true,
+  //       confirmButtonColor: "#3085d6",
+  //       cancelButtonColor: "#d33",
+  //       confirmButtonText: "Login",
+  //     }).then((result) => {
+  //       if (result.isConfirmed) {
+  //         navgate("/login");
+  //       }
+  //     });
+  //   }
+  // };
+
+  const handleAddToCart = (selectedProduct) => {
+    const { name, image_url, price, _id } = selectedProduct;
+    const email = user.email;
+
+    if (user.uid && email) {
+      // Fetch the current cart items for the user
+      fetch(
+        `https://hungry-place-restaurant-server.vercel.app/carts?email=${email}`
+      )
         .then((res) => res.json())
-        .then((data) => {
-          if (data.insertedId) {
-            refetch();
-            Swal.fire({
-              position: "top-end",
-              icon: "success",
-              title: "Your order added in cart ",
-              showConfirmButton: false,
-              timer: 1500,
-            });
+        .then((cartItems) => {
+          // Check if the item with the same foodId already exists in the cart
+          const exists = cartItems.find((item) => item.foodId === _id);
+
+          if (!exists) {
+            // If the item does not exist, add a new item to the cart
+            const orderItem = {
+              foodId: _id,
+              price: parseFloat(price),
+              name,
+              image_url,
+              email: email,
+              quantity: 1,
+            };
+
+            fetch("https://hungry-place-restaurant-server.vercel.app/carts", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(orderItem),
+            })
+              .then((res) => res.json())
+              .then((data) => {
+                if (data.insertedId) {
+                  refetch();
+                  Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Your order added to cart",
+                    showConfirmButton: false,
+                    timer: 1500,
+                  });
+                }
+              });
+          } else {
+            // If the item exists, update its quantity
+            const updatedQuantity = stateQuantity; // Adjust stateQuantity as necessary
+            const updatedPrice =
+              parseFloat(updatedQuantity) * parseFloat(price); // Update the total price
+
+            fetch(`http://localhost:5000/carts/${exists._id}`, {
+              method: "PUT",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                quantity: updatedQuantity,
+                price: updatedPrice,
+              }),
+            })
+              .then((res) => res.json())
+              .then((data) => {
+                if (data.modifiedCount > 0) {
+                  refetch();
+                  Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Your order quantity updated in cart",
+                    showConfirmButton: false,
+                    timer: 1500,
+                  });
+                }
+              });
           }
         });
     } else {
@@ -119,7 +213,7 @@ const RecepieDetails = () => {
                       -
                     </button>
                     <div className="flex w-full items-center justify-center bg-gray-100 px-4 text-xs uppercase transition">
-                      {quantity.value}
+                      {stateQuantity}
                     </div>
                     <button
                       onClick={increment}
