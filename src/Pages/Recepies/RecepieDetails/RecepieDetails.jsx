@@ -137,16 +137,19 @@ const RecepieDetails = () => {
             const updatedPrice =
               parseFloat(updatedQuantity) * parseFloat(price); // Update the total price
 
-            fetch(`http://localhost:5000/carts/${exists._id}`, {
-              method: "PUT",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                quantity: updatedQuantity,
-                price: updatedPrice,
-              }),
-            })
+            fetch(
+              `https://hungry-place-restaurant-server.vercel.app/carts/${exists._id}`,
+              {
+                method: "PUT",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  quantity: updatedQuantity,
+                  price: updatedPrice,
+                }),
+              }
+            )
               .then((res) => res.json())
               .then((data) => {
                 if (data.modifiedCount > 0) {

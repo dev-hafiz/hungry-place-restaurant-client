@@ -1,0 +1,123 @@
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-top: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-top: 20px;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.cart-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.item-des h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.item-des p{
+    font-size: 0.900rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #6F6F79;
+}
+
+.price-text{
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+}
+
+.delete-btn {
+    font-size: 1.2rem;
+    color: #6F6F79;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+
+}
+
+.delete-btn:hover {
+    border: #6F6F79 1px solid;
+    border-radius: 5px;
+    transition: .3s linear;
+}
+
+.calculator-area {
+    background: #FAFAFA;
+    padding: 30px 26px;
+}
+
+.calculating-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    border-bottom: 1px solid #dadadc;
+    padding-bottom: 16px;
+    margin-top: 20px;
+}
+
+.calculating-row p{
+    font-size: 1.2rem;
+    color: #6F6F79;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+}
+
+.calculating-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    padding-bottom: 16px;
+    margin-top: 20px;
+}
+
+.calculating-total p{
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+}
+
+.payment-btn{
+    background: #17171A;
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.payment-btn:hover{
+    background: #3F3F46;
+    transition: .3s linear;
+}
+
+.continue-btn{
+    background: #fff;
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 6px;
+    color: #17171A;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    margin-top: 10px;
+    border: 1px solid #17171A;
+}
+
+.continue-btn:hover{
+    background: #f5f4f4;
+    transition: .3s linear;
+}

@@ -17,6 +17,7 @@ import Payment from "../Pages/Dashboard/Payment/Payment";
 import PaymentHistory from "../Pages/Dashboard/UserPages/PaymentHistory/PaymentHistory";
 import Recepies from "../Pages/Recepies/Recepies";
 import RecepieDetails from "../Pages/Recepies/RecepieDetails/RecepieDetails";
+import OrderCart from "../Pages/Dashboard/UserPages/OrderCart/OrderCart";
 
 export const router = createBrowserRouter([
   {
@@ -66,6 +67,10 @@ export const router = createBrowserRouter([
       {
         path: "mycart",
         element: <MyCart />,
+      },
+      {
+        path: "orderCart",
+        element: <OrderCart />,
       },
       {
         path: "payment",
