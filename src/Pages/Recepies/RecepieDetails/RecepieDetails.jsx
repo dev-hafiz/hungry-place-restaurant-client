@@ -21,6 +21,7 @@ const RecepieDetails = () => {
   const navgate = useNavigate();
 
   const recepie = useLoaderData();
+  console.log(recepie);
 
   const [stateQuantity, setStateQuantity] = useState(1);
 
@@ -87,7 +88,7 @@ const RecepieDetails = () => {
   // };
 
   const handleAddToCart = (selectedProduct) => {
-    const { name, image_url, price, _id } = selectedProduct;
+    const { name, image_url, price, _id, category } = selectedProduct;
     const email = user.email;
 
     if (user.uid && email) {
@@ -109,6 +110,7 @@ const RecepieDetails = () => {
               image_url,
               email: email,
               quantity: 1,
+              category,
             };
 
             fetch("https://hungry-place-restaurant-server.vercel.app/carts", {
