@@ -4,9 +4,35 @@ import useCart from "../../../../Hooks/useCart";
 import "./OrderCart.css";
 import { AiOutlineDelete } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const OrderCart = () => {
   const [cart, refetch] = useCart();
+  const [quantities, setQuantities] = useState({});
+
+  useEffect(() => {
+    const initialQuantities = cart.reduce((acc, item) => {
+      acc[item._id] = 1; // Set initial quantity to 1 or any other default value
+      return acc;
+    }, {});
+    setQuantities(initialQuantities);
+  }, [cart]);
+
+  // Handle increment
+  const handleIncrement = (id) => {
+    setQuantities((prevQuantities) => ({
+      ...prevQuantities,
+      [id]: (prevQuantities[id] || 0) + 1,
+    }));
+  };
+
+  // Handle decrement
+  const handleDecrement = (id) => {
+    setQuantities((prevQuantities) => ({
+      ...prevQuantities,
+      [id]: Math.max((prevQuantities[id] || 0) - 1, 1),
+    }));
+  };
 
   let subTotal = 0;
   let shipping = 0;
@@ -59,14 +85,14 @@ const OrderCart = () => {
               <p className="text-[#6F6F79] ">{cart?.length} Items in cart</p>
             </div>
 
-            {cart?.map((item) => (
+            {cart.map((item) => (
               <div key={item._id} className="cart-item">
                 <div className="left-box-wrapper">
                   <div className="flex items-center gap-6">
                     <img src={item?.image_url} alt="item image" />
                     <div className="item-des">
                       <h3>{item?.name}</h3>
-                      <p>{item?.category} </p>
+                      <p>{item?.category}</p>
                     </div>
                   </div>
                   <div>
@@ -77,8 +103,8 @@ const OrderCart = () => {
                       <div className="flex items-center gap-x-1.5">
                         <button
                           type="button"
-                          className="size-6 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
-                          data-hs-input-number-decrement=""
+                          className="size-6 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50"
+                          onClick={() => handleDecrement(item._id)}
                         >
                           <svg
                             className="flex-shrink-0 size-3.5"
@@ -88,9 +114,9 @@ const OrderCart = () => {
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           >
                             <path d="M5 12h14"></path>
                           </svg>
@@ -98,11 +124,13 @@ const OrderCart = () => {
                         <input
                           className="p-0 w-6 bg-transparent border-0 text-gray-800 text-center focus:ring-0"
                           type="text"
-                          value="0"
+                          value={quantities[item._id] || 0}
+                          readOnly
                         />
                         <button
                           type="button"
-                          className="size-6 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+                          className="size-6 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50"
+                          onClick={() => handleIncrement(item._id)}
                         >
                           <svg
                             className="flex-shrink-0 size-3.5"
@@ -112,9 +140,9 @@ const OrderCart = () => {
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           >
                             <path d="M5 12h14"></path>
                             <path d="M12 5v14"></path>
@@ -126,7 +154,7 @@ const OrderCart = () => {
                 </div>
                 <div className="right-box-wrapper">
                   <p className="price-text">{item?.price}</p>
-                  <button onClick={() => handleDelete(item?._id)}>
+                  <button onClick={() => handleDelete(item._id)}>
                     <AiOutlineDelete className="delete-btn" />
                   </button>
                 </div>

@@ -21,7 +21,6 @@ const RecepieDetails = () => {
   const navgate = useNavigate();
 
   const recepie = useLoaderData();
-  console.log(recepie);
 
   const [stateQuantity, setStateQuantity] = useState(1);
 
