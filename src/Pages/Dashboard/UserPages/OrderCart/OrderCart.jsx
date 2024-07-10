@@ -7,8 +7,18 @@ import { Link } from "react-router-dom";
 
 const OrderCart = () => {
   const [cart, refetch] = useCart();
-  console.log(cart);
-  const total = cart.reduce((sum, item) => parseFloat(item.price) + sum, 0);
+
+  let subTotal = 0;
+  let shipping = 0;
+  let quantity = 0;
+
+  for (const item of cart) {
+    quantity = quantity + item.quantity;
+    subTotal = subTotal + item.price * item.quantity;
+    shipping = shipping + 3;
+  }
+  const tax = parseFloat((subTotal * 0.1).toFixed(2));
+  const grandTotal = subTotal + shipping + tax;
 
   //Send delete request in server side from client side
   const handleDelete = (id) => {
@@ -126,21 +136,25 @@ const OrderCart = () => {
         </div>
         <div className="md:col-span-4  p-4">
           <div className="calculator-area">
+            <div className="summary">
+              <h3>Summary</h3>
+              <div className="item_counter">{quantity}</div>
+            </div>
             <div className="calculating-row">
               <p>Subtotal</p>
-              <p>$100</p>
+              <p>$ {subTotal.toFixed(2)}</p>
             </div>
             <div className="calculating-row">
-              <p>Tax</p>
-              <p>$4.00</p>
+              <p>Estimated Tax</p>
+              <p>$ {tax}</p>
             </div>
             <div className="calculating-row">
-              <p>Shipping</p>
-              <p>$5.00</p>
+              <p>Estimated Shipping</p>
+              <p>$ {shipping.toFixed(2)}</p>
             </div>
             <div className="calculating-total">
-              <p>Total</p>
-              <p>$109.00</p>
+              <p>Grand Total</p>
+              <p>$ {grandTotal.toFixed(2)}</p>
             </div>
             <button className="payment-btn">Confirm Payment</button>
             <Link to="/recepies">
