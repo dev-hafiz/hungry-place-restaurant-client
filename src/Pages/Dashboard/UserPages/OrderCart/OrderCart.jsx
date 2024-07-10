@@ -6,9 +6,17 @@ import { AiOutlineDelete } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const OrderCart = () => {
+const OrderCart = ({ flatShippingRate = 3 }) => {
   const [cart, refetch] = useCart();
   const [quantities, setQuantities] = useState({});
+
+  const [totals, setTotals] = useState({
+    subTotal: 0,
+    shipping: 0,
+    quantity: 0,
+    tax: 0,
+    grandTotal: 0,
+  });
 
   useEffect(() => {
     const initialQuantities = cart.reduce((acc, item) => {
@@ -17,6 +25,24 @@ const OrderCart = () => {
     }, {});
     setQuantities(initialQuantities);
   }, [cart]);
+
+  // Recalculate totals whenever quantities or cart changes
+  useEffect(() => {
+    let subTotal = 0;
+    let quantity = 0;
+
+    for (const item of cart) {
+      const itemQuantity = quantities[item._id] || 0;
+      quantity += itemQuantity;
+      subTotal += item.price * itemQuantity;
+    }
+
+    const shipping = flatShippingRate * quantity;
+    const tax = parseFloat((subTotal * 0.1).toFixed(2));
+    const grandTotal = subTotal + shipping + tax;
+
+    setTotals({ subTotal, shipping, quantity, tax, grandTotal });
+  }, [quantities, cart, flatShippingRate]);
 
   // Handle increment
   const handleIncrement = (id) => {
@@ -34,17 +60,17 @@ const OrderCart = () => {
     }));
   };
 
-  let subTotal = 0;
-  let shipping = 0;
-  let quantity = 0;
+  // let subTotal = 0;
+  // let shipping = 0;
+  // let quantity = 0;
 
-  for (const item of cart) {
-    quantity = quantity + item.quantity;
-    subTotal = subTotal + item.price * item.quantity;
-    shipping = shipping + 3;
-  }
-  const tax = parseFloat((subTotal * 0.1).toFixed(2));
-  const grandTotal = subTotal + shipping + tax;
+  // for (const item of cart) {
+  //   quantity = quantity + item.quantity;
+  //   subTotal = subTotal + item.price * item.quantity;
+  //   shipping = shipping + 3;
+  // }
+  // const tax = parseFloat((subTotal * 0.1).toFixed(2));
+  // const grandTotal = subTotal + shipping + tax;
 
   //Send delete request in server side from client side
   const handleDelete = (id) => {
@@ -166,23 +192,23 @@ const OrderCart = () => {
           <div className="calculator-area">
             <div className="summary">
               <h3>Summary</h3>
-              <div className="item_counter">{quantity}</div>
+              <div className="item_counter">{totals.quantity}</div>
             </div>
             <div className="calculating-row">
               <p>Subtotal</p>
-              <p>$ {subTotal.toFixed(2)}</p>
+              <p>$ {totals.subTotal.toFixed(2)}</p>
             </div>
             <div className="calculating-row">
               <p>Estimated Tax</p>
-              <p>$ {tax}</p>
+              <p>$ {totals.tax}</p>
             </div>
             <div className="calculating-row">
               <p>Estimated Shipping</p>
-              <p>$ {shipping.toFixed(2)}</p>
+              <p>$ {totals.shipping.toFixed(2)}</p>
             </div>
             <div className="calculating-total">
               <p>Grand Total</p>
-              <p>$ {grandTotal.toFixed(2)}</p>
+              <p>$ {totals.grandTotal.toFixed(2)}</p>
             </div>
             <button className="payment-btn">Confirm Payment</button>
             <Link to="/recepies">
