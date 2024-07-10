@@ -119,7 +119,7 @@ const CheckoutForm = () => {
     }
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="mt-3 ">
       <CardElement
         options={{
           style: {
@@ -138,7 +138,7 @@ const CheckoutForm = () => {
       />
       <button
         type="submit"
-        className="btn btn-primary mt-4 w-[80px]"
+        className="mt-9 mb-8 w-full rounded-md bg-gray-900 px-6 py-3 font-medium text-white"
         disabled={!stripe || !clientSecret}
       >
         Pay

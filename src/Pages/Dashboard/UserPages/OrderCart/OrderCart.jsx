@@ -210,7 +210,20 @@ const OrderCart = ({ flatShippingRate = 3 }) => {
               <p>Grand Total</p>
               <p>$ {totals.grandTotal.toFixed(2)}</p>
             </div>
-            <button className="payment-btn">Confirm Payment</button>
+
+            {cart.length ? (
+              <Link to="/dashboard/payment">
+                <button className="payment-btn">Confirm Payment</button>
+              </Link>
+            ) : (
+              <button
+                disabled
+                className="btn btn-secondary bg-orange-400 border-none"
+              >
+                PAY
+              </button>
+            )}
+
             <Link to="/recepies">
               <button className="continue-btn">Continue to Recepie</button>
             </Link>
