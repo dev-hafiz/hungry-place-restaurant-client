@@ -12,7 +12,7 @@ const OrderCart = () => {
 
   useEffect(() => {
     const initialQuantities = cart.reduce((acc, item) => {
-      acc[item._id] = 1; // Set initial quantity to 1 or any other default value
+      acc[item._id] = item.quantity;
       return acc;
     }, {});
     setQuantities(initialQuantities);
