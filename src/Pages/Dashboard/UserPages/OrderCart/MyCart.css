@@ -142,6 +142,19 @@
     transition: .3s linear;
 }
 
+.payment-btn-disabled{
+    background: #dbdbdb;
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 6px;
+    color: #040404;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
 .continue-btn{
     background: #fff;
     width: 100%;

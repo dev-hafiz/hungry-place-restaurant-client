@@ -5,7 +5,6 @@ import Login from "../Pages/Login/Login/Login";
 import Signup from "../Pages/Login/Signup";
 import Dashboard from "../Layout/Dashboard";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
-import MyCart from "../Pages/Dashboard/UserPages/MyCart/MyCart";
 import AllUser from "../Pages/Dashboard/AdminPages/AllUser/AllUser";
 import AddProduct from "../Pages/Dashboard/AdminPages/AddProduct/AddProduct";
 import AdminRoute from "../PrivateRoute/AdminRoute";
@@ -17,7 +16,7 @@ import Payment from "../Pages/Dashboard/Payment/Payment";
 import PaymentHistory from "../Pages/Dashboard/UserPages/PaymentHistory/PaymentHistory";
 import Recepies from "../Pages/Recepies/Recepies";
 import RecepieDetails from "../Pages/Recepies/RecepieDetails/RecepieDetails";
-import OrderCart from "../Pages/Dashboard/UserPages/OrderCart/OrderCart";
+import MyCart from "../Pages/Dashboard/UserPages/OrderCart/MyCart";
 
 export const router = createBrowserRouter([
   {
@@ -64,13 +63,10 @@ export const router = createBrowserRouter([
         path: "userHome",
         element: <UserHome />,
       },
+
       {
         path: "mycart",
         element: <MyCart />,
-      },
-      {
-        path: "orderCart",
-        element: <OrderCart />,
       },
       {
         path: "payment",

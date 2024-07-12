@@ -1,12 +1,12 @@
 /* eslint-disable react/no-unknown-property */
 import Swal from "sweetalert2";
 import useCart from "../../../../Hooks/useCart";
-import "./OrderCart.css";
+import "./MyCart.css";
 import { AiOutlineDelete } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const OrderCart = ({ flatShippingRate = 3 }) => {
+const MyCart = ({ flatShippingRate = 3 }) => {
   const [cart, refetch] = useCart();
   const [quantities, setQuantities] = useState({});
 
@@ -216,11 +216,8 @@ const OrderCart = ({ flatShippingRate = 3 }) => {
                 <button className="payment-btn">Confirm Payment</button>
               </Link>
             ) : (
-              <button
-                disabled
-                className="btn btn-secondary bg-orange-400 border-none"
-              >
-                PAY
+              <button disabled className="payment-btn-disabled ">
+                Confirm Payment
               </button>
             )}
 
@@ -234,4 +231,4 @@ const OrderCart = ({ flatShippingRate = 3 }) => {
   );
 };
 
-export default OrderCart;
+export default MyCart;

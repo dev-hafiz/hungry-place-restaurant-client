@@ -89,6 +89,7 @@ const RecepieDetails = () => {
   const handleAddToCart = (selectedProduct) => {
     const { name, image_url, price, _id, category } = selectedProduct;
     const email = user.email;
+    const itemQuantity = stateQuantity;
 
     if (user.uid && email) {
       // Fetch the current cart items for the user
@@ -108,7 +109,7 @@ const RecepieDetails = () => {
               name,
               image_url,
               email: email,
-              quantity: 1,
+              quantity: itemQuantity,
               category,
             };
 
