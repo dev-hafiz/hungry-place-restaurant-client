@@ -121,6 +121,7 @@ const CheckoutForm = () => {
   return (
     <form onSubmit={handleSubmit} className="mt-3 ">
       <CardElement
+        className="mb-3 border border-gray-300 p-4 rounded-md "
         options={{
           style: {
             base: {
@@ -136,13 +137,21 @@ const CheckoutForm = () => {
           },
         }}
       />
-      <button
-        type="submit"
-        className="mt-9 mb-8 w-full rounded-md bg-gray-900 px-6 py-3 font-medium text-white"
-        disabled={!stripe || !clientSecret}
-      >
-        Pay
-      </button>
+
+      {cart.length ? (
+        <button
+          className="payment-btn mb-3"
+          type="submit"
+          disabled={!stripe || !clientSecret}
+        >
+          Confirm Payment
+        </button>
+      ) : (
+        <button type="submit" disabled className="payment-btn-disabled ">
+          Confirm Payment
+        </button>
+      )}
+
       <p className="text-red-800">{error}</p>
       {transactionId && (
         <p className="text-green-700">

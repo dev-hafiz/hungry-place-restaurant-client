@@ -4,7 +4,6 @@ import useCart from "../../../Hooks/useCart";
 import logo1 from "../../../assets/Logo1.png";
 const CategoryNavbar = () => {
   const [cart] = useCart();
-  const total = cart.reduce((sum, item) => item.price + sum, 0);
   return (
     <header className="bg-white">
       <div className="container mx-auto pr-4 py-4 flex items-center">
@@ -109,11 +108,6 @@ const CategoryNavbar = () => {
             </li>
           </ul>
         </nav>
-
-        <div className="ml-4 hidden sm:flex flex-col font-bold">
-          <span className="text-xs text-gray-400">Your Cart</span>
-          <span>${total}</span>
-        </div>
       </div>
 
       <hr />

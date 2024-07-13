@@ -165,8 +165,8 @@
     font-weight: 500;
     font-family: "Roboto", sans-serif;
     cursor: pointer;
-    margin-top: 10px;
     border: 1px solid #17171A;
+    margin-top: 6px;
 }
 
 .continue-btn:hover{

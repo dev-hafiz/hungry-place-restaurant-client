@@ -5,6 +5,12 @@ import "./MyCart.css";
 import { AiOutlineDelete } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Elements } from "@stripe/react-stripe-js";
+import CheckoutForm from "../../Payment/CheckoutForm";
+import { loadStripe } from "@stripe/stripe-js";
+
+// Stripe Payment Gateway API env key
+const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT_GATEWAY_KEY);
 
 const MyCart = ({ flatShippingRate = 3 }) => {
   const [cart, refetch] = useCart();
@@ -101,6 +107,7 @@ const MyCart = ({ flatShippingRate = 3 }) => {
       }
     });
   };
+
   return (
     <div className="w-9/12 h-full mt-20">
       <div className=" grid grid-cols-1 md:grid-cols-12 gap-4">
@@ -210,16 +217,11 @@ const MyCart = ({ flatShippingRate = 3 }) => {
               <p>Grand Total</p>
               <p>$ {totals.grandTotal.toFixed(2)}</p>
             </div>
-
-            {cart.length ? (
-              <Link to="/dashboard/payment">
-                <button className="payment-btn">Confirm Payment</button>
-              </Link>
-            ) : (
-              <button disabled className="payment-btn-disabled ">
-                Confirm Payment
-              </button>
-            )}
+            <div>
+              <Elements stripe={stripePromise}>
+                <CheckoutForm />
+              </Elements>
+            </div>
 
             <Link to="/recepies">
               <button className="continue-btn">Continue to Recepie</button>
