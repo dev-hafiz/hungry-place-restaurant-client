@@ -5,7 +5,7 @@ import useAuth from "../../../Hooks/useAuth";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
-const CheckoutForm = () => {
+const CheckoutForm = ({ flatShippingRate = 3 }) => {
   const [error, setError] = useState("");
   const [clientSecret, setClientSecret] = useState("");
   const [transactionId, setTransactionId] = useState("");
@@ -15,10 +15,35 @@ const CheckoutForm = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
 
-  const price = cart.reduce((sum, item) => item.price + sum, 0);
+  const [totals, setTotals] = useState({
+    subTotal: 0,
+    shipping: 0,
+    quantity: 0,
+    tax: 0,
+    grandTotal: 0,
+  });
+  const price = totals.grandTotal.toFixed(2);
+
+  // Recalculate totals whenever quantities or cart changes
+  useEffect(() => {
+    let subTotal = 0;
+    let quantity = 0;
+
+    for (const item of cart) {
+      quantity = quantity + item.quantity;
+      subTotal = subTotal + item.price * item.quantity;
+    }
+
+    const shipping = flatShippingRate * quantity;
+    const tax = parseFloat((subTotal * 0.1).toFixed(2));
+    const grandTotal = subTotal + shipping + tax;
+
+    setTotals({ subTotal, shipping, quantity, tax, grandTotal });
+  }, [cart, flatShippingRate]);
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
+
     if (price > 0) {
       fetch(
         "https://hungry-place-restaurant-server.vercel.app/create-payment-intent",

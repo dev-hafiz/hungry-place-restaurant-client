@@ -12,7 +12,6 @@ import ManageProducts from "../Pages/Dashboard/AdminPages/ManageProducts/ManageP
 import UpdateProduct from "../Pages/Dashboard/AdminPages/UpdateProduct/UpdateProduct";
 import AdminHome from "../Pages/Dashboard/AdminPages/AdminHome/AdminHome";
 import UserHome from "../Pages/Dashboard/UserPages/UserHome/UserHome";
-import Payment from "../Pages/Dashboard/Payment/Payment";
 import PaymentHistory from "../Pages/Dashboard/UserPages/PaymentHistory/PaymentHistory";
 import Recepies from "../Pages/Recepies/Recepies";
 import RecepieDetails from "../Pages/Recepies/RecepieDetails/RecepieDetails";
@@ -73,10 +72,7 @@ export const router = createBrowserRouter([
         path: "mycart",
         element: <MyCart />,
       },
-      {
-        path: "payment",
-        element: <Payment />,
-      },
+
       {
         path: "paymentHistory",
         element: <PaymentHistory />,
