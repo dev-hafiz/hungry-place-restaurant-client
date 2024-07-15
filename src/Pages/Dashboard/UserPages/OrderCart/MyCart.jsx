@@ -177,9 +177,11 @@ const MyCart = ({ flatShippingRate = 3 }) => {
             if (data.deletedCount > 0) {
               refetch();
               Swal.fire({
-                title: "Deleted Successfully!",
-                text: "Your file has been deleted.",
+                position: "center",
                 icon: "success",
+                title: "Your item deleted from cart",
+                showConfirmButton: false,
+                timer: 1500,
               });
             }
           });

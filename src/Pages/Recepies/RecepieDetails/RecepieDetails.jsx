@@ -125,7 +125,7 @@ const RecepieDetails = () => {
                 if (data.insertedId) {
                   refetch();
                   Swal.fire({
-                    position: "top-end",
+                    position: "center",
                     icon: "success",
                     title: "Your order added to cart",
                     showConfirmButton: false,
@@ -157,9 +157,9 @@ const RecepieDetails = () => {
                 if (data.modifiedCount > 0) {
                   refetch();
                   Swal.fire({
-                    position: "top-end",
+                    position: "center",
                     icon: "success",
-                    title: "Your order quantity updated in cart",
+                    title: "Your item added in cart",
                     showConfirmButton: false,
                     timer: 1500,
                   });
