@@ -212,7 +212,7 @@ const Recepies = () => {
                 </div>
               </div>
             </div>
-            <div className=" col-span-12 md:col-span-9">
+            <div className=" col-span-12 md:col-span-9 bg-white mb-9 mt-[20px]">
               <div className="right-area flex flex-wrap items-center justify-around">
                 {/* food card  */}
 
@@ -242,7 +242,7 @@ const Recepies = () => {
                 ))}
               </div>
               {/* Pagination  Start*/}
-              <div className="flex flex-col items-center my-12">
+              <div className="flex flex-col items-center justify-center my-12">
                 <div className="flex text-gray-700">
                   <div
                     className={`h-8 w-8 mr-1 flex justify-center items-center rounded-full bg-gray-200 cursor-pointer ${
@@ -269,7 +269,7 @@ const Recepies = () => {
                     {Array.from({ length: totalPages }, (_, index) => (
                       <div
                         key={index + 1}
-                        className={`w-8 md:flex justify-center items-center cursor-pointer leading-5 transition duration-150 ease-in rounded-full ${
+                        className={`w-8 flex justify-center items-center cursor-pointer leading-5 transition duration-150 ease-in rounded-full ${
                           currentPage === index + 1
                             ? "bg-pink-600 text-white"
                             : ""
