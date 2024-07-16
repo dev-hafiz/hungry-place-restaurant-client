@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-import useAuth from "../../../../Hooks/useAuth";
 import { FaDollarSign, FaUsers } from "react-icons/fa6";
 import {
   BarChart,
@@ -17,8 +16,6 @@ const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#FF0000"];
 
 const AdminHome = () => {
-  const { user } = useAuth();
-
   //Data load from backend with Tan-Stack query
   const { data: stats = {} } = useQuery({
     queryKey: ["admin-stats"],
@@ -90,9 +87,6 @@ const AdminHome = () => {
 
   return (
     <div className="w-full h-full mt-6 ">
-      <h2 className="text-2xl text-[#D926A9] ">
-        Well Come Admin :) {user?.displayName ? user?.displayName : "Back"}
-      </h2>
       <div>
         <div className="stats shadow mt-10 ">
           <div className="stat">

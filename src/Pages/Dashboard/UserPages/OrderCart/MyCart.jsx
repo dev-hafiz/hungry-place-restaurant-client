@@ -268,7 +268,7 @@ const MyCart = ({ flatShippingRate = 3 }) => {
                     </div>
                   </div>
                   <div className="right-box-wrapper">
-                    <p className="price-text">{item?.price}</p>
+                    <p className="price-text">＄{item?.price}</p>
                     <button onClick={() => handleDelete(item._id)}>
                       <AiOutlineDelete className="delete-btn" />
                     </button>

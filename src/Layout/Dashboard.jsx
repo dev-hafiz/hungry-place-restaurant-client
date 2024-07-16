@@ -1,13 +1,12 @@
 /* eslint-disable react/no-unknown-property */
 import { Link, Outlet } from "react-router-dom";
-// import { FaEdit, FaHamburger, FaHome, FaShoppingCart } from "react-icons/fa";
-// import { FaCalendar, FaPlus, FaUsers, FaWallet } from "react-icons/fa6";
 import useCart from "../Hooks/useCart";
 import useAdmin from "../Hooks/useAdmin";
+import useAuth from "../Hooks/useAuth";
 
 const Dashboard = () => {
   const [cart] = useCart();
-
+  const { user } = useAuth();
   const [isAdmin] = useAdmin();
 
   return (
@@ -29,17 +28,19 @@ const Dashboard = () => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <div className="h-screen w-64 pb-10">
-          <div className="flex h-full flex-grow flex-col overflow-y-auto rounded-br-lg rounded-tr-lg bg-white pt-5 shadow-md">
+        <div className="h-screen w-64 pb-10 ">
+          <div className="flex bg-[#FAFAFA] h-full flex-grow flex-col overflow-y-auto rounded-br-lg rounded-tr-lg mt-5 pt-5 ">
             <div className="flex mt-10 items-center px-4">
               <img
                 className="h-12 w-12 object-cover max-w-full align-middle rounded-full"
-                src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIQEhUQEhIVFRUQEBYVFRIWFQ8QEBUVFxUWFhUWFxUYHSggGBolGxcVITEhJSkrLi4uFyAzODMtNygtLisBCgoKDg0OGxAQGy0lHyYvLS0tLS0tLi0tLS0tLSsrLS0tLTctLS0tLS0tLS0tLS0tLS0tLS0tLSstKy0tLS0tLf/AABEIALcBEwMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAAAQIDBAUGBwj/xABAEAACAQICBgcGAwYFBQAAAAAAAQIDEQQhBQYSMUFRImFxgZGhsQcTMsHR8FJy4RRCYoKy8RUjM5LCJDRDY9L/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAQMEAgUG/8QAMBEAAgIBAgQDBwMFAAAAAAAAAAECEQMhMQQFEkFhcbETIjIzUYHRIzSRBiRyocH/2gAMAwEAAhEDEQA/APXQCTstBDJQAKQySACAAAQCQAQVIglAAhoksY7GU6EJVas404QV5Tk1GKXawC6Unjmtntkk9qno+Gyr2/aaivJ9cKTyXbLwPNtIaz43EPaq4qtJp3X+ZOMU+qMbJdyIshyR9WWKbnybU03ipK0sTXaW5OtWa/qNhoDXPHYKSdGvLZW+lUbq0n/LJ5dqsxY6z6gZDOU1F16oaThs5U8RBXnQb4btqD/ej5rjwb6tknVlLCBKBBXCJfSKKaLgAAAAAAAAAAAAAaLcoFwAGM4AyNkAWSSQACSAAAAACGQVEAEEgAAA0ut2stHRuHliKueezCmmlOpN7orzbfBJgFGuOs9HRuHdaq+k01Sp/vVJ2yS6t13wR856062YrSU9rEVLxi7wpR6NGHC6jxfW7vPuLGsmn6+kK8sRXk223swu/d048IQT3Ld272aiSf3ZHJw2HIpbJUOzxj9TMwWia9b/AEqU5/lWXjuIOUrMEk6WhqJj55+42VzlOmvRsqq6haQir+42vyzpt+bRz1L6nXRL6HP4HGVKFSNalJwnTkpQmt6a+93E+kNQNboaTw6m7RrU7RrU1uUuE4r8Ms2uWa4Hzpj9HVcO9mtSnTfDbjKF+y6z7jYaoaxVNG4mOIhdx+GpDhOm967eK60dohOj6iJgY+DxUK1OFWElKFSCnGS3OMldPzMmmdFhkQRUREkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEkAEnzh7XNYZYvH1Kak/dYRulGN3s7cXapK3PauuyKPddcNNrAYOtirXdOHQjuTnJqME+raaPlWvUcm5Sd5Sk5Sk97bd232tkM5kyiU+Qo03JqMU25OySTbbeSSS3spjG57N7PNS44eMa9aKdaSvZ5qkvwr+K1rvra3b+JSpERi5OjU6p+zfKNXFq73qivhj+dr4n1LLtPQKGjIwSjTglGPBJKK+SN1GmkiuNK33u7DHOTkejhxJbGvjB7tn0RfpxS3przMvYEoFepf0RLOIwMKsHCcIzhJZxkozg11p5Hl+unsvSUq+BTyzlhm28v/VJ/wBL7nwPUVNwfVfNffEyJWaus0/u5bCbRmy4V3Od9lteM9G0Ip50lKnNNNOM4ybcWnxs14nY0kaLRWCjRrVZQyVe0pR3L3kbrbS5tNX/ACo39FG6LtWZGq0LyABJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIJDAPK/bvpBqjQwyf+pN1JLmoK0fOT8Dw2uen+2LFe8xso8KNOMF4bT85eR5fV3nLK5bnbey7V/8AaMR76SThQe7fepa/grrvkuR7nh6Fl4fU5L2XaM93hIO1nUipPtneTv5LuO3nk2vvgZ5u2asUaRZnvLiOV09rU6FR0qdCdaattWvGEbpNLas8+NjWU9ecQmlLBSjd8feerirFCizamkkjviJGPofSUcTBS2XB7nF70Y2sOOlQpv3aTm8lfcuslolPUv4h8SnAYhO8U7p5q3g/l4nnS0VUxUtvF4iUo/hV9ldXJG40Zg44WVOVCq3CM+nTdnFxeTa5NXv3HFxvRncoTcXaOylk0+TNvQd0auuuJl4d/C77src75P5G3CzzciM8AFxUAAAAAAAAAAAwAAgwAQAASAAAAAAAAAAAAGCJuyb5IA+dfaBV2sTWlzqy9XY4dQ2pbPPgt76l1nXa7VV7+p+d+pz2haO3iKUVvnXpx5vKSb+RyVvc+ltXMIqVGnHdaMV1ZJIyKju2+31L+GVor74Is1F6fO5lb1NsVocVrLrHSwcpXai27t26W5Ghwet8a8rRU3e7UrSatG13kslms3uN7rPqfHE4j9ojsucJJ7M9qVN2ta8bk6A1LdGpKs3CEppp+7U4rZe+K2m7LsKFCL3bPR9pOKXSlX+zZ6LxTjsPhMv6xUnNwfB3vbna5dr4SNNJRilGN2rWWfEvYzp0brerNdzFaUQ3raPLdZK+LUoxhaFOSWzJ5bN3/wCRSWT9L8TH0JQxUq7pbarUdq7rRUoJ2d0rdq60euUKUKsE5xUrre0mP2KEPhSXYkiWlWiRClJytt+XYyMJLbpRk99lft3PzNlh+XNGu0bnCUVwb+vrczaMtxowyMGeNNoz0CIbiTUZgAAAAAAAAAQGwASiGGyCQCQCASAAAAAAAAAAAAU1JWRLZZr7n2AHzb7RMsbX/iqOS/mzfnct+z3B+8x9BcKd6j80vVeBsdfsC6labXxQm8ucTbex/R21Wq1nwjTivF//AB5lSlaJnjcZHtMFZIxpriX28vvmY03kZmaoliM1n2sv0ukalVs3nubNhhqlitM3yj7tosaWmtlLcr783ey3Gvp6bgqUlsSulZRlGcJPl0ZJM3GJjFq0rWWefrcw3pChFWvHop35q47kKLa0ROr05SptTVrPLc7X3q6yf6lWkJ2Rj4TStKT2Yyzvktz7ijSFW6YvQlJxeplav1bua5W/5GxpSy7zTauLpVP5V4J/U28Xv7V5osxujHn1kzaUZXRcMPBzytyMtM3J2jCyQAAAQACSGwACCbgEgpJJFgCkknZABIAIAAAAAAAIbDZQ2AJMtyZMmUMkHj2vWDdPFO+6o00/U6b2eYfZpylbOdS7fc2vKSN3rVq/HFwT3Thmn8jH1Xwc6MXCcbNVXZdSjFJ+pmcOmTZp9opQSOik8vvmYs9z7fmZE93iY7eT++JSdI0lJdKXaZsJZGoxmMVGr0vhm9/BNcH3WNjComrp7yh6M3xdxNfpyOIqNWdqa4Ru595pquFpv4qrT/C7JvyudY4tlcMEnm2+6x0i6GZxVUcfhtGwlNNxkop3zc035nQVY5W5mTXw8Ys5vWbTLgvc0bOtWahTW/Z2ns7b6lcPXQqyZG3bOm1f/elwlPLsWV/I2tvi7jC0ThlShGmt0IRiufRVvkZ3PrsWJUYJO3ZXhp2fajPhI1NOVrdT/X6GxhI14naM81qZKZJZjIuqRYVkkEgAgEkAAkAAAAAAAAAAAAEAEkNkEABsobJZTIElLKWyWylkkFMzCU+n3mVVeRp517TX5irI6RZBam3nu8TGmX2y1LiuaMpeaHG0FUumrpSzXVu+ngYFXR9ahnSe3D8Lea7HxNhiquzKT5XfddfU2uHalFPmUTRuxtxRy9LWBQyqpw/Mml47jIlrRRS+OPibmvhYvelbkYn+F0Vn7qnfnsQ+hCdHTaNDU0vUxL2aEW775u6gu8uaL0DGFaM5dOcXtSm97e6MVyV3fuOjp0lFZLcXMHS6V+bv4f38jqN2V5X7pmRjZ91/G5M3n3L1RNT4n3FqpLz2fkWmRlEnZyXLP6mww8rxRr6i6XbF/IsU9P0Kb93OUouOTey2vK5bjyRj8Toj2M8nwJvyN4mVxkayjpnDz+GtDsclF+ErGfCV807rms0aIzjLZ2Z545w+JNeaMqLKjHjIuqR0cFbBTclAEgAAAAAAAAAAAgEkAFLZBLKWAQyhlTMHSukIYeG3Pi7KK3yf3xIclFWzuEJTajFW2ZLZar14wV5yjFc5NRXmchpHWWrPKn/lx6s5/wC7h3GirVHJ3k3J823J+LMGTmEVpBWezw/JMktcjrw3f49Tta+naMujCW115qPi9/carGYi/SXB+n35HN3K4YucFZWaWdne/iZnxkpfEbJ8mUV+m/5PQ6Fbainzjcm+fajSataQjUp2W+D3Pelyfn5G2k7eq7P7GiMr1PIyYnCTizR6Snao0+v+m/zMPUnSbcZ4ab6VCbUebp36PgrLwM/WGFnGotzyf1PP8dpH9gx1HFP/AE59Cq1d9F2jPwShJc9grWs3E3ZElw0cq7b+n4PV6ivmWYxb4GZCCautz470VqnxOukz9Rh1uivveXsCufL5t/PyIxMLq5cwuSv1fIlKiqbsVJdJmLVqfC+u3l+hVVl0n2Fhyya/DK/c8/qTZXRstlON/wCD6nnONrbVScuDk7dl8juMZiXGhK29qy6nz7t/ccCoW6rcOXUZOJloke5yeC96X2KWXMPiZ03eEpRf8LcfQoZakzFs9D3ulSVM6vQus9V1IQqtSjUkoXslJNuyd1vzsdopnj0sQ6coSW+FSMrflkpP0PW1NPNbnuPa4DLKcWpO6Pk+d8LDDkjKCpNdvAzITLiZhQmZVORvPDLgAAAAAAAAAAAAYABQyhlySLUgSQ2cZr7JqVHlsz8bxv8AI7Fs5PXdXdLsqf8AAzcZ8l/b1PQ5X+6j9/RnLKd0Utlt9F24P1KpSPBPtUgQxcgHRXo7FyoTc4q998b2vy78rd50+G1jpVMneMkk7Sy7Vf73nH1Kct8ZWfYnHvX0LbqNfHHvjeS8N6LseZxVGPieBx53b3PQ6jhUhsvNS3PlyPM/aBo5+4ksm6UlJdnwvyfkZ1KdVR2YVpKD3LKVlyTedi1icNt0p023JzhJNvNttbyx511Rkuxljy6UcU8bdpp159jpvZXph4nAxpybc8K/dSbtnFZ03/tsu2LO0UsjwHUDWX/DcRKdWMpUqtPYqRgouakneErNq9ukt+6TPX9B64YPHS91QqSc9ly2JU6tN7Ktd3as964noZINO0fNYMqcVF7m4xDytzaK6X6FnESzSLjlaPkVSdItluYWIl0+267yiDtLPdJW6ijFc+JejHaXmjiDsiWhFaP7r5HK6Ywbg9pbnv8AkzsqkNuClxjv7OJh1sKqkWivLjvQ1cHxXsZX27nESZiqV5dhstJYSVKTi1bl2GopRdst83e/Jf2MMlTpn12GSnHqWxL6UnLhFNLt4/faer4NNU6ae9U4p9uyrnlVWpCkltfDtRT52bW15XPV4Tuk1xR6fLF8T8j5z+oZ/Lj5v0LsJGZQZgRZm0D1T5kygECAAAAAAAAAAAAAQyzMvsszJCLTON14m1Onyz9L/I7KRx+vLzpdr9GUcT8qRs4BtcRCvqc1K0l2mPmsn3MrlFrOPeuH6Ee8TyZ88z7uJbpT3p70V3ztzLclaSfcTVds+Wf1B2y4QSQCCCUQSgSef6Zw/u69SPDbbXZLpfM7X2M4DbxFfEPdSoqmn/FUe0/BQXic/rjh7ThU/FFxfas16vwOq9iWk1/1OFdk3avB8WlanNd1oP8AmZ7mOfXhTPg+JwrDxko+Nr76o9BxVXpP+GP1JrzyjHtfp9TCxdW7qP7yf6F7ESzh17S9H8mZpli3LlRXXcVYR26PLd2E0c0n9/e4rnSt0lw9DmOjsS10Ly6Ly3T9eXeW1CztzzX0LykmrffUywpdKz47vHP760XNFKMbT2jo16XKeezLr5M4GUNi6eTWT7j0bH1NhZuyl6/LM4nWCgve3/Ek7cL8fPIycVDTqR9ByfO79lLbdHP14OrJfhTu+s9O1dm3hqV+FNLuWS8kjzTSGJ2IuMPiay6utnpegK0Z4alKGUXTWXK2TXc013FvLU+pvwOf6hf6cEl33+2xsoGfhzApmxw6PXPlTIABAAAAAAAAAAAAADLMwCUC1I5rXahekp/gkvPL5kAq4j5UvI1cF+4h5r1OMZRJJgHzh98i1UjbxXqVz3AEHZTh5ZW/Dl9PKxdIBJDDIQABqNbcPt4aUuNNqa7sn5NnN6kaVeFxdCrw96oTXOFToS7bbW1bnFAHrcA7xteJ8fz+KjxEZLev+s9lpSvtLi5VI9+aXmkZeLn0ITXCcX/K3svyAOZbMpxr3kZuFWdueaNpShk0AIrQrnuavSVR0Wp/uuL2l1xdm/D0Meda780AT3oV7qY1oW3hnbJ7Pz/Q43G1XUp03fpRglJ9V5WfogCjPra8D1+WbJ9+qv5Rq/2deO87vU7/ALZcveTt2Xt6pgHPLvmvy/Br5+/7Zf5L0Z0FI2VAA9s+NL4AAAAAAAAP/9k="
+                src={user?.photoURL}
                 alt=""
               />
               <div className="flex ml-3 flex-col">
-                <h3 className="font-medium">Sarah Carter</h3>
-                <p className="text-xs text-gray-500">Sr. Engineer</p>
+                <h3 className="font-medium">{user?.displayName}</h3>
+                <p className="text-xs text-gray-500">
+                  {isAdmin?.admin ? "𝐀𝐝𝐦𝐢𝐧" : "𝐆𝐞𝐧𝐞𝐫𝐚𝐥 𝐔𝐬𝐞𝐫"}
+                </p>
               </div>
             </div>
 
@@ -208,94 +209,92 @@ const Dashboard = () => {
                       <span className="ml-3 mt-10 mb-2 block text-xs font-semibold text-gray-500">
                         User Dashboard
                       </span>
-                      <nav className="flex-1">
-                        <Link
-                          to="/dashboard/userHome"
-                          className="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4"
+                      <Link
+                        to="/dashboard/userHome"
+                        className="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4"
+                      >
+                        <svg
+                          className="mr-4 h-5 w-5 align-middle"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
                         >
-                          <svg
-                            className="mr-4 h-5 w-5 align-middle"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-                            />
-                          </svg>
-                          User Home
-                        </Link>
-                        <Link
-                          to="/dashboard/mycart"
-                          className="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4"
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                          />
+                        </svg>
+                        User Home
+                      </Link>
+                      <Link
+                        to="/dashboard/mycart"
+                        className="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4"
+                      >
+                        <svg
+                          className="mr-4 h-5 w-5 align-middle"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
                         >
-                          <svg
-                            className="mr-4 h-5 w-5 align-middle"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-                            />
-                          </svg>
-                          <div className="flex">
-                            {/* <FaShoppingCart className="mr-2" /> */}
-                            My Cart{" "}
-                            <span className="badge ml-1 mt-[-5px] badge-secondary bg-red-600">
-                              +{cart.length || 0}
-                            </span>
-                          </div>
-                        </Link>
-                        <Link
-                          to="/dashboard/mycart"
-                          className="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4"
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                          />
+                        </svg>
+                        <div className="flex">
+                          {/* <FaShoppingCart className="mr-2" /> */}
+                          My Cart{" "}
+                          <span className="badge ml-1 mt-[-5px] badge-secondary bg-red-600">
+                            +{cart.length || 0}
+                          </span>
+                        </div>
+                      </Link>
+                      <Link
+                        to="/dashboard/mycart"
+                        className="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4"
+                      >
+                        <svg
+                          className="mr-4 h-5 w-5 align-middle"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
                         >
-                          <svg
-                            className="mr-4 h-5 w-5 align-middle"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-                            />
-                          </svg>
-                          Cart
-                        </Link>
-                        <Link
-                          to="/dashboard/paymentHistory"
-                          className="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4"
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                          />
+                        </svg>
+                        Cart
+                      </Link>
+                      <Link
+                        to="/dashboard/paymentHistory"
+                        className="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4"
+                      >
+                        <svg
+                          className="mr-4 h-5 w-5 align-middle"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
                         >
-                          <svg
-                            className="mr-4 h-5 w-5 align-middle"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-                            />
-                          </svg>
-                          Payment History
-                        </Link>
-                      </nav>
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                          />
+                        </svg>
+                        Payment History
+                      </Link>
                     </>
                   )}
                 </nav>

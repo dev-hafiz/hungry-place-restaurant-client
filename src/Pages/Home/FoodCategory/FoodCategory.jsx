@@ -1,15 +1,15 @@
-import useMenu from "../../../Hooks/useMenu";
+// import useMenu from "../../../Hooks/useMenu";
 
 const FoodCategory = () => {
-  const [items] = useMenu();
+  // const [items] = useMenu();
   // console.log("items", items);
-  const fastFoods = items.filter((item) => item.category === "Fast food");
-  const deshiFoods = items.filter((item) => item.category === "Deshi food");
-  const chineseFoods = items.filter((item) => item.category === "Chinese food");
+  // const fastFoods = items.filter((item) => item.category === "Fast food");
+  // const deshiFoods = items.filter((item) => item.category === "Deshi food");
+  // const chineseFoods = items.filter((item) => item.category === "Chinese food");
 
-  console.log("Category Fast Food", fastFoods);
-  console.log("Category Deshi Food", deshiFoods);
-  console.log("Category Chinese Food", chineseFoods);
+  // console.log("Category Fast Food", fastFoods);
+  // console.log("Category Deshi Food", deshiFoods);
+  // console.log("Category Chinese Food", chineseFoods);
 
   return (
     <div className="lg:container  mx-auto  mt-32 mb-24  relative">
