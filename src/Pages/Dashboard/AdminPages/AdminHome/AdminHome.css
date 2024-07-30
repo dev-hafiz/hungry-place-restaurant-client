@@ -1,0 +1,120 @@
+/* Dashboard home  */
+.mini-background{
+    background: #FAFAFA;
+}
+
+/* Revenue Cart  */
+.card-revenue{
+    width: 250px;
+    height: 150px;
+    background: linear-gradient(90deg, #FBEBD2, #D4D6FC);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+.card-revenue h3{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+.card-revenue h1 {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    align-items: center;
+}
+.sign{
+    font-size: 17px;
+    margin-top: 10px;
+    color: #FA896B;
+}
+
+/* User card  */
+.card-user{
+    width: 250px;
+    height: 150px;
+    background: linear-gradient(90deg, #FFECCC, #FFE2E7);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+.card-user h3{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    background: #FFD7CE;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.icon-circle .user-icon{
+    font-size: 25px;
+    color: #FC2A1B;
+}
+.card-user h1 {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+/* Menu Card  */
+.card-menu{
+    width: 250px;
+    height: 150px;
+    background: linear-gradient(90deg, #E999E5, #F6D0C2);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+.card-menu h3 {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+.card-menu h1 {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+/* card order  */
+.card-order{
+    width: 250px;
+    height: 150px;
+    background: linear-gradient(90deg, #E2B4E7, #BBD5ED);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+.card-order h3 {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+
+.card-order h1 {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    align-items: center;
+}

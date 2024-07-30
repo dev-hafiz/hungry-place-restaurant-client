@@ -191,7 +191,7 @@ const MyCart = ({ flatShippingRate = 3 }) => {
 
   return (
     <>
-      <div className="w-9/12 h-full mt-20">
+      <div className="w-9/12 h-full mt-32 ml-24">
         <div className=" grid grid-cols-1 md:grid-cols-12 gap-4">
           <div className="md:col-span-8 py-6 px-5">
             <div>

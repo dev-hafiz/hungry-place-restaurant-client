@@ -12,15 +12,17 @@ const Dashboard = () => {
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col items-center justify-center bg-white text-black">
-        {/* Page content here */}
-        <Outlet />
-        <label
-          htmlFor="my-drawer-2"
-          className="btn btn-primary drawer-button lg:hidden"
-        >
-          Open drawer
-        </label>
+      <div className="drawer-content ml-6 bg-white text-black">
+        <div>
+          {/* Page content here */}
+          <Outlet />
+          <label
+            htmlFor="my-drawer-2"
+            className="btn btn-primary drawer-button lg:hidden"
+          >
+            Open drawer
+          </label>
+        </div>
       </div>
       <div className="drawer-side">
         <label
@@ -28,8 +30,8 @@ const Dashboard = () => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <div className="h-screen w-64 pb-10 ">
-          <div className="flex bg-[#FAFAFA] h-full flex-grow flex-col overflow-y-auto rounded-br-lg rounded-tr-lg mt-5 pt-5 ">
+        <div className="h-full w-64 pb-5 mt-5">
+          <div className="flex bg-[#FAFAFA] h-full flex-grow flex-col overflow-y-auto rounded-br-lg rounded-tr-lg pt-5 ">
             <div className="flex mt-10 items-center px-4">
               <img
                 className="h-12 w-12 object-cover max-w-full align-middle rounded-full"
@@ -206,9 +208,6 @@ const Dashboard = () => {
                     </>
                   ) : (
                     <>
-                      <span className="ml-3 mt-10 mb-2 block text-xs font-semibold text-gray-500">
-                        User Dashboard
-                      </span>
                       <Link
                         to="/dashboard/userHome"
                         className="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4"
@@ -224,29 +223,31 @@ const Dashboard = () => {
                           <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-                          />
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                            className=""
+                          ></path>
                         </svg>
-                        User Home
+                        Dashboard
                       </Link>
                       <Link
                         to="/dashboard/mycart"
                         className="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4"
                       >
                         <svg
-                          className="mr-4 h-5 w-5 align-middle"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
-                          stroke="currentColor"
                           stroke-width="2"
+                          stroke="currentColor"
+                          className="mr-4 h-5 w-5 align-middle"
                         >
                           <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
                           />
                         </svg>
+
                         <div className="flex">
                           {/* <FaShoppingCart className="mr-2" /> */}
                           My Cart{" "}
@@ -256,41 +257,21 @@ const Dashboard = () => {
                         </div>
                       </Link>
                       <Link
-                        to="/dashboard/mycart"
-                        className="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4"
-                      >
-                        <svg
-                          className="mr-4 h-5 w-5 align-middle"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          stroke-width="2"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-                          />
-                        </svg>
-                        Cart
-                      </Link>
-                      <Link
                         to="/dashboard/paymentHistory"
                         className="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4"
                       >
                         <svg
-                          className="mr-4 h-5 w-5 align-middle"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
-                          stroke="currentColor"
                           stroke-width="2"
+                          stroke="currentColor"
+                          className="mr-4 h-5 w-5 align-middle"
                         >
                           <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                            d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z"
                           />
                         </svg>
                         Payment History
