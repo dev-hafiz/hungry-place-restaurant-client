@@ -95,7 +95,7 @@ const AdminHome = () => {
     <div className=" h-full  mt-5 mr-5">
       <div className="h-60 mini-background"></div>
       <div>
-        <div className="flex items-center gap-5">
+        <div className="flex items-center justify-center -mt-16 gap-8 flex-wrap mb-10">
           <div className="card-revenue">
             <h3> Your Total Revenue</h3>
             <div>
@@ -125,7 +125,7 @@ const AdminHome = () => {
                 <FaBowlFood className="user-icon" />
               </div>
               <div>
-                <h1>{stats?.menuItems}.00</h1>
+                <h1>{stats?.menuItems}</h1>
                 <div className="stat-desc">↗︎ {stats?.menuItems} (items)</div>
               </div>
             </div>
@@ -137,14 +137,14 @@ const AdminHome = () => {
                 <FaCartShopping className="user-icon" />
               </div>
               <div>
-                <h1>{stats?.orders}.00</h1>
+                <h1>{stats?.orders}</h1>
                 <div className="stat-desc">↗︎ {stats?.orders} (items)</div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* <div className="flex">
+        <div className="flex">
           <div className="w-1/2">
             <BarChart
               width={500}
@@ -194,7 +194,7 @@ const AdminHome = () => {
               <Legend></Legend>
             </PieChart>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );

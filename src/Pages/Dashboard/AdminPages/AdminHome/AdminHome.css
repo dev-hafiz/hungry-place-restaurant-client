@@ -5,8 +5,8 @@
 
 /* Revenue Cart  */
 .card-revenue{
-    width: 250px;
-    height: 150px;
+    width: 260px;
+    height: 160px;
     background: linear-gradient(90deg, #FBEBD2, #D4D6FC);
     border-radius: 20px;
     display: flex;
@@ -34,8 +34,8 @@
 
 /* User card  */
 .card-user{
-    width: 250px;
-    height: 150px;
+    width: 260px;
+    height: 160px;
     background: linear-gradient(90deg, #FFECCC, #FFE2E7);
     border-radius: 20px;
     display: flex;
@@ -72,8 +72,8 @@
 
 /* Menu Card  */
 .card-menu{
-    width: 250px;
-    height: 150px;
+    width: 260px;
+    height: 160px;
     background: linear-gradient(90deg, #E999E5, #F6D0C2);
     border-radius: 20px;
     display: flex;
@@ -96,8 +96,8 @@
 
 /* card order  */
 .card-order{
-    width: 250px;
-    height: 150px;
+    width: 260px;
+    height: 160px;
     background: linear-gradient(90deg, #E2B4E7, #BBD5ED);
     border-radius: 20px;
     display: flex;
