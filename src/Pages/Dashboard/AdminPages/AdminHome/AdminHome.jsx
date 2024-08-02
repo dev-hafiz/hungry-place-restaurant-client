@@ -144,10 +144,10 @@ const AdminHome = () => {
           </div>
         </div>
 
-        <div className="flex">
-          <div className="w-1/2">
+        <div className="flex  items-center justify-center  mt-16 gap-14 flex-wrap ">
+          <div>
             <BarChart
-              width={500}
+              width={430}
               height={300}
               data={chartData}
               margin={{
@@ -172,7 +172,8 @@ const AdminHome = () => {
               </Bar>
             </BarChart>
           </div>
-          <div className="w-1/2">
+
+          <div>
             <PieChart width={400} height={400}>
               <Pie
                 data={pieChartData}
