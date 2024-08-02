@@ -6,7 +6,7 @@ import useAuth from "../Hooks/useAuth";
 
 const Dashboard = () => {
   const [cart] = useCart();
-  const { user } = useAuth();
+  const { user, logOut } = useAuth();
   const [isAdmin] = useAdmin();
 
   return (
@@ -328,6 +328,31 @@ const Dashboard = () => {
                   </Link>
                 </nav>
               </div>
+            </div>
+
+            <div className="bg-gray-100">
+              <button
+                onClick={logOut}
+                className="flex cursor-pointer items-center m-2  border-l-rose-600 py-3 pl-2  text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4"
+              >
+                <span className="mr-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2"
+                    stroke="currentColor"
+                    className="h-5 w-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15"
+                    />
+                  </svg>
+                </span>
+                LogOut
+              </button>
             </div>
           </div>
         </div>
