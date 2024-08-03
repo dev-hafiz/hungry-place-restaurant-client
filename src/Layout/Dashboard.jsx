@@ -12,16 +12,26 @@ const Dashboard = () => {
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content ml-6 bg-white text-black">
+      <div className="drawer-content ml-6 mt-8 bg-white text-black">
         <div>
+          <label htmlFor="my-drawer-2" className="drawer-button lg:hidden ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={3}
+              stroke="currentColor"
+              className="w-7 h-7 text-red-500"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </label>
           {/* Page content here */}
           <Outlet />
-          <label
-            htmlFor="my-drawer-2"
-            className="btn btn-primary drawer-button lg:hidden"
-          >
-            Open drawer
-          </label>
         </div>
       </div>
       <div className="drawer-side">
@@ -200,7 +210,7 @@ const Dashboard = () => {
                                   />
                                 </svg>
                               </span>
-                              Revenue
+                              Revenue & analytics
                             </Link>
                           </li>
                         </ul>
