@@ -31,7 +31,7 @@ const TopNavbar = () => {
 
             {user?.email && isAdmin?.admin && (
               <li className="md:px-4 md:py-2 hover:text-indigo-400">
-                <Link to="/dashboard/adminHome">DashBoard</Link>
+                <Link to="/dashboard/profile">DashBoard</Link>
               </li>
             )}
             {user?.email && !isAdmin?.admin && (

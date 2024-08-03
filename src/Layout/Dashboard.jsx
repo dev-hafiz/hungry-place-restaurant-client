@@ -56,7 +56,7 @@ const Dashboard = () => {
                   {isAdmin?.admin ? (
                     <>
                       <Link
-                        to="/dashboard/adminHome"
+                        to="/dashboard/profile"
                         className="flex cursor-pointer items-center border-l-4 border-l-rose-600 py-2 px-4 text-sm font-medium text-rose-600 outline-none transition-all duration-100 ease-in-out focus:border-l-4"
                       >
                         <svg
@@ -74,7 +74,7 @@ const Dashboard = () => {
                             className=""
                           ></path>
                         </svg>
-                        Dashboard
+                        Profile
                       </Link>
                       <Link
                         to="/dashboard/alluser"
@@ -181,7 +181,7 @@ const Dashboard = () => {
                         <ul className="duration-400 flex m-2 max-h-0 flex-col overflow-hidden rounded-xl bg-gray-100 font-medium transition-all duration-300 peer-checked:max-h-96">
                           <li>
                             <Link
-                              to="/dashboard/adminHome"
+                              to="/dashboard/analytics"
                               className="flex cursor-pointer items-center m-2  border-l-rose-600 py-3 px-4 pl-5 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4"
                             >
                               <span className="mr-5">

@@ -16,6 +16,7 @@ import PaymentHistory from "../Pages/Dashboard/UserPages/PaymentHistory/PaymentH
 import Recepies from "../Pages/Recepies/Recepies";
 import RecepieDetails from "../Pages/Recepies/RecepieDetails/RecepieDetails";
 import MyCart from "../Pages/Dashboard/UserPages/OrderCart/MyCart";
+import Profile from "../Pages/Dashboard/Profile/Profile";
 
 export const router = createBrowserRouter([
   {
@@ -80,7 +81,15 @@ export const router = createBrowserRouter([
 
       //Admin only routes
       {
-        path: "adminHome",
+        path: "profile",
+        element: (
+          <AdminRoute>
+            <Profile />
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "analytics",
         element: (
           <AdminRoute>
             <AdminHome />
