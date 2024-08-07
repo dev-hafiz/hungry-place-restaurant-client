@@ -12,7 +12,6 @@ const UpdateProduct = () => {
   const axiosPublic = useAxiosPublic();
 
   const onSubmit = async (data) => {
-    console.log("Consoled data -->", data);
     // Image upload to imageBB and then get an URL
     const imageFile = { image: data.image[0] };
     const res = await axiosPublic.post(image_hosting_api, imageFile, {

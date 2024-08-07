@@ -17,6 +17,7 @@ import Recepies from "../Pages/Recepies/Recepies";
 import RecepieDetails from "../Pages/Recepies/RecepieDetails/RecepieDetails";
 import MyCart from "../Pages/Dashboard/UserPages/OrderCart/MyCart";
 import Profile from "../Pages/Dashboard/Profile/Profile";
+import ProfileUpdate from "../Pages/Dashboard/Profile/ProfileUpdate/ProfileUpdate";
 
 export const router = createBrowserRouter([
   {
@@ -35,8 +36,7 @@ export const router = createBrowserRouter([
         path: "recepies/:id",
         element: (
           <PrivateRoute>
-            {" "}
-            <RecepieDetails />{" "}
+            <RecepieDetails />
           </PrivateRoute>
         ),
         loader: ({ params }) =>
@@ -87,6 +87,18 @@ export const router = createBrowserRouter([
             <Profile />
           </AdminRoute>
         ),
+      },
+      {
+        path: "profile/:id",
+        element: (
+          <AdminRoute>
+            <ProfileUpdate />
+          </AdminRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://hungry-place-restaurant-server.vercel.app/users/id/${params.id}`
+          ),
       },
       {
         path: "analytics",

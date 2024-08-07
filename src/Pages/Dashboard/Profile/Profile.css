@@ -52,6 +52,7 @@
     font-weight: 600;
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
+    text-transform: capitalize;
 }
 
 .address{
@@ -91,6 +92,7 @@
     font-weight: normal;
     letter-spacing: .5px;
     margin-top: 10px;
+    text-transform: capitalize;
 }
 
 /* Address wrapper  */
