@@ -78,28 +78,21 @@ export const router = createBrowserRouter([
         path: "paymentHistory",
         element: <PaymentHistory />,
       },
-
-      //Admin only routes
       {
         path: "profile",
-        element: (
-          <AdminRoute>
-            <Profile />
-          </AdminRoute>
-        ),
+        element: <Profile />,
       },
       {
         path: "profile/:id",
-        element: (
-          <AdminRoute>
-            <ProfileUpdate />
-          </AdminRoute>
-        ),
+        element: <ProfileUpdate />,
         loader: ({ params }) =>
           fetch(
             `https://hungry-place-restaurant-server.vercel.app/users/id/${params.id}`
           ),
       },
+
+      //Admin only routes
+
       {
         path: "analytics",
         element: (

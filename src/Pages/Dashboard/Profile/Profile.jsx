@@ -6,7 +6,8 @@ const Profile = () => {
   const { user } = useAuth();
 
   const [profile, setProfile] = useState();
-  console.log(profile);
+  const role = profile?.role ? "Admin" : "Customer";
+  // console.log(profile);
 
   useEffect(() => {
     fetch(
@@ -14,21 +15,24 @@ const Profile = () => {
     )
       .then((res) => res.json())
       .then((data) => setProfile(data));
-  }, []);
+  }, [user.email]);
 
   return (
     <div>
       <div className="profile-wrapper">
         <div className="profile-header">
           <img
-            src="https://lh3.googleusercontent.com/a/ACg8ocIxEInVSXtpVDW6iJ6TtXaN92h4R9d7Q-fyTxsjJJQoTGA=s96-c"
+            src={profile?.image}
             alt="User Profile"
             className="profile-img"
           />
           <div>
             <h3 className="user-name">{profile?.displayName}</h3>
-            <p className="designation">{profile?.role}</p>
-            <p className="address">Los Angeles, California, USA</p>
+            <p className="designation">{role}</p>
+            <p className="address">
+              {" "}
+              {profile?.city}, {profile?.country}
+            </p>
           </div>
         </div>
         <Link to={`/dashboard/profile/${profile?._id}`}>
@@ -68,12 +72,12 @@ const Profile = () => {
           </div>
           <div>
             <p className="level">Phone</p>
-            <p className="name">(+880) 1786 xxx xxx</p>
+            <p className="name">{profile?.phone}</p>
           </div>
         </div>
         <div className="mb-10">
           <p className="level">Designation</p>
-          <p className="name">{profile?.role}</p>
+          <p className="name">{role}</p>
         </div>
       </div>
 
@@ -82,21 +86,21 @@ const Profile = () => {
         <div className="flex items-center mb-7 gap-60">
           <div>
             <p className="level">Country</p>
-            <p className="name">USA </p>
+            <p className="name">{profile?.country} </p>
           </div>
           <div>
             <p className="level">City/State</p>
-            <p className="name">California, USA </p>
+            <p className="name">{profile?.city}</p>
           </div>
         </div>
         <div className="flex items-center mb-7 gap-52">
           <div>
             <p className="level">Postal Code</p>
-            <p className="name">#31745 </p>
+            <p className="name">#{profile?.postCode}</p>
           </div>
           <div>
             <p className="level">Road & House</p>
-            <p className="name">RHD 07 h.</p>
+            <p className="name">{profile?.roadAndHouse}</p>
           </div>
         </div>
       </div>
