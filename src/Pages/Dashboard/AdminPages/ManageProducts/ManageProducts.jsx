@@ -38,18 +38,15 @@ const ManageProducts = () => {
     });
   };
   return (
-    <div className="w-full">
+    <div className="w-3/4 md:ml-10">
       <div className="w-full">
-        <h1>Manage your Products</h1>
+        <h3 className="sub-heading mt-10">Manage: {items.length} items</h3>
       </div>
-      <div className="pr-6">
+      <div className="">
         <table className="table">
           {/* head */}
           <thead>
             <tr className="text-black">
-              <th>
-                # <span>Total: {items.length}</span>
-              </th>
               <th>Image</th>
               <th> Item Name </th>
               <th>Price</th>
@@ -59,9 +56,8 @@ const ManageProducts = () => {
           </thead>
           <tbody>
             {/* row 1 */}
-            {items.map((item, index) => (
+            {items.map((item) => (
               <tr key={item?._id}>
-                <td>{index + 1}</td>
                 <td>
                   <div className="flex items-center gap-3">
                     <div className="avatar">

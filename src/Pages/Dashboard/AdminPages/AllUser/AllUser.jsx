@@ -70,7 +70,6 @@ const AllUser = () => {
             {/* head */}
             <thead>
               <tr className="text-black">
-                <th>No.</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Role</th>
@@ -79,9 +78,8 @@ const AllUser = () => {
             </thead>
             <tbody>
               {/* row 1 */}
-              {users.map((user, index) => (
+              {users.map((user) => (
                 <tr key={user?._id}>
-                  <th>{index + 1}</th>
                   <td>{user?.displayName}</td>
                   <td>
                     <span>{user?.email}</span>
