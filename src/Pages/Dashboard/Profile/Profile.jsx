@@ -22,7 +22,7 @@ const Profile = () => {
       <div className="profile-wrapper">
         <div className="profile-header">
           <img
-            src={profile?.image}
+            src={!profile?.image ? user?.photoURL : profile?.image}
             alt="User Profile"
             className="profile-img"
           />

@@ -39,7 +39,7 @@
     height: 80px;
     border-radius: 50%;
     margin: 20px;
-    object-fit: cover;
+    object-fit: scale-down;
 }
 .user-name{
     font-size: 18px;

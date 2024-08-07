@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import "./ProfileUpdate.css";
 import { useForm } from "react-hook-form";
 import useAxiosPublic from "../../../../Hooks/useAxiosPublic";
@@ -8,12 +8,13 @@ const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 
 const ProfileUpdate = () => {
-  const { _id, displayName, email } = useLoaderData();
+  const { _id, displayName, email, image } = useLoaderData();
   const { register, handleSubmit } = useForm();
   const axiosPublic = useAxiosPublic();
+  const navigate = useNavigate();
 
   const onSubmit = async (data) => {
-    console.log(data);
+    // console.log(data);
 
     // Image upload to imageBB and then get an URL
     const imageFile = { image: data.image[0] };
@@ -37,7 +38,7 @@ const ProfileUpdate = () => {
 
       console.log(profileInfo);
 
-      fetch(`http://localhost:5000/users/${_id}`, {
+      fetch(`https://hungry-place-restaurant-server.vercel.app/users/${_id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -56,110 +57,132 @@ const ProfileUpdate = () => {
               showConfirmButton: false,
               timer: 1500,
             });
+            navigate("/dashboard/profile");
           }
         });
     }
   };
   return (
-    <div>
-      <h1>Your ID : {_id}</h1>
-
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <label className="form-control w-full mb-6">
-            <div className="label">
-              <span className="label-text">Your Name*</span>
+    <div className="h-screen  w-full flex items-center justify-center">
+      <form className="mx-10  w-full" onSubmit={handleSubmit(onSubmit)}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <div>
+              <label className="form-control w-full mb-6">
+                <div className="label">
+                  <span className="label-text">Your Name*</span>
+                </div>
+                <input
+                  {...register("name", { required: true })}
+                  type="text"
+                  defaultValue={displayName}
+                  className="input input-bordered w-full bg-white"
+                />
+              </label>
             </div>
+            <div className="flex w-full gap-4 mb-6">
+              <label className="form-control w-full mb-6">
+                <div className="label">
+                  <span className="label-text">Email Address*</span>
+                </div>
+                <input
+                  {...register("email", { required: true })}
+                  type="email"
+                  defaultValue={email}
+                  className="input input-bordered w-full bg-white"
+                />
+              </label>
+
+              <label className="form-control w-full ">
+                <div className="label">
+                  <span className="label-text">Phone*</span>
+                </div>
+                <input
+                  {...register("phone", { required: true })}
+                  type="number"
+                  placeholder="Phone Number"
+                  className="input input-bordered w-full bg-white"
+                />
+              </label>
+            </div>
+            <div className="flex w-full gap-4 mb-6">
+              <label className="form-control w-full mb-6">
+                <div className="label">
+                  <span className="label-text">Country*</span>
+                </div>
+                <input
+                  {...register("country", { required: true })}
+                  type="text"
+                  placeholder="Country"
+                  className="input input-bordered w-full bg-white"
+                />
+              </label>
+
+              <label className="form-control w-full ">
+                <div className="label">
+                  <span className="label-text">City/State*</span>
+                </div>
+                <input
+                  {...register("city", { required: true })}
+                  type="text"
+                  placeholder="City/State"
+                  className="input input-bordered w-full bg-white"
+                />
+              </label>
+            </div>
+            <div className="flex w-full gap-4 mb-6">
+              <label className="form-control w-full mb-6">
+                <div className="label">
+                  <span className="label-text">Post Code*</span>
+                </div>
+                <input
+                  {...register("postCode", { required: true })}
+                  type="number"
+                  placeholder="Post Code"
+                  className="input input-bordered w-full bg-white"
+                />
+              </label>
+
+              <label className="form-control w-full ">
+                <div className="label">
+                  <span className="label-text">Road & House*</span>
+                </div>
+                <input
+                  {...register("roadAndHouse", { required: true })}
+                  type="text"
+                  placeholder="Road & House"
+                  className="input input-bordered w-full bg-white"
+                />
+              </label>
+            </div>
+          </div>
+          <div className="profile-area">
+            <img src={image} alt="" />
             <input
-              {...register("name", { required: true })}
-              type="text"
-              defaultValue={displayName}
-              className="input input-bordered w-full bg-white"
+              {...register("image", { required: true })}
+              type="file"
+              className="file-input my-6 bg-white file-input-sm w-full max-w-xs"
             />
-          </label>
+          </div>
         </div>
-        <div className="flex w-full gap-2 mb-6">
-          <label className="form-control w-full mb-6">
-            <div className="label">
-              <span className="label-text">Email Address*</span>
-            </div>
-            <input
-              {...register("email", { required: true })}
-              type="email"
-              defaultValue={email}
-              className="input input-bordered w-full bg-white"
-            />
-          </label>
 
-          <label className="form-control w-full ">
-            <div className="label">
-              <span className="label-text">Phone*</span>
-            </div>
-            <input
-              {...register("phone", { required: true })}
-              type="number"
-              placeholder="Phone Number"
-              className="input input-bordered w-full bg-white"
+        <button className="submit-profile-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-6 h-6 text-red-500"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
             />
-          </label>
-        </div>
-        <div className="flex w-full gap-2 mb-6">
-          <label className="form-control w-full mb-6">
-            <div className="label">
-              <span className="label-text">Country*</span>
-            </div>
-            <input
-              {...register("country", { required: true })}
-              type="text"
-              placeholder="Country"
-              className="input input-bordered w-full bg-white"
-            />
-          </label>
-
-          <label className="form-control w-full ">
-            <div className="label">
-              <span className="label-text">City/State*</span>
-            </div>
-            <input
-              {...register("city", { required: true })}
-              type="text"
-              placeholder="City/State"
-              className="input input-bordered w-full bg-white"
-            />
-          </label>
-        </div>
-        <div className="flex w-full gap-2 mb-6">
-          <label className="form-control w-full mb-6">
-            <div className="label">
-              <span className="label-text">Post Code*</span>
-            </div>
-            <input
-              {...register("postCode", { required: true })}
-              type="number"
-              placeholder="Post Code"
-              className="input input-bordered w-full bg-white"
-            />
-          </label>
-
-          <label className="form-control w-full ">
-            <div className="label">
-              <span className="label-text">Road & House*</span>
-            </div>
-            <input
-              {...register("roadAndHouse", { required: true })}
-              type="text"
-              placeholder="Road & House"
-              className="input input-bordered w-full bg-white"
-            />
-          </label>
-        </div>
-
-        <input
-          {...register("image", { required: true })}
-          type="file"
-          className="file-input my-6 bg-white file-input-sm w-full max-w-xs"
-        />
-        <button className="btn btn-primary block">Add Product</button>
+          </svg>
+          Update Profile
+        </button>
       </form>
     </div>
   );

@@ -42,12 +42,12 @@ const Dashboard = () => {
         ></label>
         <div className="h-full w-64 pb-5 mt-5">
           <div className="flex bg-[#FAFAFA] h-full flex-grow flex-col overflow-y-auto rounded-br-lg rounded-tr-lg pt-5 ">
-            <div className="flex mt-10 items-center px-4">
-              <img
+            <div className="flex mt-10 items-center pl-2">
+              {/* <img
                 className="h-12 w-12 object-cover max-w-full align-middle rounded-full"
                 src={user?.photoURL}
                 alt=""
-              />
+              /> */}
               <div className="flex ml-3 flex-col">
                 <h3 className="font-medium">{user?.displayName}</h3>
                 <p className="text-xs text-gray-500">
@@ -219,7 +219,7 @@ const Dashboard = () => {
                   ) : (
                     <>
                       <Link
-                        to="/dashboard/userHome"
+                        to="/dashboard/profile"
                         className="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4"
                       >
                         <svg
@@ -237,7 +237,7 @@ const Dashboard = () => {
                             className=""
                           ></path>
                         </svg>
-                        Dashboard
+                        Profile
                       </Link>
                       <Link
                         to="/dashboard/mycart"
