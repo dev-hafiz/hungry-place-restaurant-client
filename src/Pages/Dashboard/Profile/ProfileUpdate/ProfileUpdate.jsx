@@ -64,7 +64,7 @@ const ProfileUpdate = () => {
   };
   return (
     <>
-      <div className="h-screen  w-full flex items-center justify-center">
+      <div className="h-full mt-10  w-full flex items-center justify-center">
         <form className="mx-10  w-full" onSubmit={handleSubmit(onSubmit)}>
           <h3 className="sub-heading">Profile Update</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

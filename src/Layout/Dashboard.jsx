@@ -43,11 +43,11 @@ const Dashboard = () => {
         <div className="h-full w-64 pb-5 mt-5">
           <div className="flex bg-[#FAFAFA] h-full flex-grow flex-col overflow-y-auto rounded-br-lg rounded-tr-lg pt-5 ">
             <div className="flex mt-10 items-center pl-2">
-              <img
+              {/* <img
                 className="h-12 w-12 object-cover max-w-full align-middle rounded-full"
                 src={user?.photoURL}
                 alt=""
-              />
+              /> */}
               <div className="flex ml-3 flex-col">
                 <h3 className="font-medium">{user?.displayName}</h3>
                 <p className="text-xs text-gray-500">

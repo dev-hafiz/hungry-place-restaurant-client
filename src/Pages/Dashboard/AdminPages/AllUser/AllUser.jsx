@@ -60,20 +60,17 @@ const AllUser = () => {
   };
 
   return (
-    <>
-      <div
-        className="
-      mt-10 users-center  px-12 mb-3 font-semibold"
-      >
-        <h3 className="text-3xl mr-8">Total Users : {users.length}</h3>
+    <div className="w-3/4 md:ml-10">
+      <div className="mb-3 font-semibold">
+        <h3 className="sub-heading mt-10">Total : {users.length} users </h3>
       </div>
       <div>
         <div>
-          <table className="table">
+          <table className="table mt-7">
             {/* head */}
             <thead>
               <tr className="text-black">
-                <th>#</th>
+                <th>No.</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Role</th>
@@ -117,7 +114,7 @@ const AllUser = () => {
           </table>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

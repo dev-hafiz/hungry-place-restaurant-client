@@ -27,10 +27,11 @@ const Profile = () => {
             className="profile-img"
           />
           <div>
-            <h3 className="user-name">{profile?.displayName}</h3>
+            <h3 className="user-name">
+              {!profile?.displayName ? profile?.name : profile?.displayName}
+            </h3>
             <p className="designation">{role}</p>
             <p className="address">
-              {" "}
               {profile?.city}, {profile?.country}
             </p>
           </div>
@@ -62,7 +63,12 @@ const Profile = () => {
         <div className="flex items-center mb-7 gap-60">
           <div>
             <p className="level">Full Name</p>
-            <p className="name">{profile?.displayName} </p>
+            <p className="name">
+              {" "}
+              {!profile?.displayName
+                ? profile?.name
+                : profile?.displayName}{" "}
+            </p>
           </div>
         </div>
         <div className="flex items-center mb-7 gap-32">
