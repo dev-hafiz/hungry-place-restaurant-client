@@ -272,7 +272,7 @@ const Recepies = () => {
                           key={index + 1}
                           className={`w-8 flex justify-center items-center cursor-pointer leading-5 transition duration-150 ease-in rounded-full ${
                             currentPage === index + 1
-                              ? "bg-pink-600 text-white"
+                              ? "bg-red-500 text-white"
                               : ""
                           }`}
                           onClick={() => handlePageChange(index + 1)}
