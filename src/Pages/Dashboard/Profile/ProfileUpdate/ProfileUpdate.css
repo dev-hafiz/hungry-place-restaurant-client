@@ -1,7 +1,15 @@
+.sub-heading{
+    font-size:1.8rem ;
+    color: #243E63;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+  }
+
 .profile-area{
     width: 200px;
     height: auto;
-    margin-top: 100px;
+    margin-top: 60px;
     margin-left: 30px;
 }
 .profile-area img {
@@ -21,7 +29,7 @@
     height: 36px;
     border-radius: 5px;
     transition: .3s linear ;
-    padding: 10px 26px;
+    padding: 20px 26px;
     margin-bottom: 20px;
 }
 .submit-profile-btn:hover{
