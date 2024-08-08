@@ -1,7 +1,7 @@
 import { useForm, useFieldArray } from "react-hook-form";
 import useAxiosPublic from "../../../../Hooks/useAxiosPublic";
 import Swal from "sweetalert2";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
@@ -18,15 +18,6 @@ const UpdateProduct = () => {
     ingredients,
     image_url,
   } = useLoaderData();
-  // console.log("id", _id);
-  // console.log("name", name);
-  // console.log("category", category);
-  // console.log("price", price);
-  // console.log("description", description);
-  // console.log("preparation_time", preparation_time);
-  // console.log("calories", calories);
-  // console.log("ingredients", ingredients);
-  // console.log("image_url", image_url);
 
   const {
     register,
@@ -52,6 +43,7 @@ const UpdateProduct = () => {
   });
 
   const axiosPublic = useAxiosPublic();
+  const navigate = useNavigate();
 
   const onSubmit = async (data) => {
     // console.log("Add Product Data: ", data);
@@ -97,6 +89,7 @@ const UpdateProduct = () => {
               showConfirmButton: false,
               timer: 1500,
             });
+            navigate("/dashboard/manageProducts");
           }
         });
     }
