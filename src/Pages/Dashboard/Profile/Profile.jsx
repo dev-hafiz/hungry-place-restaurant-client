@@ -18,7 +18,7 @@ const Profile = () => {
   }, [user.email]);
 
   return (
-    <div>
+    <div className="w-3/4 -mt-3">
       <div className="profile-wrapper">
         <div className="profile-header">
           <img

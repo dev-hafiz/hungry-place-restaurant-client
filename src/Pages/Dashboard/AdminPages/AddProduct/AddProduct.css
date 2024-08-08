@@ -1,0 +1,29 @@
+.remove-btn{
+    width: 40px;
+    height: 40px;
+    background-color: #F3F4F6;
+    padding: 4px 8px;
+    border-radius: 20px;
+}
+.add-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: #F3F4F6;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.update-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: #F3F4F6;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin-top: 10px;
+    width: 50%;
+}
