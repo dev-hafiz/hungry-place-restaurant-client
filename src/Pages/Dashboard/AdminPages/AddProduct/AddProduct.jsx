@@ -34,7 +34,7 @@ const AddProduct = () => {
   const axiosPublic = useAxiosPublic();
 
   const onSubmit = async (data) => {
-    console.log("Add Product Data: ", data);
+    // console.log("Add Product Data: ", data);
     // Image upload to imageBB and then get an URL
     const imageFile = data.image_url[0];
     const formData = new FormData();

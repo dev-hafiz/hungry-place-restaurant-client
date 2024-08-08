@@ -54,6 +54,13 @@
     text-transform: capitalize;
 }
 
+.sub-designation{
+    color: #22C55E;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
 .address{
     color: #ACB3C6;
     font-weight: 600;

@@ -83,7 +83,7 @@ const Profile = () => {
         </div>
         <div className="mb-10">
           <p className="level">Designation</p>
-          <p className="name">{role}</p>
+          <p className="sub-designation">{role}</p>
         </div>
       </div>
 
