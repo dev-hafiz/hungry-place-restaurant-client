@@ -36,7 +36,7 @@ const ProfileUpdate = () => {
         roadAndHouse: data.roadAndHouse,
       };
 
-      console.log(profileInfo);
+      // console.log(profileInfo);
 
       fetch(`https://hungry-place-restaurant-server.vercel.app/users/${_id}`, {
         method: "PUT",

@@ -26,7 +26,7 @@ const TopNavbar = () => {
               <Link to="/">About</Link>
             </li>
             <li className="md:px-4 md:py-2 hover:text-indigo-400">
-              <Link to="/">Contact</Link>
+              <Link to="/contact">Contact</Link>
             </li>
 
             {user?.email && isAdmin?.admin && (

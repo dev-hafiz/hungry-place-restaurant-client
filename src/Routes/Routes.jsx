@@ -17,6 +17,7 @@ import RecepieDetails from "../Pages/Recepies/RecepieDetails/RecepieDetails";
 import MyCart from "../Pages/Dashboard/UserPages/OrderCart/MyCart";
 import Profile from "../Pages/Dashboard/Profile/Profile";
 import ProfileUpdate from "../Pages/Dashboard/Profile/ProfileUpdate/ProfileUpdate";
+import Contact from "../Pages/Home/Contact/Contact";
 
 export const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ export const router = createBrowserRouter([
           fetch(
             `https://hungry-place-restaurant-server.vercel.app/menu/${params.id}`
           ),
+      },
+      {
+        path: "contact",
+        element: <Contact />,
       },
     ],
   },
