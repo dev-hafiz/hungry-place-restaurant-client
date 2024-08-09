@@ -1,0 +1,11 @@
+.link-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #CF2424;
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}

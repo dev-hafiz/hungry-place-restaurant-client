@@ -23,10 +23,10 @@ const TopNavbar = () => {
               <Link to="/recepies">Recepies</Link>
             </li>
             <li className="md:px-4 md:py-2 hover:text-indigo-400">
-              <Link to="/">About</Link>
+              <Link to="/contact">Contact</Link>
             </li>
             <li className="md:px-4 md:py-2 hover:text-indigo-400">
-              <Link to="/contact">Contact</Link>
+              <Link to="/about">About</Link>
             </li>
 
             {user?.email && isAdmin?.admin && (

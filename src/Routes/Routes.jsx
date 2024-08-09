@@ -18,6 +18,7 @@ import MyCart from "../Pages/Dashboard/UserPages/OrderCart/MyCart";
 import Profile from "../Pages/Dashboard/Profile/Profile";
 import ProfileUpdate from "../Pages/Dashboard/Profile/ProfileUpdate/ProfileUpdate";
 import Contact from "../Pages/Home/Contact/Contact";
+import About from "../Pages/Home/About/About";
 
 export const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ export const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />,
+      },
+      {
+        path: "about",
+        element: <About />,
       },
     ],
   },

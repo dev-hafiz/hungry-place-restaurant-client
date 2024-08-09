@@ -4,6 +4,7 @@ import phone from "../../../assets/icon/phone.png";
 import whatsapp from "../../../assets/icon/whatsapp.png";
 import email from "../../../assets/icon/email.png";
 import store from "../../../assets/icon/store.png";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const handleSubmit = (e) => {
@@ -14,17 +15,28 @@ const Contact = () => {
   };
   return (
     <div>
-      <div className="bg-[url('/src/assets/contactSlide/contact.jpeg')] flex justify-center items-center  py-12 bg-cover bg-no-repeat bg-center">
-        <section className="bg-[#FAFAFA] opacity-80 py-10  w-2/4 ">
+      <div className="relative flex justify-center items-center py-12 bg-cover bg-no-repeat bg-center bg-[url('/src/assets/contactSlide/hotel.jpeg')]">
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-[#232220] opacity-90"></div>
+
+        {/* Content section */}
+        <section className="relative z-10  py-20 my-5 w-2/4">
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-3xl text-center">
-              <h1 className="mt-5  pb-4 text-3xl font-light leading-snug sm:text-5xl sm:leading-snug lg:text-6xl lg:leading-snug">
-                We’d Love to <br className="sm:hidden" />
-                Hear from You
-                <span className="text-[#CF2424] relative inline-flex justify-center whitespace-nowrap font-bold">
+            <div className="mx-auto max-w-3xl flex flex-col justify-center items-center">
+              <h1 className="mt-5 text-white font-serif pb-4 text-3xl font-light leading-snug sm:text-5xl sm:leading-snug lg:text-6xl lg:leading-snug">
+                <span className=" relative inline-flex justify-center whitespace-nowrap font-bold">
                   Contact Us
                 </span>
               </h1>
+              <div className="link-area">
+                <Link to="/" className="text-white">
+                  Home
+                </Link>
+                <span className="mx-2 text-white">/</span>
+                <Link to="/contact" className="text-white">
+                  Contact Us
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -73,7 +85,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="p-5">
-          <h2 className="mt-5 text-[#0a121c] pb-4 text-2xl font-light leading-snug sm:text-5xl sm:leading-snug lg:text-4xl lg:leading-snug">
+          <h2 className="mt-5 text-[#0a121c] font-serif pb-4 text-2xl font-light leading-snug sm:text-5xl sm:leading-snug lg:text-4xl lg:leading-snug">
             <span className="relative inline-flex justify-center whitespace-nowrap font-bold">
               Get In Touch
             </span>
