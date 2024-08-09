@@ -30,7 +30,7 @@ const Contact = () => {
         </section>
       </div>
 
-      <div className="lg:container mx-auto my-16 grid grid-cols-1 md:grid-cols-2 ">
+      <div className="lg:container mx-auto mb-16 mt-10 grid grid-cols-1 md:grid-cols-2 ">
         <div className="flex flex-col justify-center items-center">
           <div className="p-5 mt-16 w-3/4 ">
             <div class="grid  md:grid-cols-2 justify-center">
@@ -153,7 +153,7 @@ const Contact = () => {
                 <div>
                   <button
                     type="submit"
-                    className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-[#CF2424] hover:bg-[#b11e1e] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0e1927] focus:ring-offset-white"
+                    className="w-full flex justify-center py-3 mt-4 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-[#CF2424] hover:bg-[#b11e1e] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0e1927] focus:ring-offset-white"
                   >
                     Submit
                   </button>
