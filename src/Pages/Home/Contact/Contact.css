@@ -1,0 +1,43 @@
+.contact-card{
+    max-width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #FAFAFA;
+    transition: all 0.3s;
+}
+
+.contact-card h5{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+    margin: 10px 0;
+}
+
+.contact-card p{
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+}
+
+.responsive-map{
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 30%;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.responsive-map iframe {
+    border: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
