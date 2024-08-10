@@ -92,7 +92,7 @@ const AdminHome = () => {
   });
 
   return (
-    <div className=" h-full -mt-3 mr-5">
+    <div className=" mx-5">
       <div className="h-60 mini-background"></div>
       <div>
         <div className="flex items-center justify-center -mt-16 gap-8 flex-wrap mb-10">
