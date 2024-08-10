@@ -119,7 +119,7 @@ const MyCart = ({ flatShippingRate = 3 }) => {
     ) {
       const payload = {
         quantity: quantity - 1, // Incrementing the quantity
-        price: existingCart.price - 1, // Incrementing the price (adjust as per your logic)
+        price: existingCart.price, // Incrementing the price (adjust as per your logic)
       };
 
       fetch(
