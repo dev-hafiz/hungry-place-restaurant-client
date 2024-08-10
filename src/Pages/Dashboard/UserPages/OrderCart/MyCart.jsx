@@ -59,6 +59,7 @@ const MyCart = ({ flatShippingRate = 3 }) => {
 
     //existing cart data load from server
     const existingCart = cart.find((item) => item._id === id);
+    console.log("existingCart -->", existingCart);
     const quantity = quantities[existingCart._id];
 
     if (
@@ -144,18 +145,6 @@ const MyCart = ({ flatShippingRate = 3 }) => {
       console.log("Item not found in cart or quantity information missing.");
     }
   };
-
-  // let subTotal = 0;
-  // let shipping = 0;
-  // let quantity = 0;
-
-  // for (const item of cart) {
-  //   quantity = quantity + item.quantity;
-  //   subTotal = subTotal + item.price * item.quantity;
-  //   shipping = shipping + 3;
-  // }
-  // const tax = parseFloat((subTotal * 0.1).toFixed(2));
-  // const grandTotal = subTotal + shipping + tax;
 
   //Send delete request in server side from client side
   const handleDelete = (id) => {

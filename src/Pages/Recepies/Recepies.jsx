@@ -87,7 +87,7 @@ const Recepies = () => {
 
       <div className=" container mx-auto">
         <div className=" mt-10 ">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-1">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
             <div className=" col-span-12 md:col-span-3">
               {/* Search Area  */}
               <div className="left-area">
