@@ -90,7 +90,7 @@ const Contact = () => {
               Get In Touch
             </span>
           </h2>
-          <p className="text-base text-[#0e1927]  ">
+          <p className="mb-5  text-lg text-gray-600">
             Our team is here to guide you through our exquisite menu and help
             you plan your perfect dining experience. Contact us today to explore
             flavors that elevate your senses and create unforgettable memories.

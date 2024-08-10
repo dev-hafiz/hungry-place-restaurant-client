@@ -1,6 +1,10 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/no-unknown-property */
 import { Link } from "react-router-dom";
 import "./About.css";
+import chef from "../../../assets/team/chef.png";
+import manager from "../../../assets/team/manager.png";
+import ceo from "../../../assets/team/ceo.png";
 
 const About = () => {
   return (
@@ -46,10 +50,10 @@ const About = () => {
             look forward to making your visit truly memorable. Come and savor
             the flavors with us!
           </p>
-          <section class="py-6 -mt-10 text-blue-900 sm:py-16">
-            <div class="mx-auto max-w-screen-lg px-4 sm:px-6 lg:px-8">
-              <div class="relative flex flex-col lg:flex-row">
-                <div class="pointer-events-none absolute -bottom-10 left-12 hidden h-24 w-24 rounded-full opacity-60 lg:block">
+          <section className="py-6 -mt-10 text-blue-900 sm:py-16">
+            <div className="mx-auto max-w-screen-lg px-4 sm:px-6 lg:px-8">
+              <div className="relative flex flex-col lg:flex-row">
+                <div className="pointer-events-none absolute -bottom-10 left-12 hidden h-24 w-24 rounded-full opacity-60 lg:block">
                   <svg
                     id="patternId"
                     width="100%"
@@ -89,59 +93,59 @@ const About = () => {
                   </svg>
                 </div>
 
-                <div class="my-10 text-center sm:mt-20 lg:text-left">
-                  <p class="text-lg font-medium text-red-500">
+                <div className="my-10 text-center sm:mt-20 lg:text-left">
+                  <p className="text-lg font-medium text-red-500">
                     Celebrating Our Success
                   </p>
-                  <h2 class="text-3xl font-bold text-[#243E63] sm:text-4xl">
+                  <h2 className="text-3xl font-bold text-[#243E63] sm:text-4xl">
                     Our Growth
                   </h2>
                 </div>
 
-                <div class="mx-auto mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:mt-16 lg:mr-0">
-                  <div class="px-6 py-10">
-                    <div class="flex items-center">
-                      <h3 class="relative ml-2 inline-block text-4xl font-bold leading-none">
-                        <span class="absolute -top-6 -left-6 h-16 w-16 rounded-full bg-red-300"></span>
-                        <span class="relative text-[#243E63]">328</span>
+                <div className="mx-auto mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:mt-16 lg:mr-0">
+                  <div className="px-6 py-10">
+                    <div className="flex items-center">
+                      <h3 className="relative ml-2 inline-block text-4xl font-bold leading-none">
+                        <span className="absolute -top-6 -left-6 h-16 w-16 rounded-full bg-red-300"></span>
+                        <span className="relative text-[#243E63]">328</span>
                       </h3>
-                      <span class="ml-3 text-base font-medium capitalize text-[#243E63]">
+                      <span className="ml-3 text-base font-medium capitalize text-[#243E63]">
                         Dishes Created
                       </span>
                     </div>
                   </div>
 
-                  <div class="px-6 py-10">
-                    <div class="flex items-center">
-                      <h3 class="relative ml-2 inline-block text-4xl font-bold leading-none">
-                        <span class="absolute -top-6 -left-6 h-16 w-16 rounded-full bg-red-300"></span>
-                        <span class="relative text-[#243E63]">16</span>
+                  <div className="px-6 py-10">
+                    <div className="flex items-center">
+                      <h3 className="relative ml-2 inline-block text-4xl font-bold leading-none">
+                        <span className="absolute -top-6 -left-6 h-16 w-16 rounded-full bg-red-300"></span>
+                        <span className="relative text-[#243E63]">16</span>
                       </h3>
-                      <span class="ml-3 text-[#243E63] text-base font-medium capitalize">
+                      <span className="ml-3 text-[#243E63] text-base font-medium capitalize">
                         New Hires
                       </span>
                     </div>
                   </div>
 
-                  <div class="px-6 py-10">
-                    <div class="flex items-center">
-                      <h3 class="relative ml-2 inline-block text-4xl font-bold leading-none">
-                        <span class="absolute -top-6 -left-6 h-16 w-16 rounded-full bg-red-300"></span>
-                        <span class="relative text-[#243E63]">41+</span>
+                  <div className="px-6 py-10">
+                    <div className="flex items-center">
+                      <h3 className="relative ml-2 inline-block text-4xl font-bold leading-none">
+                        <span className="absolute -top-6 -left-6 h-16 w-16 rounded-full bg-red-300"></span>
+                        <span className="relative text-[#243E63]">41+</span>
                       </h3>
-                      <span class="ml-3 text-[#243E63] text-base font-medium capitalize">
+                      <span className="ml-3 text-[#243E63] text-base font-medium capitalize">
                         Events Hosted
                       </span>
                     </div>
                   </div>
 
-                  <div class="px-6 py-10">
-                    <div class="flex items-center">
-                      <h3 class="relative ml-2 inline-block text-4xl font-bold leading-none">
-                        <span class="absolute -top-6 -left-6 h-16 w-16 rounded-full bg-red-300"></span>
-                        <span class="relative text-[#243E63]">99%</span>
+                  <div className="px-6 py-10">
+                    <div className="flex items-center">
+                      <h3 className="relative ml-2 inline-block text-4xl font-bold leading-none">
+                        <span className="absolute -top-6 -left-6 h-16 w-16 rounded-full bg-red-300"></span>
+                        <span className="relative text-[#243E63]">99%</span>
                       </h3>
-                      <span class="ml-3 text-base text-[#243E63] font-medium capitalize">
+                      <span className="ml-3 text-base text-[#243E63] font-medium capitalize">
                         Customer Satisfaction
                       </span>
                     </div>
@@ -238,13 +242,104 @@ const About = () => {
               </label>
             </li>
           </ul>
-          <div className="mt-20 flex justify-center">
-            <a
-              className="inline-flex cursor-pointer rounded-full bg-[#CF2424] px-5 py-4 text-white"
-              href="/contact"
-            >
-              Still have a question? Contact us!
-            </a>
+        </div>
+      </div>
+
+      {/* Our team  */}
+      <div>
+        <div className="lg:container mx-auto">
+          <div class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 md:px-12 xl:px-32">
+              <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+                <div>
+                  <p class="inline-block px-4 py-1 mb-4 text-xs font-semibold tracking-wider text-white rounded-full bg-[#CF2424]">
+                    Our Team
+                  </p>
+                </div>
+                <div class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-red-500 sm:text-4xl md:mx-auto">
+                  <span class="relative inline-block">
+                    <svg
+                      viewBox="0 0 52 24"
+                      fill="currentColor"
+                      class="absolute -top-5 -left-44  z-0 hidden w-32 -mt-8  text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+                    >
+                      <defs>
+                        <pattern
+                          id="247432cb-6e6c-4bec-9766-564ed7c230dc"
+                          x="0"
+                          y="0"
+                          width=".135"
+                          height=".30"
+                        >
+                          <circle cx="1" cy="1" r=".7"></circle>
+                        </pattern>
+                      </defs>
+                      <rect
+                        fill="url(#247432cb-6e6c-4bec-9766-564ed7c230dc)"
+                        width="52"
+                        height="24"
+                      ></rect>
+                    </svg>
+                  </span>
+                  <h2 className="headinTwo text-center pb-4 -mt-5 mb-10  relative before:absolute before:bg-[#CF2424] before:h-1 before:w-20 before:content-''  before:bottom-0 before:left-1/2 before:-translate-x-1/2">
+                    Our Dedicated Team
+                  </h2>
+                </div>
+                <p class="text-base mb-4 text-gray-700 md:text-lg">
+                  Our dedicated staff ensures exceptional service, from culinary
+                  creations to customer care, making every dining experience
+                  memorable and delightful
+                </p>
+              </div>
+              <div class="grid gap-12 items-center md:grid-cols-3">
+                <div class="space-y-4 text-center">
+                  <img
+                    class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
+                    src={manager}
+                    alt="manager"
+                    loading="lazy"
+                    width="640"
+                    height="805"
+                  />
+                  <div>
+                    <h4 class="text-2xl">Dino James</h4>
+                    <span class="block text-sm text-gray-500">
+                      Restaurant Manager
+                    </span>
+                  </div>
+                </div>
+                <div class="space-y-4 text-center">
+                  <img
+                    class="w-64 h-64 mx-auto object-cover rounded-xl md:w-48 md:h-64 lg:w-64 lg:h-80"
+                    src={chef}
+                    alt="Chef"
+                    loading="lazy"
+                    width="1000"
+                    height="667"
+                  />
+                  <div>
+                    <h4 class="text-2xl">Mariana Sue</h4>
+                    <span class="block text-sm text-gray-500">
+                      Executive Chef
+                    </span>
+                  </div>
+                </div>
+                <div class="space-y-4 text-center">
+                  <img
+                    class="w-64 h-64 mx-auto object-cover rounded-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
+                    src={ceo}
+                    alt="CEO"
+                    loading="lazy"
+                    width="1000"
+                    height="667"
+                  />
+                  <div>
+                    <h4 class="text-2xl">Anabelle Doe</h4>
+                    <span class="block text-sm text-gray-500">CEO</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
