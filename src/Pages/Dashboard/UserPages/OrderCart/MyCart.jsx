@@ -14,6 +14,7 @@ const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT_GATEWAY_KEY);
 
 const MyCart = ({ flatShippingRate = 3 }) => {
   const [cart, refetch] = useCart();
+  console.log("cart", cart);
   const [quantities, setQuantities] = useState({});
 
   const [totals, setTotals] = useState({
@@ -69,7 +70,7 @@ const MyCart = ({ flatShippingRate = 3 }) => {
     ) {
       const payload = {
         quantity: quantity + 1, // Incrementing the quantity
-        price: existingCart.price + 1, // Incrementing the price (adjust as per your logic)
+        price: existingCart.price, // Incrementing the price (adjust as per your logic)
       };
 
       fetch(

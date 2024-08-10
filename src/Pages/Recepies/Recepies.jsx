@@ -6,13 +6,14 @@ import { IoIosArrowForward } from "react-icons/io";
 import useMenu from "../../Hooks/useMenu";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import LoadingSpinner from "../../Components/LoadingSpinner";
 
 const Recepies = () => {
   // State for Pagination
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9;
 
-  const [items] = useMenu();
+  const [items, loading] = useMenu();
 
   const [selectedCategory, setSelectedCategory] = useState(null);
 
@@ -215,7 +216,7 @@ const Recepies = () => {
             <div className=" col-span-12 md:col-span-9 bg-white mb-9 mt-[20px]">
               <div className="right-area flex flex-wrap items-center justify-around">
                 {/* food card  */}
-
+                {loading && <LoadingSpinner />}
                 {currentItems.map((item) => (
                   <div className="card-items" key={item._id}>
                     <div className="card__image">
