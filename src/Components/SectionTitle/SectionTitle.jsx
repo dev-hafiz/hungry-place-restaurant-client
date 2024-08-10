@@ -8,7 +8,7 @@ const SectionTitle = ({ title, details }) => {
     <div className="border-b bg-white border-gray-200 px-10 py-5 shadow-sm">
       <div className="container mx-auto">
         <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2">
-          <div>
+          <div className=" md:text-left text-center">
             <p className="recepie-text">{title}</p>
           </div>
           <div>
