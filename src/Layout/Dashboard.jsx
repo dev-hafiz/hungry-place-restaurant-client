@@ -10,9 +10,9 @@ const Dashboard = () => {
   const [isAdmin] = useAdmin();
 
   return (
-    <div className="drawer lg:drawer-open">
+    <div className="drawer lg:drawer-open p-5">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content ml-6 mt-8 bg-white text-black">
+      <div className="drawer-content  bg-white text-black">
         <div>
           <label htmlFor="my-drawer-2" className="drawer-button lg:hidden ">
             <svg
@@ -40,7 +40,7 @@ const Dashboard = () => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <div className="h-full w-64 pb-5 mt-5">
+        <div className="h-full w-64 pb-5 ">
           <div className="flex bg-[#FAFAFA] h-full flex-grow flex-col overflow-y-auto rounded-br-lg rounded-tr-lg pt-5 ">
             <div className="flex mt-10 items-center pl-2">
               {/* <img
