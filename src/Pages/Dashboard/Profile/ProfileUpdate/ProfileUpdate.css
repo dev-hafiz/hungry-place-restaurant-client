@@ -5,12 +5,16 @@
     font-family: 'Times New Roman', Times, serif;
     margin-bottom: 20px;
   }
-
+.upload-image{
+    display: flex;
+    align-items: center;
+}
 .profile-area{
     width: 200px;
     height: auto;
     margin-top: 60px;
     margin-left: 30px;
+   
 }
 .profile-area img {
     border-radius: 10px;

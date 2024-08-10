@@ -10,9 +10,9 @@ const Dashboard = () => {
   const [isAdmin] = useAdmin();
 
   return (
-    <div className="drawer lg:drawer-open p-5">
+    <div className="drawer lg:drawer-open p-5 ">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content  bg-white text-black">
+      <div className=" drawer-content  bg-white text-black">
         <div>
           <label htmlFor="my-drawer-2" className="drawer-button lg:hidden ">
             <svg
@@ -34,7 +34,7 @@ const Dashboard = () => {
           <Outlet />
         </div>
       </div>
-      <div className="drawer-side">
+      <div className="drawer-side  h-screen">
         <label
           htmlFor="my-drawer-2"
           aria-label="close sidebar"

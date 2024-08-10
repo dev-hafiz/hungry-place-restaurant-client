@@ -97,99 +97,97 @@ const UpdateProduct = () => {
 
   return (
     <div className="w-full">
-      <div className="h-full mt-10 w-full flex items-center justify-center">
-        <form className="mx-10 w-full" onSubmit={handleSubmit(onSubmit)}>
-          <h3 className="sub-heading">Update Item</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label className="form-control w-full mb-6">
+      <div className=" flex items-center justify-center">
+        <form className="mx-0 md:mx-5 w-full" onSubmit={handleSubmit(onSubmit)}>
+          <h3 className="sub-heading mt-12">Update Item</h3>
+          <label className="form-control w-full mb-6">
+            <div className="label">
+              <span className="label-text">Recipe Name*</span>
+            </div>
+            <input
+              {...register("name", { required: true })}
+              type="text"
+              defaultValue={name}
+              className="input input-bordered w-full bg-white"
+            />
+            {errors.name && (
+              <span className="text-red-500">Name is required</span>
+            )}
+          </label>
+          <div className="grid grid-cols-1  gap-4">
+            <div className="flex flex-wrap md:flex-nowrap  gap-4">
+              <label className="form-control w-full mb-4">
                 <div className="label">
-                  <span className="label-text">Recipe Name*</span>
+                  <span className="label-text">Preparation Time*</span>
                 </div>
                 <input
-                  {...register("name", { required: true })}
+                  {...register("preparation_time", { required: true })}
                   type="text"
-                  defaultValue={name}
+                  defaultValue={preparation_time}
                   className="input input-bordered w-full bg-white"
                 />
-                {errors.name && (
-                  <span className="text-red-500">Name is required</span>
+                {errors.preparation_time && (
+                  <span className="text-red-500">
+                    Preparation time is required
+                  </span>
                 )}
               </label>
-              <div className="flex w-full gap-4">
-                <label className="form-control w-full mb-4">
-                  <div className="label">
-                    <span className="label-text">Preparation Time*</span>
-                  </div>
-                  <input
-                    {...register("preparation_time", { required: true })}
-                    type="text"
-                    defaultValue={preparation_time}
-                    className="input input-bordered w-full bg-white"
-                  />
-                  {errors.preparation_time && (
-                    <span className="text-red-500">
-                      Preparation time is required
-                    </span>
-                  )}
-                </label>
 
-                <label className="form-control w-full">
-                  <div className="label">
-                    <span className="label-text">Calories*</span>
-                  </div>
-                  <input
-                    {...register("calories", { required: true })}
-                    type="text"
-                    defaultValue={calories}
-                    className="input input-bordered w-full bg-white"
-                  />
-                  {errors.calories && (
-                    <span className="text-red-500">Calories are required</span>
-                  )}
-                </label>
-              </div>
-              <div className="flex w-full gap-4">
-                <label className="form-control w-full mb-4">
-                  <div className="label">
-                    <span className="label-text">Price*</span>
-                  </div>
-                  <input
-                    {...register("price", { required: true })}
-                    type="text"
-                    defaultValue={price}
-                    className="input input-bordered w-full bg-white"
-                  />
-                  {errors.price && (
-                    <span className="text-red-500">Price is required</span>
-                  )}
-                </label>
+              <label className="form-control w-full">
+                <div className="label">
+                  <span className="label-text">Calories*</span>
+                </div>
+                <input
+                  {...register("calories", { required: true })}
+                  type="text"
+                  defaultValue={calories}
+                  className="input input-bordered w-full bg-white"
+                />
+                {errors.calories && (
+                  <span className="text-red-500">Calories are required</span>
+                )}
+              </label>
+            </div>
+            <div className="flex flex-wrap md:flex-nowrap  gap-4">
+              <label className="form-control w-full mb-4">
+                <div className="label">
+                  <span className="label-text">Price*</span>
+                </div>
+                <input
+                  {...register("price", { required: true })}
+                  type="text"
+                  defaultValue={price}
+                  className="input input-bordered w-full bg-white"
+                />
+                {errors.price && (
+                  <span className="text-red-500">Price is required</span>
+                )}
+              </label>
 
-                <label className="form-control w-full">
-                  <div className="label">
-                    <span className="label-text">Category*</span>
-                  </div>
-                  <select
-                    {...register("category", { required: true })}
-                    className="select select-bordered w-full bg-white"
-                  >
-                    <option disabled value="default" defaultValue={category}>
-                      Select a Category
-                    </option>
-                    <option value="Fast food">Fast food</option>
-                    <option value="Chinese food">Chinese food</option>
-                    <option value="Deshi food">Deshi food</option>
-                  </select>
-                  {errors.category && (
-                    <span className="text-red-500">Category is required</span>
-                  )}
-                </label>
-              </div>
+              <label className="form-control w-full">
+                <div className="label">
+                  <span className="label-text">Category*</span>
+                </div>
+                <select
+                  {...register("category", { required: true })}
+                  className="select select-bordered w-full bg-white"
+                >
+                  <option disabled value="default" defaultValue={category}>
+                    Select a Category
+                  </option>
+                  <option value="Fast food">Fast food</option>
+                  <option value="Chinese food">Chinese food</option>
+                  <option value="Deshi food">Deshi food</option>
+                </select>
+                {errors.category && (
+                  <span className="text-red-500">Category is required</span>
+                )}
+              </label>
             </div>
           </div>
 
           <div>
-            <label className="form-control w-3/6 mb-10">
+            <label className="form-control mb-10">
               <div className="label">
                 <span className="label-text">Description*</span>
               </div>
@@ -205,7 +203,7 @@ const UpdateProduct = () => {
             </label>
           </div>
 
-          <div className="w-3/6 -mt-2 mb-6">
+          <div className=" -mt-2 mb-6">
             <h4 className="label-text mb-2">Ingredients*</h4>
             {fields.map((item, index) => (
               <div key={item.id} className="flex items-center gap-4 mb-2">

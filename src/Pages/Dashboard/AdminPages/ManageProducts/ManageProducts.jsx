@@ -73,7 +73,7 @@ const ManageProducts = () => {
   // End Pagination Calculation
 
   return (
-    <div className="w-3/4 md:ml-10">
+    <div className="mx-0 md:mx-5">
       <div className="w-full">
         <h3 className="sub-heading mt-10">Manage: {items.length} items</h3>
       </div>

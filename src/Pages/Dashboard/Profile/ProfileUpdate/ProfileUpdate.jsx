@@ -66,16 +66,16 @@ const ProfileUpdate = () => {
   return (
     <>
       <div className="w-full">
-        <div className=" flex items-center justify-center">
+        <div className=" flex items-center justify-center ">
           <form
             className="mx-0 md:mx-5 w-full"
             onSubmit={handleSubmit(onSubmit)}
           >
-            <h3 className="sub-heading">Profile Update</h3>
+            <h3 className="sub-heading mt-12">Profile Update</h3>
 
             <div className="grid grid-cols-12 gap-4">
               <div className="col-span-12 md:col-span-8">
-                <label className="form-control w-full mb-6">
+                <label className="form-control w-full mb-5">
                   <div className="label">
                     <span className="label-text">Email Address*</span>
                   </div>
@@ -87,7 +87,7 @@ const ProfileUpdate = () => {
                   />
                 </label>
                 <div>
-                  <label className="form-control w-full mb-6">
+                  <label className="form-control w-full mb-5  ">
                     <div className="label">
                       <span className="label-text">Your Name*</span>
                     </div>
@@ -163,13 +163,15 @@ const ProfileUpdate = () => {
                   </label>
                 </div>
               </div>
-              <div className="col-span-12 md:col-span-4 profile-area">
-                <img src={image} alt="" />
-                <input
-                  {...register("image", { required: true })}
-                  type="file"
-                  className="file-input my-6 bg-white file-input-sm w-full max-w-xs"
-                />
+              <div className="col-span-12 md:col-span-4 upload-image">
+                <div className="profile-area">
+                  <img src={image} alt="" />
+                  <input
+                    {...register("image", { required: true })}
+                    type="file"
+                    className="file-input my-6 bg-white file-input-sm w-full max-w-xs"
+                  />
+                </div>
               </div>
             </div>
 
