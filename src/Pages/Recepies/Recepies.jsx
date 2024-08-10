@@ -221,7 +221,7 @@ const Recepies = () => {
                     <div className="card__image">
                       <img src={item?.image_url} alt="Food Card" />
                     </div>
-                    <div className="flex flex-col items-start">
+                    <div className="flex  flex-col items-start">
                       <div className="card__info--price">
                         <p>$ {item?.price}</p>
                       </div>

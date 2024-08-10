@@ -5,8 +5,8 @@ import logo1 from "../../../assets/Logo1.png";
 const CategoryNavbar = () => {
   const [cart] = useCart();
   return (
-    <header className="bg-white">
-      <div className="container mx-auto pr-4 py-4 flex items-center">
+    <header>
+      <div className="container mx-auto pr-4 md:px-0 px-5 py-4 flex items-center">
         <div className="mr-auto md:w-48 flex-shrink-0">
           <img className="h-10 md:h-full" src={logo1} alt="" />
         </div>
@@ -42,7 +42,7 @@ const CategoryNavbar = () => {
         </div>
 
         <nav className="contents">
-          <ul className="ml-4 flex items-center justify-end">
+          <ul className="ml-4 flex flex-wrap items-center justify-end">
             <li className="ml-2 lg:ml-4 relative inline-block">
               <a className="" href="">
                 <svg
