@@ -18,8 +18,8 @@ const Profile = () => {
   }, [user.email]);
 
   return (
-    <div className="w-3/4 -mt-3">
-      <div className="profile-wrapper">
+    <div className="w-full -mt-3">
+      <div className="profile-wrapper p-5 sm:p-0">
         <div className="profile-header">
           <img
             src={!profile?.image ? user?.photoURL : profile?.image}
@@ -60,7 +60,7 @@ const Profile = () => {
       <div className="info-wrapper">
         <h3 className="title">Personal information</h3>
 
-        <div className="flex items-center mb-7 gap-60">
+        <div className="flex flex-wrap items-center mb-7 gap-60">
           <div>
             <p className="level">Full Name</p>
             <p className="name">
@@ -71,7 +71,7 @@ const Profile = () => {
             </p>
           </div>
         </div>
-        <div className="flex items-center mb-7 gap-32">
+        <div className="flex flex-wrap items-center mb-7 gap-16 md:gap-32">
           <div>
             <p className="level">Email Address</p>
             <p className="name">{profile?.email} </p>
@@ -89,7 +89,7 @@ const Profile = () => {
 
       <div className="address-wrapper">
         <h3 className="title">Address</h3>
-        <div className="flex items-center mb-7 gap-60">
+        <div className="flex flex-wrap items-center mb-7 md:mb-16 gap-20 md:gap-60 ">
           <div>
             <p className="level">Country</p>
             <p className="name">{profile?.country} </p>
@@ -99,7 +99,7 @@ const Profile = () => {
             <p className="name">{profile?.city}</p>
           </div>
         </div>
-        <div className="flex items-center mb-7 gap-52">
+        <div className="flex flex-wrap items-center mb-7 gap-20 md:gap-52">
           <div>
             <p className="level">Postal Code</p>
             <p className="name">#{profile?.postCode}</p>

@@ -5,6 +5,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    
 }
 
 .upate-btn{
@@ -32,6 +34,7 @@
 .profile-header{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 .profile-img{
     width: 80px;
