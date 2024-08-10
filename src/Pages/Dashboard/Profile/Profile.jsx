@@ -18,7 +18,7 @@ const Profile = () => {
   }, [user.email]);
 
   return (
-    <div className="w-full -mt-3">
+    <div className="w-full ml-5">
       <div className="profile-wrapper p-5 sm:p-0">
         <div className="profile-header">
           <img

@@ -84,10 +84,7 @@ const AddProduct = () => {
   return (
     <div className="w-full">
       <div className=" flex items-center justify-center">
-        <form
-          className="mx-0 md:mx-10 w-full"
-          onSubmit={handleSubmit(onSubmit)}
-        >
+        <form className="mx-0 md:mx-5 w-full" onSubmit={handleSubmit(onSubmit)}>
           <h3 className="sub-heading">Add Food Item</h3>
 
           <label className="form-control w-full mb-6">
