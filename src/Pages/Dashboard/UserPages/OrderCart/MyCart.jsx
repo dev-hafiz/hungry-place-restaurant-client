@@ -185,7 +185,7 @@ const MyCart = ({ flatShippingRate = 3 }) => {
       <Helmet>
         <title>Dashboard | My Cart</title>
       </Helmet>
-      <div className="w-9/12 h-full mt-32 ml-24">
+      <div className="md:w-9/12 w-full h-full md:mt-32 mt-14 md:ml-24 ml-0">
         <div className=" grid grid-cols-1 md:grid-cols-12 gap-4">
           <div className="md:col-span-8 py-6 px-5">
             <div>
@@ -209,7 +209,7 @@ const MyCart = ({ flatShippingRate = 3 }) => {
                         className="py-1 px-2 inline-block bg-white border border-gray-200 rounded-md"
                         data-hs-input-number=""
                       >
-                        <div className="flex items-center gap-x-1.5">
+                        <div className="md:flex md:flex-row items-center flex flex-col  gap-x-1.5">
                           <button
                             type="button"
                             className="size-6 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50"
@@ -230,8 +230,9 @@ const MyCart = ({ flatShippingRate = 3 }) => {
                               <path d="M5 12h14"></path>
                             </svg>
                           </button>
+
                           <input
-                            className="p-0 w-6 bg-transparent border-0 text-gray-800 text-center focus:ring-0"
+                            className="p-0 w-6 bg-transparent border-0  text-gray-800 text-center focus:ring-0"
                             type="text"
                             value={quantities[item._id] || 0}
                             readOnly

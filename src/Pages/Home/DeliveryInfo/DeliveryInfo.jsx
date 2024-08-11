@@ -6,8 +6,8 @@ const DeliveryInfo = () => {
   return (
     <div className="lg:container  mx-auto pt-10  mb-24 ">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4   items-center  ">
-        <div className="md:col-span-6 p-4">
-          <h3 className="headingFour text-[#243E63]">
+        <div className="md:col-span-6 p-4 ">
+          <h3 className="headingFour text-[#243E63] md:text-left text-center">
             A Moments Of
             <br />
             <span className="text-[#CF2424]">
@@ -20,8 +20,8 @@ const DeliveryInfo = () => {
             With glazed frontage on two sides of the building, overlooking the
             market and a bustling inteon.
           </p>
-          <div className="flex items-center justify-between w-3/4">
-            <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center justify-between  w-3/4">
+            <div className="flex items-center  gap-2 mb:mb-0 mb-4">
               <div>
                 <p className="text-[#243E63] font-semibold text-[20px]">
                   Delivery Order

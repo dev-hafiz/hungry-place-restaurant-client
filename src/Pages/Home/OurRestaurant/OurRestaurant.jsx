@@ -5,6 +5,7 @@ import growthIcon from "../../../assets/restaurentImage/growth 1.png";
 import cookIcon from "../../../assets/restaurentImage/cooking 1.png";
 import "./OurRestaurant.css";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const OurRestaurant = () => {
   return (
@@ -12,7 +13,7 @@ const OurRestaurant = () => {
       <h3 className="headinTwo text-center pb-4 mb-20 relative before:absolute before:bg-[#CF2424] before:h-1 before:w-20 before:content-''  before:bottom-0 before:left-1/2 before:-translate-x-1/2">
         Our Restaurant
       </h3>
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-2 pl-4">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-2 md:pl-4 md:mx-0 mx-5">
         <div className="md:col-span-5 ">
           <div className="flex items-center">
             <div>
@@ -36,7 +37,7 @@ const OurRestaurant = () => {
             duties and abandon long-term goals for fleeting satisfaction.
           </p>
           <div className="flex gap-4 items-center mt-5">
-            <div className="icon-img ">
+            <div className="icon-img">
               <img src={growthIcon} alt="icon" />
             </div>
             <div className="des">
@@ -45,9 +46,11 @@ const OurRestaurant = () => {
                 Certain circumstances and owing to the claims of duty
                 obligations <br /> of business it will frequently.
               </p>
-              <button className="read-active flex items-center gap-1">
-                Read More <FaRegArrowAltCircleRight />
-              </button>
+              <Link to="/about">
+                <button className="read-active flex items-center gap-1">
+                  Read More <FaRegArrowAltCircleRight />
+                </button>
+              </Link>
             </div>
           </div>
           <div className="flex gap-4 items-center mt-5">
@@ -60,9 +63,11 @@ const OurRestaurant = () => {
                 Duty or the obligations of business it frequently occur
                 pleasures <br /> have to be repudiated.
               </p>
-              <button className="read-In-active flex items-center gap-1">
-                Read More <FaRegArrowAltCircleRight />
-              </button>
+              <Link to="/about">
+                <button className="read-In-active flex items-center gap-1">
+                  Read More <FaRegArrowAltCircleRight />
+                </button>
+              </Link>
             </div>
           </div>
         </div>

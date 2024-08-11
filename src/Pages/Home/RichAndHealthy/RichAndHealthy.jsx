@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import chef from "../../../assets/home/Chef.png";
 import food from "../../../assets/home/food.png";
 import star from "../../../assets/icon/Star 1.png";
@@ -9,7 +10,7 @@ const RichAndHealthy = () => {
         Rich & Healthy
       </h3>
       <div className="grid grid-cols-1 mt-8 md:grid-cols-12 gap-4">
-        <div className="md:col-span-4   ">
+        <div className="md:col-span-4   md:mr-0 mr-5 md:-ml-0 -ml-5">
           <img src={chef} alt="Chef Photo" />
         </div>
         <div className="md:col-span-8">
@@ -64,7 +65,9 @@ const RichAndHealthy = () => {
                 </div>
               </div>
               <div className="text-center ">
-                <button className="order-btn">Read More</button>
+                <Link to="/about">
+                  <button className="order-btn">Read More</button>
+                </Link>
               </div>
             </div>
             <div className="md:col-span-6 flex justify-center ">

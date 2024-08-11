@@ -25,8 +25,8 @@ const PaymentHistory = () => {
       </Helmet>
 
       <div className="w-full px-6">
-        <h1>Payment History</h1>
-        <h1>Total Payments : {payments.length}</h1>
+        <h3 className="sub-heading mt-12">Payment History</h3>
+        <h3 className="text-2xl ">Total Payments : {payments.length}</h3>
 
         <div>
           <div className="overflow-x-auto">
