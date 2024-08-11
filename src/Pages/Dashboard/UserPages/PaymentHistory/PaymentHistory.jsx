@@ -34,7 +34,7 @@ const PaymentHistory = () => {
               {/* head */}
               <thead>
                 <tr>
-                  <th>#</th>
+                  <th>No.</th>
                   <th>Email</th>
                   <th>Transaction Id</th>
                   <th>Price</th>
@@ -45,9 +45,21 @@ const PaymentHistory = () => {
                 {payments.map((payment, index) => (
                   <tr key={payment._id}>
                     <th>{index + 1}</th>
-                    <td>{payment?.email}</td>
-                    <td>{payment?.transactionId}</td>
-                    <td>$ {payment?.price}</td>
+                    <td>
+                      <p className="bg-green-500 text-white py-2 px-4 rounded-md">
+                        {payment?.email}
+                      </p>
+                    </td>
+                    <td>
+                      <p className="bg-red-400 text-white py-2 px-4 rounded-md">
+                        {payment?.transactionId}
+                      </p>
+                    </td>
+                    <td>
+                      <p className="bg-sky-500 text-white py-2 px-4 rounded-md">
+                        $ {payment?.price}
+                      </p>
+                    </td>
                     <td className="  text-green-800 font-bold">
                       {payment?.status}
                     </td>
