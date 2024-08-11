@@ -148,6 +148,7 @@ const useFirebase = () => {
 
   //Save User To Database
   const saveUserInDb = (email, displayName, method) => {
+    console.log("Email and DisplayName -->", email, displayName);
     const user = { email, displayName };
     fetch("https://hungry-place-restaurant-server.vercel.app/users", {
       method: method,

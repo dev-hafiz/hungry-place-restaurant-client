@@ -4,11 +4,22 @@ import useCart from "../Hooks/useCart";
 import useAdmin from "../Hooks/useAdmin";
 import useAuth from "../Hooks/useAuth";
 import { Helmet } from "react-helmet-async";
+import { useEffect, useState } from "react";
 
 const Dashboard = () => {
   const [cart] = useCart();
   const { user, logOut } = useAuth();
   const [isAdmin] = useAdmin();
+
+  const [profile, setProfile] = useState();
+
+  useEffect(() => {
+    fetch(
+      `https://hungry-place-restaurant-server.vercel.app/users/${user.email}`
+    )
+      .then((res) => res.json())
+      .then((data) => setProfile(data));
+  }, [user.email]);
 
   return (
     <>
@@ -54,7 +65,9 @@ const Dashboard = () => {
                 alt=""
               /> */}
                 <div className="flex ml-3 flex-col">
-                  <h3 className="font-medium">{user?.displayName}</h3>
+                  <h3 className="font-medium">
+                    {!user?.displayName ? profile.name : user?.displayName}
+                  </h3>
                   <p className="text-xs text-gray-500">
                     {isAdmin?.admin ? "𝐀𝐝𝐦𝐢𝐧" : "𝐆𝐞𝐧𝐞𝐫𝐚𝐥 𝐔𝐬𝐞𝐫"}
                   </p>

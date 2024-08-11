@@ -78,7 +78,7 @@ const Profile = () => {
           </div>
           <div>
             <p className="level">Phone</p>
-            <p className="name">{profile?.phone}</p>
+            <p className="name">{!profile?.phone ? "---" : profile?.phone}</p>
           </div>
         </div>
         <div className="mb-10">
@@ -92,21 +92,27 @@ const Profile = () => {
         <div className="flex flex-wrap items-center mb-7 md:mb-16 gap-20 md:gap-60 ">
           <div>
             <p className="level">Country</p>
-            <p className="name">{profile?.country} </p>
+            <p className="name">
+              {!profile?.country ? "-------" : profile?.country}{" "}
+            </p>
           </div>
           <div>
             <p className="level">City/State</p>
-            <p className="name">{profile?.city}</p>
+            <p className="name">{!profile?.city ? "-------" : profile?.city}</p>
           </div>
         </div>
         <div className="flex flex-wrap items-center mb-7 gap-20 md:gap-52">
           <div>
             <p className="level">Postal Code</p>
-            <p className="name">#{profile?.postCode}</p>
+            <p className="name">
+              #{!profile?.postCode ? "-------" : profile?.postCode}
+            </p>
           </div>
           <div>
             <p className="level">Road & House</p>
-            <p className="name">{profile?.roadAndHouse}</p>
+            <p className="name">
+              {!profile?.roadAndHouse ? "-------" : profile?.roadAndHouse}
+            </p>
           </div>
         </div>
       </div>
