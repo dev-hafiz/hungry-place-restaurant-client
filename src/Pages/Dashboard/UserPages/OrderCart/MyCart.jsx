@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "../../Payment/CheckoutForm";
 import { loadStripe } from "@stripe/stripe-js";
+import { Helmet } from "react-helmet-async";
 
 // Stripe Payment Gateway API env key
 const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT_GATEWAY_KEY);
@@ -181,6 +182,9 @@ const MyCart = ({ flatShippingRate = 3 }) => {
 
   return (
     <>
+      <Helmet>
+        <title>Dashboard | My Cart</title>
+      </Helmet>
       <div className="w-9/12 h-full mt-32 ml-24">
         <div className=" grid grid-cols-1 md:grid-cols-12 gap-4">
           <div className="md:col-span-8 py-6 px-5">

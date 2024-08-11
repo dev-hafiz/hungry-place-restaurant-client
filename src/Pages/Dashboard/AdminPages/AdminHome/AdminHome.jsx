@@ -17,6 +17,7 @@ import {
   Pie,
   Legend,
 } from "recharts";
+import { Helmet } from "react-helmet-async";
 
 const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#FF0000"];
@@ -92,112 +93,117 @@ const AdminHome = () => {
   });
 
   return (
-    <div className=" mx-5">
-      <div className="h-60 mini-background"></div>
-      <div>
-        <div className="flex items-center justify-center -mt-16 gap-8 flex-wrap mb-10">
-          <div className="card-revenue">
-            <h3> Your Total Revenue</h3>
+    <>
+      <Helmet>
+        <title>Dashboard | Analytics</title>
+      </Helmet>
+      <div className=" mx-5">
+        <div className="h-60 mini-background"></div>
+        <div>
+          <div className="flex items-center justify-center -mt-16 gap-8 flex-wrap mb-10">
+            <div className="card-revenue">
+              <h3> Your Total Revenue</h3>
+              <div>
+                <h1>
+                  {stats?.revenue} <FaDollarSign className="sign" />
+                </h1>
+
+                <div className="stat-desc">↗︎ 400 (22%)</div>
+              </div>
+            </div>
+            <div className="card-user">
+              <h3>Your Total User</h3>
+              <div className="flex items-center gap-4">
+                <div className="icon-circle">
+                  <FaUsers className="user-icon" />
+                </div>
+                <div>
+                  <h1>{stats?.users}</h1>
+                  <div className="stat-desc">Jan 1st - Feb 1st</div>
+                </div>
+              </div>
+            </div>
+            <div className="card-menu">
+              <h3>Total Menu Items</h3>
+              <div className="flex items-center gap-4">
+                <div className="icon-circle">
+                  <FaBowlFood className="user-icon" />
+                </div>
+                <div>
+                  <h1>{stats?.menuItems}</h1>
+                  <div className="stat-desc">↗︎ {stats?.menuItems} (items)</div>
+                </div>
+              </div>
+            </div>
+            <div className="card-order">
+              <h3>Total Orders</h3>
+              <div className="flex items-center gap-4">
+                <div className="icon-circle">
+                  <FaCartShopping className="user-icon" />
+                </div>
+                <div>
+                  <h1>{stats?.orders}</h1>
+                  <div className="stat-desc">↗︎ {stats?.orders} (items)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex  items-center justify-center  mt-16 gap-14 flex-wrap ">
             <div>
-              <h1>
-                {stats?.revenue} <FaDollarSign className="sign" />
-              </h1>
-
-              <div className="stat-desc">↗︎ 400 (22%)</div>
-            </div>
-          </div>
-          <div className="card-user">
-            <h3>Your Total User</h3>
-            <div className="flex items-center gap-4">
-              <div className="icon-circle">
-                <FaUsers className="user-icon" />
-              </div>
-              <div>
-                <h1>{stats?.users}</h1>
-                <div className="stat-desc">Jan 1st - Feb 1st</div>
-              </div>
-            </div>
-          </div>
-          <div className="card-menu">
-            <h3>Total Menu Items</h3>
-            <div className="flex items-center gap-4">
-              <div className="icon-circle">
-                <FaBowlFood className="user-icon" />
-              </div>
-              <div>
-                <h1>{stats?.menuItems}</h1>
-                <div className="stat-desc">↗︎ {stats?.menuItems} (items)</div>
-              </div>
-            </div>
-          </div>
-          <div className="card-order">
-            <h3>Total Orders</h3>
-            <div className="flex items-center gap-4">
-              <div className="icon-circle">
-                <FaCartShopping className="user-icon" />
-              </div>
-              <div>
-                <h1>{stats?.orders}</h1>
-                <div className="stat-desc">↗︎ {stats?.orders} (items)</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex  items-center justify-center  mt-16 gap-14 flex-wrap ">
-          <div>
-            <BarChart
-              width={430}
-              height={300}
-              data={chartData}
-              margin={{
-                top: 20,
-                right: 30,
-                left: 20,
-                bottom: 5,
-              }}
-            >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="category" />
-              <YAxis />
-              <Bar
-                dataKey="quantity"
-                fill="#8884d8"
-                shape={<TriangleBar />}
-                label={{ position: "top" }}
+              <BarChart
+                width={430}
+                height={300}
+                data={chartData}
+                margin={{
+                  top: 20,
+                  right: 30,
+                  left: 20,
+                  bottom: 5,
+                }}
               >
-                {chartData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={colors[index % 6]} />
-                ))}
-              </Bar>
-            </BarChart>
-          </div>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="category" />
+                <YAxis />
+                <Bar
+                  dataKey="quantity"
+                  fill="#8884d8"
+                  shape={<TriangleBar />}
+                  label={{ position: "top" }}
+                >
+                  {chartData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={colors[index % 6]} />
+                  ))}
+                </Bar>
+              </BarChart>
+            </div>
 
-          <div>
-            <PieChart width={400} height={400}>
-              <Pie
-                data={pieChartData}
-                cx="50%"
-                cy="50%"
-                labelLine={false}
-                label={renderCustomizedLabel}
-                outerRadius={80}
-                fill="#8884d8"
-                dataKey="value"
-              >
-                {pieChartData.map((entry, index) => (
-                  <Cell
-                    key={`cell-${index}`}
-                    fill={COLORS[index % COLORS.length]}
-                  />
-                ))}
-              </Pie>
-              <Legend></Legend>
-            </PieChart>
+            <div>
+              <PieChart width={400} height={400}>
+                <Pie
+                  data={pieChartData}
+                  cx="50%"
+                  cy="50%"
+                  labelLine={false}
+                  label={renderCustomizedLabel}
+                  outerRadius={80}
+                  fill="#8884d8"
+                  dataKey="value"
+                >
+                  {pieChartData.map((entry, index) => (
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={COLORS[index % COLORS.length]}
+                    />
+                  ))}
+                </Pie>
+                <Legend></Legend>
+              </PieChart>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -3,6 +3,7 @@ import useMenu from "../../../../Hooks/useMenu";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const ManageProducts = () => {
   const [items, , refetch] = useMenu();
@@ -73,129 +74,136 @@ const ManageProducts = () => {
   // End Pagination Calculation
 
   return (
-    <div className="mx-0 md:mx-5">
-      <div className="w-full">
-        <h3 className="sub-heading mt-10">Manage: {items.length} items</h3>
-      </div>
-      <div>
-        <table className="table">
-          {/* head */}
-          <thead>
-            <tr className="text-black">
-              <th>Image</th>
-              <th> Item Name </th>
-              <th>Price</th>
-              <th>Update</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
-          <tbody>
-            {/* row 1 */}
-            {currentItems.map((item) => (
-              <tr key={item?._id}>
-                <td>
-                  <div className="flex items-center gap-3">
-                    <div className="avatar">
-                      <div className="mask mask-squircle w-12 h-12">
-                        <img
-                          src={item?.image_url}
-                          alt="Avatar Tailwind CSS Component"
-                        />
+    <>
+      <Helmet>
+        <title>Dashboard | Manage Food Item</title>
+      </Helmet>
+
+      <div className="mx-0 md:mx-5">
+        <div className="w-full">
+          <h3 className="sub-heading mt-10">Manage: {items.length} items</h3>
+        </div>
+        <div>
+          <table className="table">
+            {/* head */}
+            <thead>
+              <tr className="text-black">
+                <th>Image</th>
+                <th> Item Name </th>
+                <th>Price</th>
+                <th>Update</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* row 1 */}
+              {currentItems.map((item) => (
+                <tr key={item?._id}>
+                  <td>
+                    <div className="flex items-center gap-3">
+                      <div className="avatar">
+                        <div className="mask mask-squircle w-12 h-12">
+                          <img
+                            src={item?.image_url}
+                            alt="Avatar Tailwind CSS Component"
+                          />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </td>
-                <td>
-                  <span>{item?.name}</span>
-                </td>
-                <td>
-                  <span>{item?.price}</span>
-                </td>
-                <td className="font-bold">
-                  <Link to={`/dashboard/updateProduct/${item?._id}`}>
-                    <button className="btn bg-green-500 text-white  btn-ghost btn-xs">
-                      <FaEdit />
+                  </td>
+                  <td>
+                    <span>{item?.name}</span>
+                  </td>
+                  <td>
+                    <span>{item?.price}</span>
+                  </td>
+                  <td className="font-bold">
+                    <Link to={`/dashboard/updateProduct/${item?._id}`}>
+                      <button className="btn bg-green-500 text-white  btn-ghost btn-xs">
+                        <FaEdit />
+                      </button>
+                    </Link>
+                  </td>
+                  <td>
+                    <button
+                      onClick={() => handleDelete(item)}
+                      className="btn bg-red-500 text-white  btn-ghost btn-xs"
+                    >
+                      <FaTrash />
                     </button>
-                  </Link>
-                </td>
-                <td>
-                  <button
-                    onClick={() => handleDelete(item)}
-                    className="btn bg-red-500 text-white  btn-ghost btn-xs"
-                  >
-                    <FaTrash />
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
 
-        {/* Pagination  Start*/}
-        {currentItems.length > 0 && (
-          <div className="flex flex-col items-center justify-center my-12">
-            <div className="flex text-gray-700">
-              <div
-                className={`h-8 w-8 mr-1 flex justify-center items-center rounded-full bg-gray-200 cursor-pointer ${
-                  currentPage === 1 && "opacity-50 cursor-not-allowed"
-                }`}
-                onClick={handlePreviousPage}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="100%"
-                  height="100%"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="feather feather-chevron-left w-4 h-4"
+          {/* Pagination  Start*/}
+          {currentItems.length > 0 && (
+            <div className="flex flex-col items-center justify-center my-12">
+              <div className="flex text-gray-700">
+                <div
+                  className={`h-8 w-8 mr-1 flex justify-center items-center rounded-full bg-gray-200 cursor-pointer ${
+                    currentPage === 1 && "opacity-50 cursor-not-allowed"
+                  }`}
+                  onClick={handlePreviousPage}
                 >
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-              </div>
-              <div className="flex h-8 font-medium rounded-full bg-gray-200">
-                {Array.from({ length: totalPages }, (_, index) => (
-                  <div
-                    key={index + 1}
-                    className={`w-8 flex justify-center items-center cursor-pointer leading-5 transition duration-150 ease-in rounded-full ${
-                      currentPage === index + 1 ? "bg-red-500 text-white" : ""
-                    }`}
-                    onClick={() => handlePageChange(index + 1)}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="100%"
+                    height="100%"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="feather feather-chevron-left w-4 h-4"
                   >
-                    {index + 1}
-                  </div>
-                ))}
-              </div>
-              <div
-                className={`h-8 w-8 ml-1 flex justify-center items-center rounded-full bg-gray-200 cursor-pointer ${
-                  currentPage === totalPages && "opacity-50 cursor-not-allowed"
-                }`}
-                onClick={handleNextPage}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="100%"
-                  height="100%"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="feather feather-chevron-right w-4 h-4"
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </div>
+                <div className="flex h-8 font-medium rounded-full bg-gray-200">
+                  {Array.from({ length: totalPages }, (_, index) => (
+                    <div
+                      key={index + 1}
+                      className={`w-8 flex justify-center items-center cursor-pointer leading-5 transition duration-150 ease-in rounded-full ${
+                        currentPage === index + 1 ? "bg-red-500 text-white" : ""
+                      }`}
+                      onClick={() => handlePageChange(index + 1)}
+                    >
+                      {index + 1}
+                    </div>
+                  ))}
+                </div>
+                <div
+                  className={`h-8 w-8 ml-1 flex justify-center items-center rounded-full bg-gray-200 cursor-pointer ${
+                    currentPage === totalPages &&
+                    "opacity-50 cursor-not-allowed"
+                  }`}
+                  onClick={handleNextPage}
                 >
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="100%"
+                    height="100%"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="feather feather-chevron-right w-4 h-4"
+                  >
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </div>
               </div>
             </div>
-          </div>
-        )}
-        {/* Pagination  End*/}
+          )}
+          {/* Pagination  End*/}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

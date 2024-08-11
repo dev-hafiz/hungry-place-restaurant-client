@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { Helmet } from "react-helmet-async";
 import { FaTrash, FaUserShield } from "react-icons/fa";
 import Swal from "sweetalert2";
 
@@ -60,59 +61,65 @@ const AllUser = () => {
   };
 
   return (
-    <div className=" md:ml-10 mr-5">
-      <div className="mb-3 font-semibold">
-        <h3 className="sub-heading mt-10">Total : {users.length} users </h3>
-      </div>
-      <div>
+    <>
+      <Helmet>
+        <title>Dashboard | All Users</title>
+      </Helmet>
+
+      <div className=" md:ml-10 mr-5">
+        <div className="mb-3 font-semibold">
+          <h3 className="sub-heading mt-10">Total : {users.length} users </h3>
+        </div>
         <div>
-          <table className="table mt-7">
-            {/* head */}
-            <thead>
-              <tr className="text-black">
-                <th>Name</th>
-                <th>Email</th>
-                <th>Role</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* row 1 */}
-              {users.map((user) => (
-                <tr key={user?._id}>
-                  <td>{user?.displayName}</td>
-                  <td>
-                    <span>{user?.email}</span>
-                  </td>
-                  <td className="font-bold">
-                    {user?.role === "admin" ? (
-                      "Admin"
-                    ) : (
-                      <>
-                        <button
-                          onClick={() => handleMakeAdmin(user)}
-                          className="btn bg-green-500 text-white  btn-ghost btn-xs"
-                        >
-                          <FaUserShield />
-                        </button>
-                      </>
-                    )}
-                  </td>
-                  <th>
-                    <button
-                      onClick={() => handleDelete(user)}
-                      className="btn bg-red-500 text-white  btn-ghost btn-xs"
-                    >
-                      <FaTrash />
-                    </button>
-                  </th>
+          <div>
+            <table className="table mt-7">
+              {/* head */}
+              <thead>
+                <tr className="text-black">
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Action</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {/* row 1 */}
+                {users.map((user) => (
+                  <tr key={user?._id}>
+                    <td>{user?.displayName}</td>
+                    <td>
+                      <span>{user?.email}</span>
+                    </td>
+                    <td className="font-bold">
+                      {user?.role === "admin" ? (
+                        "Admin"
+                      ) : (
+                        <>
+                          <button
+                            onClick={() => handleMakeAdmin(user)}
+                            className="btn bg-green-500 text-white  btn-ghost btn-xs"
+                          >
+                            <FaUserShield />
+                          </button>
+                        </>
+                      )}
+                    </td>
+                    <th>
+                      <button
+                        onClick={() => handleDelete(user)}
+                        className="btn bg-red-500 text-white  btn-ghost btn-xs"
+                      >
+                        <FaTrash />
+                      </button>
+                    </th>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

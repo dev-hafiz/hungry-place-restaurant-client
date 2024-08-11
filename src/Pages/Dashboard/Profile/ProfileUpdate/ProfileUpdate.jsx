@@ -3,6 +3,7 @@ import "./ProfileUpdate.css";
 import { useForm } from "react-hook-form";
 import useAxiosPublic from "../../../../Hooks/useAxiosPublic";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
@@ -65,6 +66,9 @@ const ProfileUpdate = () => {
   };
   return (
     <>
+      <Helmet>
+        <title>Dashboard | Profile Update</title>
+      </Helmet>
       <div className="w-full">
         <div className=" flex items-center justify-center ">
           <form

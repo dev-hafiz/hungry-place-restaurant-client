@@ -5,6 +5,7 @@ import whatsapp from "../../../assets/icon/whatsapp.png";
 import email from "../../../assets/icon/email.png";
 import store from "../../../assets/icon/store.png";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   const handleSubmit = (e) => {
@@ -14,7 +15,11 @@ const Contact = () => {
     console.log(data);
   };
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Hungry Place | Contact Us</title>
+      </Helmet>
+
       <div className="relative flex justify-center items-center py-12 bg-cover bg-no-repeat bg-center bg-[url('/src/assets/contactSlide/hotel.jpeg')]">
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-[#232220] opacity-90"></div>
@@ -186,7 +191,7 @@ const Contact = () => {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-    </div>
+    </>
   );
 };
 
