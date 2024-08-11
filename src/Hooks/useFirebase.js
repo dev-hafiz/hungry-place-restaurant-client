@@ -61,7 +61,7 @@ const useFirebase = () => {
       .then((result) => {
         const user = result.user;
         //Save user Info in database
-        saveUserInDb(user?.email, user?.displayName, "POST");
+        saveUserInDb(email, name, "POST");
         navigate(from, { replace: true });
         updateUserProfile(name, photoUrl);
         setUser(user);
