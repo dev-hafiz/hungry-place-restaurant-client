@@ -66,7 +66,7 @@ const Dashboard = () => {
               /> */}
                 <div className="flex ml-3 flex-col">
                   <h3 className="font-medium">
-                    {!user?.displayName ? profile.name : user?.displayName}
+                    {!user?.displayName ? profile?.name : user?.displayName}
                   </h3>
                   <p className="text-xs text-gray-500">
                     {isAdmin?.admin ? "𝐀𝐝𝐦𝐢𝐧" : "𝐆𝐞𝐧𝐞𝐫𝐚𝐥 𝐔𝐬𝐞𝐫"}

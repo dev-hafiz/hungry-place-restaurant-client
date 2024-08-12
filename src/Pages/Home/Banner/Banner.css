@@ -11,6 +11,18 @@
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
 }
+.card-title{
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+}
+.card-des{
+  font-size: .8rem;
+  font-weight: 500;
+  color: #D1D5DB;
+  font-family: "Montserrat", sans-serif; 
+}
 .headingThree{
   font-size:36px ;
   color: #CF2424;
