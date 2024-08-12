@@ -62,7 +62,7 @@ const Banner = () => {
                     Meals Near You.
                   </span>
                 </h1>
-                <p className="description">
+                <p className="text-lg text-gray-800 my-6 mr-4">
                   Discover and order your favorite dishes with our food app.
                   Explore top-rated restaurants, diverse cuisines, and enjoy
                   quick delivery. Delicious meals are just a few taps away.
@@ -121,7 +121,7 @@ const Banner = () => {
                   <br />
                   <span className="highlight"> for Healthy Living </span>
                 </h1>
-                <p className="description">
+                <p className="text-lg text-gray-800 my-6 mr-4">
                   Discover and order your favorite dishes with our food app.
                   Explore top-rated restaurants, diverse cuisines, and enjoy
                   quick delivery. Delicious meals are just a few taps away.
@@ -180,7 +180,7 @@ const Banner = () => {
                   <br />
                   <span className="highlight">Meals Near You</span>
                 </h1>
-                <p className="description">
+                <p className="text-lg text-gray-800 my-6 mr-4">
                   Discover and order your favorite dishes with our food app.
                   Explore top-rated restaurants, diverse cuisines, and enjoy
                   quick delivery. Delicious meals are just a few taps away.

@@ -5,6 +5,7 @@ import FoodCategory from "../FoodCategory/FoodCategory";
 import RichAndHealthy from "../RichAndHealthy/RichAndHealthy";
 import DeliveryInfo from "../DeliveryInfo/DeliveryInfo";
 import OurRestaurant from "../OurRestaurant/OurRestaurant";
+import HomeRecepie from "../HomeRecepie/HomeRecepie";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       </Helmet>
       <Banner />
       <FoodCategory />
+      <HomeRecepie />
       <RichAndHealthy />
       <OurRestaurant />
       <DeliveryInfo />

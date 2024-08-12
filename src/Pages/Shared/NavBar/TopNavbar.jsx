@@ -2,7 +2,7 @@
 import { CiMail } from "react-icons/ci";
 import "./TopNavbar.css";
 import useAuth from "../../../Hooks/useAuth";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import useAdmin from "../../../Hooks/useAdmin";
 const TopNavbar = () => {
   const { user, logOut } = useAuth();
@@ -16,27 +16,69 @@ const TopNavbar = () => {
         </div>
         <div className="text-gray-500 order-3 w-full md:w-auto md:order-2 px-4 max-sm:mb-6">
           <ul className="flex flex-wrap font-semibold justify-between ">
-            <li className="md:px-4 md:py-2 text-indigo-500">
-              <Link to="/">Home</Link>
+            <li className="md:px-4 md:py-2 flex cursor-pointer items-center text-sm font-medium  outline-none  hover:text-rose-600">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? "text-rose-600 " : undefined
+                }
+              >
+                Home
+              </NavLink>
             </li>
-            <li className="md:px-4 md:py-2 hover:text-indigo-400">
-              <Link to="/recepies">Recepies</Link>
+            <li className="md:px-4 md:py-2 flex cursor-pointer items-center text-sm font-medium  outline-none  hover:text-rose-600">
+              <NavLink
+                to="/recepies"
+                className={({ isActive }) =>
+                  isActive ? "text-rose-600 " : undefined
+                }
+              >
+                Recepies
+              </NavLink>
             </li>
-            <li className="md:px-4 md:py-2 hover:text-indigo-400">
-              <Link to="/contact">Contact</Link>
+            <li className="md:px-4 md:py-2 flex cursor-pointer items-center text-sm font-medium  outline-none  hover:text-rose-600">
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive ? "text-rose-600 " : undefined
+                }
+              >
+                Contact
+              </NavLink>
             </li>
-            <li className="md:px-4 md:py-2 hover:text-indigo-400">
-              <Link to="/about">About</Link>
+            <li className="md:px-4 md:py-2 flex cursor-pointer items-center text-sm font-medium  outline-none  hover:text-rose-600">
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive ? "text-rose-600 " : undefined
+                }
+              >
+                About
+              </NavLink>
             </li>
 
             {user?.email && isAdmin?.admin && (
-              <li className="md:px-4 md:py-2 hover:text-indigo-400">
-                <Link to="/dashboard/profile">Dashboard</Link>
+              <li className="md:px-4 md:py-2 flex cursor-pointer items-center text-sm font-medium  outline-none  hover:text-rose-600">
+                <NavLink
+                  to="/dashboard/profile"
+                  className={({ isActive }) =>
+                    isActive ? "text-rose-600 " : undefined
+                  }
+                >
+                  Dashboard
+                </NavLink>
               </li>
             )}
             {user?.email && !isAdmin?.admin && (
-              <li className="md:px-4 md:py-2 hover:text-indigo-400">
-                <Link to="/dashboard/profile">Dashboard</Link>
+              <li className="md:px-4 md:py-2 flex cursor-pointer items-center text-sm font-medium  outline-none  hover:text-rose-600">
+                <NavLink
+                  to="/dashboard/profile"
+                  className={({ isActive }) =>
+                    isActive ? "text-rose-600 " : undefined
+                  }
+                >
+                  Dashboard
+                </NavLink>
               </li>
             )}
           </ul>
