@@ -17,7 +17,7 @@ const UserReview = () => {
   const axiosPublic = useAxiosPublic();
 
   const onSubmit = async (data) => {
-    // console.log("review data -->", data);
+    console.log("review data -->", data);
     // Image upload to imageBB and then get an URL
     const imageFile = data.image_url[0];
     const formData = new FormData();
@@ -28,6 +28,7 @@ const UserReview = () => {
       },
     });
     if (res.data.success) {
+      console.log("Success");
       const review = {
         name: data.name,
         rating: data.category,
