@@ -34,7 +34,7 @@ const UserReview = () => {
         details: data.details,
         image_url: res.data.data.display_url,
       };
-      fetch("http://localhost:5000/reviews", {
+      fetch("https://hungry-place-restaurant-server.vercel.app/reviews", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
