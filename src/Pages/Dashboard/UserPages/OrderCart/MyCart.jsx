@@ -301,7 +301,7 @@ const MyCart = ({ flatShippingRate = 3 }) => {
               </div>
 
               <Link to="/recepies">
-                <button className="continue-btn">Continue to Recepie</button>
+                <button className="continue-btn">Continue to Recipes</button>
               </Link>
             </div>
           </div>

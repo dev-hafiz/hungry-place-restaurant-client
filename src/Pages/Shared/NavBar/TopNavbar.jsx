@@ -33,7 +33,7 @@ const TopNavbar = () => {
                   isActive ? "text-rose-600 " : undefined
                 }
               >
-                Recepies
+                Recipes
               </NavLink>
             </li>
             <li className="md:px-4 md:py-2 flex cursor-pointer items-center text-sm font-medium  outline-none  hover:text-rose-600">

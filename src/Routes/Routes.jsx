@@ -19,6 +19,7 @@ import Profile from "../Pages/Dashboard/Profile/Profile";
 import ProfileUpdate from "../Pages/Dashboard/Profile/ProfileUpdate/ProfileUpdate";
 import Contact from "../Pages/Home/Contact/Contact";
 import About from "../Pages/Home/About/About";
+import UserReview from "../Pages/Dashboard/UserPages/UserReview/UserReview";
 
 export const router = createBrowserRouter([
   {
@@ -76,6 +77,10 @@ export const router = createBrowserRouter([
       {
         path: "mycart",
         element: <MyCart />,
+      },
+      {
+        path: "review",
+        element: <UserReview />,
       },
 
       {

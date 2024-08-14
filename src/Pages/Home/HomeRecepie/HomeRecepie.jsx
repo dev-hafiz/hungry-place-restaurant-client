@@ -36,7 +36,7 @@ const HomeRecepie = () => {
         ))}
       </div>
       <Link to="/recepies" className="-mt-5">
-        <button className="order-btn">All Recepies</button>
+        <button className="order-btn">All Recipes</button>
       </Link>
     </div>
   );
