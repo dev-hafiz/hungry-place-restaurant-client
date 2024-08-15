@@ -11,7 +11,8 @@
   margin-bottom: 20px;
   margin-right: -100;
 }
-.profile-circle{
+
+.profile-circle img {
   border: 2px solid white;
   border-radius: 50%;
   height: 70px;
@@ -19,6 +20,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  object-fit: cover;
 }
 
 .customSwiper {

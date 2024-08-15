@@ -28,7 +28,6 @@ const UserReview = () => {
       },
     });
     if (res.data.success) {
-      console.log("Success");
       const review = {
         name: data.name,
         rating: data.category,

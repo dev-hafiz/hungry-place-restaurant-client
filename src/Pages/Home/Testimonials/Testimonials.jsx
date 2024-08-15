@@ -55,9 +55,9 @@ const Testimonials = () => {
             }}
           >
             <div className="p-4 flex flex-col items-center justify-center ">
-              {review?.profile ? (
+              {review?.image_url ? (
                 <div className="profile-circle">
-                  <img src={review?.profile} alt="review user porfile" />
+                  <img src={review?.image_url} alt="review user porfile" />
                 </div>
               ) : (
                 <div className="profile-circle">
